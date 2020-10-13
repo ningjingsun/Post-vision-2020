@@ -21,6 +21,16 @@
         		font-style: italic;
         	}
         	@font-face{
+        		font-family: "redaction0";
+        		src: url("Fonts/Redaction_10-Regular.woff2");
+        		font-style: normal;
+        	}
+        	@font-face{
+        		font-family: "redaction0";
+        		src: url("Fonts/Redaction_10-Italic.woff2");
+        		font-style: italic;
+        	}
+        	@font-face{
         		font-family: "redaction1";
         		src: url("Fonts/Redaction_20-Regular.woff2");
         		font-style: normal;
@@ -41,39 +51,45 @@
         		font-style: italic;
         	}
             body{
-                background-color: rgb(240, 240, 240);
+                background-color: rgb(255, 255, 255);
             }
         	h1{
         		font-family: redaction1;
         		font-style: normal;
         		font-size: 62pt;
-        		line-height: 68pt;
+        		letter-spacing: 2px;
+        		line-height: 69.2pt;
         		margin-bottom: -56px;
+        		color: rgb(20, 20, 20);
+
         	}
         	h2{
         		font-family: redaction2;
         		font-style: normal;
-        		font-size: 32pt;
-        		line-height: 34pt;
-        		letter-spacing: -0.2px;
-        		margin-bottom: 46px;
-        		margin-top: 46px;
+        		font-size: 34pt;
+        		line-height: 36pt;
+        		letter-spacing: 1px;
+        		margin-bottom: 56px;
+        		margin-top: 56px;
+        		color: rgb(20, 20, 20);
         	}
         	h4{
-        		font-family: arial;
+        		font-family: redaction2;
         		font-style: italic;
-        		font-size: 19pt;
-        		line-height: 24pt;
+        		font-size: 25pt;
+        		line-height: 35pt;
         		letter-spacing: -0.2px;
-        		margin-bottom: 80px;
+        		margin-top: 40px;
+        		margin-bottom: 65px;
                 margin-right: 40px;
         	}
         	p{
         		font-family: arial;
-        		font-size: 15pt;
-        		line-height: 21pt;
+        		font-size: 14pt;
+        		line-height: 19pt;
         		letter-spacing: -0.25px;
         		margin-bottom: 30px;
+        		color: rgb(20, 20, 20);
         	}
         	a{
         		color: rgb(0, 0, 0);
@@ -93,17 +109,26 @@
         		text-align: center;
         	}
         	#quote{
-        		margin-left: 50px;
+        		margin-left: 64px;
         	}
         	#header{
         		background-color: rgb(225, 225, 225);
         		height: 160px;
+        		position: fixed;
+        		left: 0px;
+        		right: 0px;
+        		top: 0px;
+        		z-index: 10;
+        	}
+        	#title{
+        		padding-top: 100px;
         	}
         	#content{
-        		margin-left: 170px;
-        		margin-right: 140px;
+        		margin-left: 12%;
+        		margin-right: 10%;
         		margin-top: 100px;
         		margin-bottom: 100px;
+        		z-index: 0;
         	}
         	#flex{
         		display: flex;
@@ -112,10 +137,10 @@
                 margin-top:-40px;
         	}
         	#text{
-        		max-width: 55%;
+        		max-width: 52%;
         	}
         	#pic{
-        		margin-left: 90px;
+        		margin-left: 8%;
         		flex-grow: 1;
         	}
         	img{
@@ -138,8 +163,8 @@
     	</div>
     	<div id=content>
     		<div id=title>
-   				<H1>Worldbuilding:</H1>
-   				<H1><i>as a Personal Daily Practice</i></H1>
+   				<H1>Worldbuilding as a</H1>
+   				<H1>Daily Practice</H1>
     		</div>
     		<br>
     		<br>
@@ -150,7 +175,7 @@
     		</div>
     		<div id=flex>
     			<div id=text>
-                    <H2>Art, Poetry and Worldbuilding</H2>
+                    <H2 style="margin-top:40px">Art, Poetry and Worldbuilding</H2>
     				<p>During my time at RISD, I was fortunate to be immersed in an environment where artists from all of the different creative fields gathered around. It thus became a hobby of mine to observe how the different creators created—what 	their personal practices were, and where their inner systems of logic came from.</p>
 					<p>It quickly occured to me that all different forms of creations—poems, paintings, sculptures, films, and many other more— are in essence the same, which are fundamentally structured around the concept and act of “worldbuilding”. Ian Chang defined a “world” as “a reality that (one) can believe in: one that promises to bring about habitable structure from the potential of chaos, and aims toward a future transformative enough to metabolize the pain and pleasure of its dysfunction<sup>[1]</sup>”. As he further elaborated in the project named Worlding Raga<sup>[1]</sup>,</p>
 					<div id=quote>
