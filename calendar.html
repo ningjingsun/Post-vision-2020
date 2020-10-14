@@ -8,10 +8,14 @@
         <meta name="viewport" content="width=device-width"><!--the browser will (probably) render the width of the page at the width of its own screen -->
         <style>
 			*{
+                margin: 0; /*cancels out browser-default margins*/
+                padding: 0;
+                box-sizing: border-box; /*border-box include any padding into the element's content*/
                 cursor: url(img/cursor.png) 64 64, auto;
             }
             ::-webkit-scrollbar {
    			width: 0px;  /* Remove scrollbar space */
+   			height: 0px;
     		background: transparent;  /* Optional: just make scrollbar invisible */
 			}
             @font-face{
@@ -24,6 +28,14 @@
         		src: url("Fonts/ARIALI 1.woff")
         		font-style: italic;
         	}
+        	@font-face{
+        		font-family: "redaction1";
+        		src: url("Fonts/Redaction_20-Regular.woff2");
+        		font-style: normal;
+        	}
+        	html{
+                font-size: 20px; /*https://www.cnblogs.com/shireyhu/p/7832124.html*/
+            }
         	a{
         		color: rgb(0, 0, 0);
         	}
@@ -33,70 +45,88 @@
             }
             p{
         		font-family: arial;
-        		font-size: 14pt;
-        		line-height: 18pt;
+        		margin-bottom: 2rem;
+        		margin-top: 0.6rem;
+        		font-size: 0.8rem;
+        		line-height: 1.1rem;
         		letter-spacing: -0.15px;
-        		margin-bottom: 25px;
-        		margin-top: 18px;
         		color: rgb(20, 20, 20);
         	}
         	img{
         		z-index: 10;
-        		padding-bottom: 11px;
-        		padding-top: 13px;
+        		padding-top: 0.1rem;
+        		max-width: 100%;
         	}
         	#header{
         		position: fixed;
-        		background-color: rgb(225, 225, 225);
-        		height: 160px;
+        		background-color: rgb(255, 255, 255);
+        		height: 180px;
         		left: 0px;
         		right: 0px;
         		top: 0px;
         		z-index: 20;
         	}
         	#content{
-        		z-index: 0;
+        		margin-top: 180px; /*leave space for header*/
+        		width: 100vw;
+        		overflow-x: scroll;
         	}
         	#flex{
         		display: flex;
         		flex-direction: row;
-        		align-items: flex-start;
+        		align-items: stretch;
         		flex-wrap: nowrap;
-                padding-left:10%;
+        		padding-left: 9%;
+        		padding-right: 8%;
+                /*padding-left:10%;
                 padding-right:12%;
                 margin-bottom: 0px;
-                padding-bottom: 0%;
+                padding-bottom: 0%;*/
         	}
         	.column{
-        		overflow-x: visible;
+        		height: calc(100vh - 180px); /*leave space for header*/
+        		overflow-x: hidden;
         		overflow-y: scroll;
-        		min-width: 300px;
-        		max-height: 100vh;
-        		margin-right: 9%;
-        		margin-bottom: -10%;
+        		padding: 1rem;
+        		padding-right: 2.9rem;
+        		padding-left: 2.1rem;
+        		padding-bottom: 0;
+        		min-width: 360px;
+        		width: 360px;
+        		/*max-height: 100vh;*/
+        		/*margin-right: 9%;
+        		margin-bottom: -10%;*/
         	}
         	.column:hover{
-        		background-color: rgb(252, 253, 125);
+        		/*background-color: rgb(252, 253, 125);*/
+        		background-color: rgb(235, 235, 235);
         	}
         	.month{
-        		font-size: 44pt;
+        		/*font-size: 44pt;
         		line-height: 48pt;
         		letter-spacing: -1.2px;
         		padding-top: 220px;
-        		margin-bottom: 0px;
+        		margin-bottom: 0px;*/
+        		margin-bottom: 0.8rem;
+        		margin-top: 1rem;
+        		font-family: redaction1;
+        		font-style: normal;
+        		font-size: 2rem;
+        		line-height: 1.2;
+        		letter-spacing: -0.02em;
         	}
         	.date{
-        		font-size: 44pt;
-        		line-height: 30pt;
-        		letter-spacing: -3px;
-        		margin-bottom: 22px;
-        		margin-top: 50px;
+        		margin-bottom: 1.2rem;
+        		margin-top: 2.8rem;
+        		font-size:2.9rem;
+        		line-height: 1.8rem;
+        		letter-spacing: -0.07em;
         	}
         	.title{
-        		font-size: 22pt;
-        		line-height: 28.5pt;
+        		margin-bottom: 1rem;
+        		font-size: 1.2rem;
+        		line-height: 1.7rem;
         		letter-spacing: -0.7px;
-        		margin-bottom: 11px;
         	}
         </style>
     </head>
@@ -107,26 +137,20 @@
     		<div id=flex>
     			<div class=column>
     				<p class=month>Jan</p>
-    				<p class=date>1.1</p>
-    				<p class=title><a href="https://112.international/ukraine-top-news/year-of-the-rat-how-to-meet-and-celebrate-2020-46900.html" target="_blank">CELEBRATING 2020</a></p>
-    				<p>This is the first day of 2020. People all over the world are celebrating the coming of the new year.</p>
-
 					<p class=date>1.6</p>
-    				<p class=title><a href="https://www.express.co.uk/news/science/1079535/Asteroid-apophis-nasa-asteroid-warning-earth-close-approach-2020" target="_blank">“CLOSE APPROACH” DAY</a></p>
-    				<img class=pic src="img/Jan.jpg" width="300px">
-    				<p>The Asteroid Apophis makes an “Close Approach” today. It officially crosses paths with the Earth’s orbit at 8:59 a.m. this morning. Named after the Egyptian god Apophis the Great Serpent, the asteroid is almost as tall as the Empire State Building in New York. NASA suggests a 2.7 percent chance of Apophis striking Earth in 2029.</p>
+    				<p class=title><a href="https://www.express.co.uk/news/science/1079535/Asteroid-apophis-nasa-asteroid-warning-earth-close-approach-2020" target="_blank">ASTEROID'S “CLOSE APPROACH”</a></p>
+    				<img class=pic src="img/Jan.jpg">
+    				<p>The Asteroid Apophis made an “Close Approach” today. It officially crossed paths with the Earth’s orbit at 8:59 a.m. this morning. Named after the Egyptian god Apophis the Great Serpent, the asteroid is almost as tall as the Empire State Building. NASA suggests a 2.7 percent chance of Apophis striking Earth in 2029.</p>
 
-    				<p class=date>1.12</p>
+    				<p class=date>1.16</p>
     				<p class=title><a href="https://time.com/5744039/pantone-color-of-the-year-2020/" target="_blank">PANTONE COLOR OF THE YEAR</a></p>
-    				<p>The Pantone Color Institute recently announced its 2020 “Color of the Year”, which is called “Classic Blue (19-4052)”. The indigo hue brings to mind both the constant and the classic; the sky at dusk, an impeccably tailored suit, serene waters, or a bowl of perfectly ripe blueberries. The hue embodies a forward-thinking mood and an almost utopian optimism that communicates originality, ingenuity and visionary thinking that points us toward the bright future. </p>
+    				<p>The Pantone Color Institute recently announced its 2020 “Color of the Year”, which is called “Classic Blue (19-4052)”.  The hue embodies a forward-thinking mood and an almost utopian optimism that communicates originality, ingenuity and visionary thinking that points us toward the bright future. </p>
 
-    				<p class=date>1.26</p>
+    				<p class=date>1.27</p>
     				<p class=title><a href="https://sneakernews.com/2019/12/31/adidas-yeezy-release-dates-2020/" target="_blank">ADIDAS YEEZY NEW RELEASE</a></p>
-    				<p>Now that 2020 has finally begun, we’ve been met with a number of releases from adidas Yeezy. While they opened up the year with the YZY QNTM at All-Star Weekend, the imprint was quick to revert back to their usual cadence, dropping pairs of the Yeezy Boost 350 v2 near constantly for the better part of a couple months. And alongside, we also were able to catch brand new takes of the Yeezy 500 as well as the quarantine-ready slides, but even though both were enjoyed for their own unique merits, many have their eyes set on the forthcoming offerings which include even more 350s as well as the much newer Yeezy Boost 380.</p>
-    				<br>
+    				<p>Now that 2020 has finally begun, we’ve been met with a number of releases from adidas Yeezy. While they opened up the year with the YZY QNTM at All-Star Weekend, the imprint was quick to revert back to their usual cadence, dropping pairs of the Yeezy Boost 350 v2 near constantly for the better part of a couple months. We would also be able to catch brand new takes of the Yeezy 500.</p>
     				<br>
     				<p style="text-align: center">❤ ❤ ❤</p>
-    				<br>
     				<br>
     				<br>
     				<br>
@@ -135,24 +159,22 @@
     			<div class=column>
     				<p class=month>Feb</p>
     				<p class=date>2.4</p>
-    				<p class=title><a href="https://techcrunch.com/2019/06/18/facebook-libra/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAEBgO0GfuU11sGKfdgoDYKuaKQQ782l0S_q8UZ-3OJAvpuYpc2Gy5EelkNH138CzZfpZtNE8xSlAyyy8WPuOZ8ksyFEiVp93gzX4pvbJCBOcpNO9qnNeVzORkpq_J3D0Or42pLAHyR-OLvz8i2FzXLtkqs35FROWAINirHX_ANwj" target="_blank">FACEBOOK ANNOUNCES LIBRA CRYPTOCURRENCY</a></p>
-    				<p>Facebook launches its Libra Coin today. A decentralized cryptocurrency like Bitcoin, it’s designed to be faster, more stable and accurate. People can pseudonymously buy or cash out your Libra online or at local exchange points like grocery stores, and spend it using interoperable third-party wallet apps or Facebook’s own Calibra wallet that will be built into WhatsApp, Messenger and its own app. </p>
+    				<p class=title><a href="https://techcrunch.com/2019/06/18/facebook-libra/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAEBgO0GfuU11sGKfdgoDYKuaKQQ782l0S_q8UZ-3OJAvpuYpc2Gy5EelkNH138CzZfpZtNE8xSlAyyy8WPuOZ8ksyFEiVp93gzX4pvbJCBOcpNO9qnNeVzORkpq_J3D0Or42pLAHyR-OLvz8i2FzXLtkqs35FROWAINirHX_ANwj" target="_blank">FACEBOOK ANNOUNCES LIBRA CRYPTO&shy;CURRENCY</a></p>
+    				<p>Facebook launches its Libra Coin today. A decentralized crypto&shy;currency like Bitcoin, it’s designed to be faster, more stable and accurate. People can pseudo&shy;nymously buy or cash out your Libra online or at local exchange points like grocery stores, and spend it using interoperable third-party wallet apps or Facebook’s own Calibra wallet app. </p>
 
-    				<p class=date>2.13</p>
-    				<p class=title><a href="https://www.thegoldknight.com/2018/09/oscars-2020-key-dates-announced-92nd-oscars.html" target="_blank">THE 92ND OSCAR ACADEMY AWARD</a></p>
-    				<p>The 92nd Oscar Academy Awards ceremony took place at the Dolby Theatre in Hollywood, Los Angeles, California. “The Report” directed by Scott Z. Burns led the ceremony on Sunday, taking home three awards in the Best Picture, Best Original Screenplay and Best Supporting Actress. And Quentin Tarantino finally won the best director award.</p>
-
-    				<p class=date>2.19</p>
+					<p class=date>2.13</p>
     				<p class=title><a href="https://www.theverge.com/2017/11/8/16613228/uber-flying-car-la-nasa-space-act" target="_blank">UBER’S FLYING TAXI ARRIVE IN LA</a></p>
     				<p>Volocopter reinvents urban mobility: the first flying taxi is released in the market in LA by Uber today, although the average cost is more expensive than an airplane ticket. Holden also said that Uber has signed a Space Act Agreement with NASA to create a brand-new air traffic control system to manage these low-flying, possibly autonomous aircraft. </p>
 
+    				<p class=date>2.19</p>
+    				<p class=title><a href="https://www.thegoldknight.com/2018/09/oscars-2020-key-dates-announced-92nd-oscars.html" target="_blank">THE 92ND OSCAR ACADEMY AWARD</a></p>
+    				<p>The 92nd Oscar Academy Awards ceremony took place at the Dolby Theatre in Hollywood, Los Angeles, California. “The Report” directed by Scott Z. Burns led the ceremony on Sunday, taking home three awards in the Best Picture, Best Original Screenplay and Best Supporting Actress. And Quentin Tarantino finally won the best director award.</p>
+
     				<p class=date>2.24</p>
-    				<p class=title><a href="https://www.npr.org/sections/thetwo-way/2018/04/09/600741594/north-korea-ready-to-talk-about-denuclearization-u-s-officials-say" target="_blank">READY TO TALK ABOUT DENUCLEARIZATION</a></p>
-    				<p>Today in Pyongyang, Trump meets with Kim Jong Un to discuss practical outlines for the denuclearization of North Korea. The two sides have reportedly been working toward a summit between the two leaders by the end of next month following a backchannel offer from Pyongyang to meet and President Trump's surprise acceptance despite having previously denounced Kim as "Little Rocket Man."</p>
-    				<br>
+    				<p class=title><a href="https://www.npr.org/sections/thetwo-way/2018/04/09/600741594/north-korea-ready-to-talk-about-denuclearization-u-s-officials-say" target="_blank">READY TO TALK ABOUT DENUCLEA&shy;RIZATION</a></p>
+    				<p>Today in Pyongyang, Trump met with Kim Jong Un to discuss practical outlines for the denuclearization of North Korea. The two sides had reportedly been working toward a summit by the end of next month following a backchannel offer from Pyongyang to meet and President Trump's surprise acceptance despite having previously denounced Kim as "Little Rocket Man."</p>
     				<br>
     				<p style="text-align: center">❤ ❤ ❤</p>
-    				<br>
     				<br>
     				<br>
     				<br>
@@ -160,25 +182,23 @@
     			</div>
     			<div class=column>
     				<p class=month>Mar</p>
+    				<p class=date>3.18</p>
+    				<p class=title><a href="https://www.businessinsider.com/apple-products-launching-2020-iphone-12-apple-watch-ipad-2019-11" target="_blank">APPLE SPRING RELEASE DAY</a></p>
+    				<p>Today is Apple Spring release date: Apple is releasing its new operating system and new appearances for iMacs. A low-cost version and three models with 5G modems are being released today. Our new iPhone 12 2020 features an all-glass body, the premium 120Hz ProMotion displays, and more powerful size with the 5.8-inch shrinking to 5.4-inches and 6.5-inch Max expanded to 6.7-inches.</p>
+
+					<p class=date>3.28</p>
+    				<p class=title><a href="https://www.cnet.com/news/elon-musk-neuralink-works-monkeys-human-test-brain-computer-interface-in-2020/">HUMAN TEST OF NEURALINK BY ELON MUSK</a></p>
+    				<p>Elon Musk’s Neuralink successfully held its first tests on humans: The goal is to use Neuralink to understand and treat different forms of brain or spine-related disorders. For instance, paralysed humans could use the implanted device to control phones or computers.However Musk also envisions the implant as a means of enhancing your own brain, giving humans the option to achieve a symbiosis with artificial intelligence (AI). This could eventually lead to a future of "superhuman intelligence", according to Musk.</p>
     				<p class=date>3.8</p>
     				<p class=title><a href="https://www.npr.org/sections/thetwo-way/2015/03/04/390672196/for-u-s-children-minorities-will-be-the-majority-by-2020-census-says" target="_blank">MINORITIES ARE BECOMING THE MAJORITIES FOR US CHILDREN</a></p>
     				<p>America is heading toward the day when whites will no longer make up the majority of the population. As we enter 2020, "more than half of the nation's children are expected to be part of a minority race or ethnic group," the Census Bureau says, putting Americans under the age of 18 at the front of a trend that will see the overall population follow suit some 20 years later by around 2044.</p>
-
-    				<p class=date>3.14</p>
-    				<p class=title><a href="https://www.businessinsider.com/apple-products-launching-2020-iphone-12-apple-watch-ipad-2019-11" target="_blank">APPLE SPRING RELEASE DAY</a></p>
-    				<p>Today is Apple Spring release date: Apple is releasing its new operating system and new appearances for iMacs. A low-cost version and three models with 5G modems are being released today. Our new iPhone 12 2020 features an all-glass body, the premium 120Hz ProMotion displays, and more powerful size with the 5.8-inch shrinking to 5.4-inches and 6.5-inch Max expanded to 6.7-inches.</p>
 
     				<p class=date>3.20</p>
     				<p class=title><a href="https://www.theverge.com/2017/7/25/16026236/adobe-flash-end-of-support-2020">ADOBE FINALLY KILLS FLASH</a></p>
     				<p>Chrome, Microsoft Edge, and Safari have all been blocking Flash over the year 2016, but Adobe today finally announces to remove support for it fully by the end of this month. “We will stop updating and distributing the Flash Player at the end of this month and encourage content creators to migrate any existing Flash content to these new open formats,” explains an Adobe spokesperson.</p>
 
-    				<p class=date>3.28</p>
-    				<p class=title><a href="https://www.cnet.com/news/elon-musk-neuralink-works-monkeys-human-test-brain-computer-interface-in-2020/">HUMAN TEST OF NEURALINK BY ELON MUSK</a></p>
-    				<p>Elon Musk’s Neuralink successfully held its first tests on humans: The goal is to use Neuralink to understand and treat different forms of brain or spine-related disorders. For instance, paralysed humans could use the implanted device to control phones or computers.However Musk also envisions the implant as a means of enhancing your own brain, giving humans the option to achieve a symbiosis with artificial intelligence (AI). This could eventually lead to a future of "superhuman intelligence", according to Musk.</p>
-    				<br>
     				<br>
     				<p style="text-align: center">❤ ❤ ❤</p>
-    				<br>
     				<br>
     				<br>
     				<br>
@@ -186,7 +206,7 @@
     			</div>
     			<div class=column>
     				<p class=month>Apr</p>
-    				<p class=date>4.1</p>
+    				<p class=date>4.3</p>
     				<p class=title><a href="https://www.informationweek.com/mobile/mobile-devices/gartner-21-billion-iot-devices-to-invade-by-2020/d/d-id/1323081">21 BILLION IOT DEVICES INVADE</a></p>
     				<p>Including consumer devices, the Gartner report states that the IoT devices are encompassing more than 20.8 billion connected objects in use so far. A report released earlier this year by IDC states that the worldwide IoT market has grown from $655.8 billion in 2014 to $1.7 trillion this year with a compound annual growth rate (CAGR) of 16.9%, led by devices, connectivity, and IT services.</p>
 
@@ -202,9 +222,7 @@
     				<p class=title><a href="https://www.theguardian.com/environment/2019/dec/25/2020-set-to-be-year-of-the-electric-car-say-industry-analysts">THE YEAR OF THE ELECTRIC CARS</a></p>
     				<p>This year has seen the launch of flagship electric models with familiar names including Mini, the Vauxhall Corsa and the Fiat 500. The UK EV sales has risen from 3.4% of all vehicles sold in 2019 to 5.5% this year. The number of electric vehicle (EV) models available to European buyers will jump from fewer than 100 to 175 by the end of this year, according to data firm IHS Markit.</p>
     				<br>
-    				<br>
     				<p style="text-align: center">❤ ❤ ❤</p>
-    				<br>
     				<br>
     				<br>
     				<br>
@@ -228,9 +246,7 @@
     				<p class=title><a href="https://internetofbusiness.com/robots-japan-social-care/">ROBOTS TRANSFORMS JAPAN’S SOCIAL CARE</a></p>
     				<p>The first nursing home with full AI robot automatization is now in the market in Japan. According to Dr Hirohisa Hirukawa, director of robot innovation research at Japan’s National Institute of Advanced Industrial Science and Technology, four out of every five care recipients are having some form of robotic support, such as lifting people in care facilities and other all-around helpers.</p>
     				<br>
-    				<br>
     				<p style="text-align: center">❤ ❤ ❤</p>
-    				<br>
     				<br>
     				<br>
     				<br>
@@ -240,11 +256,11 @@
     				<p class=month>Jun</p>
     				<p class=date>6.1</p>
     				<p class=title><a href="https://news.un.org/en/story/2015/09/507762-gaza-could-become-uninhabitable-less-five-years-due-ongoing-de-development-un">GAZA IS BECOMING UNINHABITABLE</a></p>
-    				<p>A new report published by the United Nations Conference on Trade and Development on assistance to the Palestinian people states that the Gaza Strip is beoming “uninhabitable” due to the current economic trends. In addition to eight years of economic blockade, over the past six years, Gaza has endured three military operations that have shattered its ability to export and produce for the domestic market, ravaged its already debilitated infrastructure, and left no time for reconstruction and economic recovery.</p>
+    				<p>A new report published by the United Nations Conference states that the Gaza Strip is beoming “uninhabitable” due to the current economic trends. In addition to eight years of economic blockade, over the past six years, Gaza has endured three military operations that have shattered its ability to export and produce for the domestic market, ravaged its already debilitated infrastructure, and left no time for reconstruction.</p>
 
     				<p class=date>6.10</p>
     				<p class=title><a href="https://www.washingtonpost.com/politics/democrats-announce-a-dozen-2020-presidential-debates-starting-in-june/2018/12/20/effcf2e4-046a-11e9-9122-82e98f91ee6f_story.html">DEMOCRATS HOLD FIRST PRESIDENTIAL DEBATE</a></p>
-    				<p>Today the democratic presidential candidates meet for the first of at least 12 planned primary debates of the 2020 election cycle. The stark ideological divide within the Democratic Party was on full display during the debate, as the conservatives, moderates and progressives fought over the ideological future of the party. At the center of the back-and-forth was the question that has bedeviled the party since 2016: Will nominating a progressive from the far left energize enough voters? Or would doing so demolish their hopes by alienating the centrist voters for Trump?</p>
+    				<p>Today the democratic presidential candidates meet for the first of at least 12 planned primary debates of the 2020 election cycle. The stark ideological divide within the Democratic Party was on full display during the debate, as the conservatives, moderates and progressives fought over the ideological future of the party. At the center of the back-and-forth was the question that has bedeviled the party since 2016: Will nominating a progressive from the far left energize enough voters?</p>
 
     				<p class=date>6.12</p>
     				<p class=title><a href="https://www.macworld.co.uk/news/apple/apple-car-3425394/">APPLE iCAR RELEASE DATE</a></p>
@@ -254,9 +270,7 @@
     				<p class=title><a href="https://scroll.in/announcements/947905/solar-eclipse-2020-the-coming-year-will-see-six-eclipses-check-dates-and-time-in-india">FULL DAY ELLIPSE</a></p>
     				<p>Areas including the Republic of Congo, the Democratic Republic of Congo, Sudan, Ethiopia, Yemen, India and China (Xizang, Sichuan, Chongqing, Guizhou, Hunan, Xi’an, Fujian and Taiwan) all witnessed the day eclipse today. The magnitude of the eclipse reached 0.994 in Northern India and the borderland area of China. The width of the ellipse band is also the narrowest here and reaches 21 kilometers. It’s the most full day eclipse ever witnessed in China in the 21st century.</p>
     				<br>
-    				<br>
     				<p style="text-align: center">❤ ❤ ❤</p>
-    				<br>
     				<br>
     				<br>
     				<br>
@@ -266,7 +280,7 @@
     				<p class=month>Jul</p>
     				<p class=date>7.10</p>
     				<p class=title><a href="https://www.technologyreview.com/2019/12/31/131052/the-seven-most-exciting-space-missions-of-2020/">FOUR MARS MISSIONS</a></p>
-    				<p>Four different missions are sending new spacecraft to the Red Planet this month: the biggest is NASA’s Mars 2020 rover. China has its own rover, called Huoxing-1, going up to study the Martian terrain and atmosphere for 90 days. ESA and Roscosmos are teaming up to launch Rosalind Franklin. And lastly, the UAE is going to send out an orbiter, the Hope Mars Mission.</p>
+    				<p>Four different missions are sending new spacecraft to the Red Planet this month: the biggest is NASA’s Mars 2020 rover. China has its own rover, called Huoxing-1, going up to study the Martian terrain for 90 days. ESA and Roscosmos are teaming up to launch Rosalind Franklin. And lastly, the UAE is going to send out an orbiter, the Hope Mars Mission.</p>
 
     				<p class=date>7.12</p>
     				<p class=title><a href="https://www.nytimes.com/2019/10/01/travel/the-tokyo-2020-olympics-what-you-need-to-know.html">TOKYO OLYMPICS OPENING</a></p>
@@ -278,11 +292,9 @@
 
     				<p class=date>7.24</p>
     				<p class=title><a href="https://edition.cnn.com/travel/article/tokyo-olympics-2020/index.html">HIGHLIGHT OF 2020 TOKYO OLYMPICS HIGH-TECH</a></p>
-    				<p>Toyota’s robot in the Olympics : Anyone can guess that the robot will play a very important role in the 2020 Tokyo Olympics. As one of the representatives of local manufacturers, Toyota has announced new products for the event. One of the most interesting is the Field Support Robot in the above picture. It looks a lot like a small e-Palette, which is used to transport javelin, shot put and other game equipment in the throwing game. Of course, the actual action of picking up the appliance is still done by people, but the presence of the robot can help reduce the manpower on the field.</p>
-    				<br>
+    				<p>As one of the representatives of local manufacturers, Toyota has announced new products for the event. One of the most interesting is the Field Support Robot in the above picture. It looks a lot like a small e-Palette, which is used to transport javelin, shot put and other game equipment in the throwing game. Of course, the actual action of picking up the appliance is still done by people, but the presence of the robot can help reduce the manpower on the field.</p>
     				<br>
     				<p style="text-align: center">❤ ❤ ❤</p>
-    				<br>
     				<br>
     				<br>
     				<br>
@@ -290,26 +302,25 @@
     			</div>
     			<div class=column>
     				<p class=month>Aug</p>
-    				<p class=date>8.8</p>
-    				<p class=title><a href="https://www.technologyreview.com/2019/12/31/131052/the-seven-most-exciting-space-missions-of-2020/">CHANG’E 5</a></p>
-    				<p>Today, Chang’e 5, which is China’s most audacious lunar mission so far, is launched into the extraterrestrial world. A lander will attempt to collect nearly 4.5 pounds of moon rocks and dust from the western edge of the near side of the moon. If successful, it will be the first lunar sample return since the Soviet Union’s 1976 Luna 24 mission.
-					</p>
+
+					<p class=date>8.8</p>
+					<p class=title><a href="https://techcrunch.com/2019/04/22/tesla-plans-to-launch-a-robotaxi-network-in-2020/">TESLA LAUNCHES ROBOTAXI NETWORK</a></p>
+					<p>Today Tesla launches its first robotaxis as part of a broader vision for an autonomous ride-sharing network. Tesla will enable owners to add their properly equipped vehicles to its own ride-sharing app, which will have a similar business model to Uber or Airbnb. Tesla will take 25 percent to 30 percent of the revenue. In places where there aren’t enough people to share their cars, Tesla would provide a dedicated fleet of robotaxis.</p>
 
 					<p class=date>8.13</p>
-					<p class=title><a href="https://techcrunch.com/2019/04/22/tesla-plans-to-launch-a-robotaxi-network-in-2020/">TESLA LAUNCHES ROBOTAXI NETWORK</a></p>
-					<p>Today Tesla launches its first robotaxis as part of a broader vision for an autonomous ride-sharing network, CEO Elon Musk said during the company’s Autonomy Day. Tesla will enable owners to add their properly equipped vehicles to its own ride-sharing app, which will have a similar business model to Uber  or Airbnb . Tesla will take 25 percent to 30 percent of the revenue from those rides, Musk said. In places where there aren’t enough people to share their cars, Tesla would provide a dedicated fleet of robotaxis.</p>
-
-					<p class=date>8.19</p>
 					<p class=title><a href="https://www.sciencemag.org/news/2019/11/brazil-s-deforestation-exploding-and-2020-will-be-worse">BRAZIL’S DEFORESTATION IS EXPLODING</a></p>
 					<p>Development, most of it illegal, destroyed more than 9700 square kilometers of Brazilian Amazon rainforest in the year ending in July, according to a government estimate released on Monday—an increase of 30% from the previous year and the highest rate of deforestation since 2007–08.</p>
 
-					<p class=date>8.25</p>
+					<p class=date>8.19</p>
 					<p class=title><a href="https://www.reuters.com/article/us-china-energy-renewables-idUSKBN14P06P">CHINA PLOWS $361 BILLION INTO RENEWABLE FUEL</a></p>
-					<p>China has plowed 2.5 trillion yuan ($361 billion) into renewable power generation by 2020, the country’s energy agency said on Thursday, as the world’s largest energy market continues to shift away from dirty coal power towards cleaner fuels. The NEA said installed renewable power capacity including wind, hydro, solar and nuclear power is contributing to about half of new electricity generation.</p>
-					<br>
+					<p>China has plowed $361 billion into renewable power generation by 2020, the country’s energy agency said on Thursday, as the world’s largest energy market continues to shift away from dirty coal power towards cleaner fuels. The NEA said installed renewable power capacity including wind, hydro, solar and nuclear power is contributing to about half of new electricity generation.</p>
+
+					<p class=date>8.25</p>
+    				<p class=title><a href="https://www.technologyreview.com/2019/12/31/131052/the-seven-most-exciting-space-missions-of-2020/">CHANG’E 5</a></p>
+    				<p>Today, Chang’e 5, which is China’s most audacious lunar mission so far, is launched into the extraterrestrial world. A lander will attempt to collect nearly 4.5 pounds of moon rocks and dust from the western edge of the near side of the moon. If successful, it will be the first lunar sample return since the Soviet Union’s 1976 Luna 24 mission.
+					</p>
 					<br>
     				<p style="text-align: center">❤ ❤ ❤</p>
-    				<br>
     				<br>
     				<br>
     				<br>
@@ -333,9 +344,7 @@
     				<p class=title><a href="https://www.computerworld.com/article/2502348/it-jobs-will-grow-22--through-2020--says-u-s-.html">IT JOBS GROW 22%</a></p>
     				<p>U.S. officials today said that offshoring will hurt the growth of U.S. programming jobs in this decade, though expansion of healthcare IT and mobile networks will in turn increase demand for software developers, support technicians and systems analysts. Employment in all computer occupations increases by 22%, but some IT fields will fare better than others, according to the U.S.</p>
     				<br>
-    				<br>
     				<p style="text-align: center">❤ ❤ ❤</p>
-    				<br>
     				<br>
     				<br>
     				<br>
@@ -345,7 +354,7 @@
     				<p class=month>Oct</p>
     				<p class=date>10.3</p>
     				<p class=title><a href="https://asia.nikkei.com/Business/China-tech/China-decouples-from-US-in-space-with-2020-GPS-completion">CHINA DECOUPLES FROM US IN SPACE WITH GPS COMPLETION</a></p>
-    				<p>The China Aerospace Agency announces that the Beidou Global Navigation system now officially launches 50 navigation satellites and that the global networking system is nearly finished. According to the tests, the navigation accuracy now reaches 1cm.</p>
+    				<p>The China Aerospace Agency announces that the Beidou Global Navigation system now officially launches 50 navigation satellites and the global networking system is nearly finished. The navigation accuracy now reaches 1cm.</p>
 
     				<p class=date>10.9</p>
     				<p class=title><a href="https://www.reuters.com/article/us-brazil-environment-raoni-idUSKBN1VZ0FH">NOBEL PRIZE ANNOUNCEMENTS</a></p>
@@ -353,15 +362,13 @@
 
     				<p class=date>10.20</p>
     				<p class=title><a href="https://www.forbes.com/sites/paullamkin/2016/02/17/wearable-tech-market-to-be-worth-34-billion-by-2020/">WEARABLE TECH MARKET REACHES $34 BILLION</a></p>
-    				<p>Ben Wood, chief of research at CCS Insight, commented, "Given the rising consumer apathy toward smartphones, it is little wonder so many companies are chasing the rapidly growing opportunity presented by wearables.” 96 million VR headset have been shipped this year, and the Oculus Rift, PlayStation VR and the HTC Vive continue to dominate the market.</p>
+    				<p>Ben Wood, chief of research at CCS Insight, commented, "Given the rising consumer apathy toward smartphones, it is little wonder so many companies are chasing the growing opportunity presented by wearables.” 96 million VR headset have been shipped this year, and the Oculus Rift, PlayStation and the HTC Vive continue to dominate the market.</p>
 
     				<p class=date>10.23</p>
     				<p class=title><a href="https://www.theguardian.com/business/2019/sep/25/global-recession-a-serious-danger-in-2020-says-un">SIGN FOR A GLOBAL RECESSION</a></p>
     				<p>Weaker growth in both advanced and developing countries shows signs for a global recession this year, the UN has warned. In a flagship report, the UN’s trade and development body, Unctad, said 2020 is enduring the weakest expansion in a decade and there was a risk of the slowdown turning into outright contraction next year. Report calls on policymakers to ward off threat by refocusing on jobs, wages and investment.</p>
     				<br>
-    				<br>
     				<p style="text-align: center">❤ ❤ ❤</p>
-    				<br>
     				<br>
     				<br>
     				<br>
@@ -371,7 +378,7 @@
     				<p class=month>Nov</p>
     				<p class=date>11.6</p>
     				<p class=title><a href="https://www.technologyreview.com/2019/12/31/131052/the-seven-most-exciting-space-missions-of-2020/">ARTEMIS 1</a></p>
-    				<p>Formerly called Exploration Mission-1, Artemis 1 today became the first flight of the Space Launch System of the NASA mission, which is so far the most powerful rocket in the world. It is planned that Orian, which is meant to one day take astronauts to the moon and possibly to Mars, will spend approximately three weeks in space. Fair warning: there is a significantly good chance the mission will slip into 2021.</p>
+    				<p>Formerly called Exploration Mission-1, Artemis 1 today became the first flight of the Space Launch System of the NASA mission, which is so far the most powerful rocket in the world. It is planned that Orian, which is meant to one day take astronauts to the moon and possibly to Mars, will spend approximately three weeks in space. There is a significantly good chance the mission will slip into 2021.</p>
 
     				<p class=date>11.9</p>
     				<p class=title><a href="https://www.vox.com/2019/6/26/18693259/2020-presidential-election-calendar-primaries">2020 US ELECTION</a></p>
@@ -385,9 +392,7 @@
     				<p class=title><a href="https://www.nasaspaceflight.com/2019/12/spacex-record-breaking-2020-manifest/">SPACEX’S FIRST ORBITAL STARSHIP FLIGHT</a></p>
     				<p>SpaceX’s first Orbital Starship made its flight debut this noon at 11:00a.m. (CT) in the Kennedy Space Center, Florida. Still under development, the Starship could see its first commercial flight as early as 2021. This is the ambitious first step in Musk’s Mars Plan: sending two unmanned Starships with cargo, before sending two further unmanned ships and two manned ships around two years after. Musk said the company could develop a self-sustaining city on Mars by 2050.</p>
     				<br>
-    				<br>
     				<p style="text-align: center">❤ ❤ ❤</p>
-    				<br>
     				<br>
     				<br>
     				<br>
@@ -411,9 +416,7 @@
     				<p class=title><a href="https://www.techtimes.com/articles/144405/20160326/faa-predicts-drones-will-number-7-million-by-2020.htm">DRONES AND FAA ACTION</a></p>
     				<p>Weary passengers await announcements at the Sheremetyevo International Airport after its runway closed just after 21:00 on 28 December when two drones were spotted flying over the perimeter fence and into the airfield. It did not reopen until Wednesday morning. Thousands of people’s flights were cancelled because of what police called “a deliberate act to disrupt the airport”.</p>
     				<br>
-    				<br>
     				<p style="text-align: center">❤ ❤ ❤</p>
-    				<br>
     				<br>
     				<br>
     				<br>
