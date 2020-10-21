@@ -19,11 +19,6 @@
                 background-size: cover;
                 background-attachment: fixed;
             }
-            ::-webkit-scrollbar {
-            width: 0px;  /* Remove scrollbar space */
-            height: 0px;
-            background: transparent;  /* Optional: just make scrollbar invisible */
-            }
             html{
                 font-size: 20px; /*https://www.cnblogs.com/shireyhu/p/7832124.html*/
             }
@@ -75,17 +70,43 @@
         	}
             #header{
                 position: fixed;
+                padding-left: 5%;
+                padding-right: 8%;
                 height: 90px;
                 left: 0px;
                 right: 0px;
                 top: 0px;
                 z-index: 20;
+                display: flex;
+                flex-direction: row;
+            }
+            .headerbackground{
+                padding-left: 0rem;
+                position: fixed;
+            }
+            .headertext{
+                z-index: 30;
+                margin-left: 2.3rem;
+                font-family: roboto;
+                margin-top: 0.6rem;
+                font-size: 0.8rem;
+                line-height: 1rem;
+                letter-spacing: -0.15px;
+                color: rgb(30, 30, 30);
+            }
+            .headercss{
+                background: rgb(255, 255, 255);
+                color: rgb(0, 0, 0);
+            }
+            .headercss:hover{
+                background: rgb(255, 255, 255);
+                color: rgb(0, 0, 0);
             }
             #content{
                 margin-top: 90px; /*leave space for header*/
                 width: 100vw;
-                padding-left: 13%;
-                padding-right: 12%;
+                padding-left: 15%;
+                padding-right: 13%;
             }
             #title{
                 padding-top: 6rem;
@@ -125,7 +146,11 @@
     </head>
     <body><!--all the contents of an HTML document goes here-->
         <div id=header>
-            <img src="img/headerbackground.png">
+            <!--<img class=headerbackground src="img/headerbackground.png">-->
+            <p class=headertext id=calendar><a href="calendar.html" class=headercss>With the Future Behind Us</a></p>
+            <p class=headertext>Post-Vision 2020</p>
+            <p class=headertext id=worldbuilding><a href="worldbuilding.html" class=headercss>Worldbuilding as a Daily Practice</a></p>
+            <p class=headertext>About</p>
     	</div>
     	<div id=content>
     		<div>
