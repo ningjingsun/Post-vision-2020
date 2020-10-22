@@ -6,18 +6,22 @@
         <title></title><!--declaring the title, or name, of the HTML document. displayed in the browser's title bar-->
         <meta name="description" content=""><!--keywords/snippet for search engines-->
         <meta name="viewport" content="width=device-width"><!--the browser will (probably) render the width of the page at the width of its own screen -->
+        <link rel="stylesheet" type="text/css" href="style.css">
         <style>
 			*{
                 margin: 0; /*cancels out browser-default margins*/
                 padding: 0;
-                box-sizing: border-box; /*border-box include any padding into the element's content*/
-                cursor: url(img/cursor.png) 64 64, auto;
+                box-sizing: border-box; /*border-box include any padding into the element's content*/   
             }
             body{
                 background-image: url("img/background.png");
                 background-position: center;
                 background-size: cover;
+                cursor: url(img/cursor.png) 36 36, auto;
             }
+            /*a:hover{
+                cursor: url(img/cursor.png) 32 32, auto;
+            }*/
             ::-webkit-scrollbar {
    			width: 0px;  /* Remove scrollbar space */
    			height: 0px;
@@ -42,26 +46,19 @@
         		letter-spacing: -0.15px;
         		color: rgb(30, 30, 30);
         	}
-        	#header{
-        		position: fixed;
-                padding-left: 5%;
-                padding-right: 8%;
-        		height: 90px;
-        		left: 0px;
-        		right: 0px;
-        		top: 0px;
-        		z-index: 20;
+
+            .nav-left{
                 display: flex;
-                flex-direction: row;
-        	}
+            }
             .headerbackground{
                 padding-left: 0rem;
                 position: fixed;
             }
             .headertext{
-                z-index: 30;
+           /*     z-index: 30;*/
                 margin-left: 2.3rem;
             }
+
             .headercss{
                 background: rgb(255, 255, 255);
                 color: rgb(0, 0, 0);
@@ -138,10 +135,12 @@
     </head>
     <body><!--all the contents of an HTML document goes here-->
     	<div id=header>
-            <img class=headerbackground src="img/headerbackground.png">
-            <p class=headertext id=calendar><a href="calendar.html" class=headercss>With the Future Behind Us</a></p>
-            <p class=headertext>Post-Vision 2020</p>
-            <p class=headertext id=worldbuilding><a href="worldbuilding.html" class=headercss>Worldbuilding as a Daily Practice</a></p>
+        <!--     <img class=headerbackground src="img/headerbackground.png"> -->
+            <div class="nav-left">
+                <p class=headertext id=calendar><a href="calendar.html" class=headercss>With the Future Behind Us</a></p>
+                <p class=headertext>Post-Vision 2020</p>
+                <p class=headertext id=worldbuilding><a href="worldbuilding.html" class=headercss>Worldbuilding as a Daily Practice</a></p>
+            </div>
             <p class=headertext>About</p>
     	</div>
     	<div id=content>
