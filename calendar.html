@@ -8,22 +8,6 @@
         <meta name="viewport" content="width=device-width"><!--the browser will (probably) render the width of the page at the width of its own screen -->
         <link rel="stylesheet" type="text/css" href="style.css">
         <style>
-			*{
-                margin: 0; /*cancels out browser-default margins*/
-                padding: 0;
-                box-sizing: border-box; /*border-box include any padding into the element's content*/   
-            }
-            ::-webkit-scrollbar {
-            width: 0px;  /* Remove scrollbar space */
-            height: 0px;
-            background: transparent;  /* Optional: just make scrollbar invisible */
-            }
-            body{
-                background-image: url("img/background.png");
-                background-position: center;
-                background-size: cover;
-                cursor: url(img/cursor.png) 36 36, auto;
-            }
             @font-face {
                 font-family: mplus;
                 font-style: normal;
@@ -34,39 +18,25 @@
                 font-style: normal;
                 src: url(fonts/Arial Narrow.ttf);
             }
-            <link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@500&display=swap" rel="stylesheet">
-            @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
-            /*a:hover{
-                cursor: url(img/cursor.png) 32 32, auto;
-            }*/
-            ::-webkit-scrollbar {
-   			width: 0px;  /* Remove scrollbar space */
-   			height: 0px;
-    		background: transparent;  /* Optional: just make scrollbar invisible */
-			}
-        	html{
-                font-size: 20px; /*https://www.cnblogs.com/shireyhu/p/7832124.html*/
-            }
         	a{
         		color: rgb(30, 30, 30);
-                /*background-color: rgb(0, 0, 20, 15%);*/
+                background-color: rgb(0, 0, 20, 15%);
         	}
             a:hover{
                 color: rgb(255, 255, 255);
-                background-color: rgb(0, 0, 0);
+                background-color: rgb(20, 60, 255);
             }
             p{
         		font-family: mplus;
                 font-style: normal;
         		margin-top: 0.6rem;
-        		font-size: 0.9rem;
-        		line-height: 1.2rem;
-        		letter-spacing: -0.2px;
+        		font-size: 0.8rem;
+        		line-height: 1.16rem;
+        		letter-spacing: -0.45px;
         	}
-
-            .nav-left{
+            /*.nav-left{
                 display: flex;
-            }
+            }*/
             .headerbackground{
                 padding-left: 0rem;
                 position: fixed;
@@ -76,17 +46,18 @@
                 font-size: 1.2rem;
                 letter-spacing: -0.05px;
                 z-index: 30;
-           /*     z-index: 30;*/
                 margin-left: 2.3rem;
             }
-
             .headercss{
                 background: rgb(255, 255, 255);
                 color: rgb(0, 0, 0);
             }
             .headercss:hover{
-                background: rgb(255, 255, 255);
-                color: rgb(0, 0, 0);
+                background: rgb(0, 0, 0);
+                color: rgb(255, 255, 255);
+            }
+            #header{
+                /*background-color: rgb(50, 50, 50);*/
             }
         	#content{
         		margin-top: 90px; /*leave space for header*/
@@ -123,10 +94,6 @@
         		/*margin-right: 9%;
         		margin-bottom: -10%;*/
         	}
-        	/*.column:hover{
-        		/*background-color: rgb(252, 253, 125);
-        		background-color: rgb(240, 240, 240);
-        	}*/
         	.month{
         		/*font-size: 44pt;
         		line-height: 48pt;
@@ -136,15 +103,15 @@
         		color: rgb(40, 40, 40);
                 font-family: arialnarrow;
                 margin-top: 1.2rem;
-                padding-bottom: 1rem;
-        		font-size: 1.9rem;
+                padding-bottom: 2rem;
+        		font-size: 1.8rem;
         		line-height: 1.2;
         		letter-spacing: -0.02em;
         	}
         	.date{
                 font-family: arialnarrow;
                 color: rgb(40, 40, 40);
-        		margin-bottom: 1.3rem;
+        		margin-bottom: 1.4rem;
         		margin-top: 2.8rem;
         		font-size:2.7rem;
         		line-height: 1.8rem;
@@ -152,25 +119,25 @@
         	}
         	.title{
                 font-family: arialnarrow;
-        		margin-bottom: 1.2rem;
-        		font-size: 1.4rem;
-        		line-height: 1.9rem;
+        		margin-bottom: 0.9rem;
+        		font-size: 1.2rem;
+        		line-height: 1.7rem;
         		letter-spacing: -0.05px;
         	}
         </style>
     </head>
     <body><!--all the contents of an HTML document goes here-->
     	<div id=header>
-            <p class=headertext id=calendar><a href="calendar.html" class=headercss>With the Future Behind Us</a></p>
+            <p class=headertext><a href="calendar.html" class=headercss>With the Future Behind Us</a></p>
             <p class=headertext>Post-Vision 2020</p>
-            <p class=headertext id=worldbuilding><a href="worldbuilding.html" class=headercss>Worldbuilding as a Daily Practice</a></p>
+            <p class=headertext><a href="worldbuilding.html" class=headercss>Worldbuilding as a Daily Practice</a></p>
         <!--     <img class=headerbackground src="img/headerbackground.png"> -->
-            <div class="nav-left">
+            <!--<div class="nav-left">
                 <p class=headertext id=calendar><a href="calendar.html" class=headercss>With the Future Behind Us</a></p>
                 <p class=headertext>Post-Vision 2020</p>
                 <p class=headertext id=worldbuilding><a href="worldbuilding.html" class=headercss>Worldbuilding as a Daily Practice</a></p>
-            </div>
-            <p class=headertext>About</p>
+            </div>-->
+            <p class=headertext>????</p>
     	</div>
     	<div id=content>
     		<div id=flex>
@@ -218,13 +185,14 @@
     			<div class=column>
     				<p class=month>Mar</p>
     				<p class=date>3.8</p>
-    				<p class=title><a href="https://www.cnet.com/news/elon-musk-neuralink-works-monkeys-human-test-brain-computer-interface-in-2020/">HUMAN TEST OF NEURALINK BY ELON MUSK</a></p>
+    				<p class=title><a href="https://www.cnet.com/news/elon-musk-neuralink-works-monkeys-human-test-brain-computer-interface-in-2020/">HUMAN TEST OF ELON MUSK'S NEURALINK</a></p>
     				<img class=pic src="img/Mar.jpg" style="width:14rem">
-    				<p>Elon Musk’s Neuralink successfully held its first tests on humans: The goal is to use Neuralink to understand and treat different forms of brain or spine-related disorders. Paralysed humans could use the implanted device to control phones or computers. However Musk also envisions the implant as a means of enhancing your own brain, giving humans the option to achieve a symbiosis with AI, leading to a future of "superhuman intelligence".</p>
+    				<p>Elon Musk’s Neuralink successfully held its first tests on humans: The goal is to use Neuralink to understand and treat different forms of brain or spine-related disorders. Paralysed humans could use the implanted device to control phones or computers as a means of enhancing your own brain, giving humans the option to achieve a symbiosis with AI, leading to a future of "superhuman intelligence".</p>
 
 					<p class=date>3.12</p>
     				<p class=title><a href="https://www.businessinsider.com/apple-products-launching-2020-iphone-12-apple-watch-ipad-2019-11" target="_blank">APPLE SPRING RELEASE DAY</a></p>
     				<p>Apple is releasing its new operating system and new appearances for iMacs today. A low-cost version and three models with 5G modems are being released. Our new iPhone 12 features an all-glass body, the premium 120Hz ProMotion displays, and more powerful size with the 5.8-inch shrinking to 5.4-inches and 6.5-inch Max expanded to 6.7-inches.</p>
+
     				<p class=date>3.20</p>
     				<p class=title><a href="https://www.theverge.com/2017/7/25/16026236/adobe-flash-end-of-support-2020">ADOBE FINALLY KILLS FLASH</a></p>
     				<p>Chrome, Microsoft Edge, and Safari have all been blocking Flash over the year 2016, but Adobe today finally announces to remove support for it fully by the end of this month. “We will stop updating and distributing the Flash Player at the end of this month and encourage content creators to migrate any existing Flash content to these new open formats,” explains an Adobe spokesperson.</p>
@@ -266,7 +234,7 @@
     				<p class=title><a href="https://www.totaltele.com/503659/Huawei-will-ship-over-2-million-5G-base-stations-by-2020-regardless-of-US-interference">HUAWEI SHIPS OVER 2 MILLION 5G BASE STATIONS</a></p>
     				<p>The race for speed is on, and Huawei became the first company to release 5G phones and update the 5G services on their phones. According to Huawei, 5G could “support 1,000-fold gains in capacity, connections for at least 100 billion devices and a 10 Gb/s individual user experience capability of extremely low latency and response times.” The overall 5G market is estimated to reach USD 31.7 billion by 2026, at a CAGR of 54.4%.</p>
 
-    				<p class=date>5.29</p>
+    				<p class=date>5.27</p>
     				<p class=title><a href="https://internetofbusiness.com/robots-japan-social-care/">ROBOTS TRANSFORMS JAPAN’S SOCIAL CARE</a></p>
     				<p>The first nursing home with full AI robot automatization is now in the market in Japan. According to Dr Hirohisa Hirukawa, director of robot innovation research at Japan’s National Institute of Advanced Industrial Science and Technology, four out of every five care recipients are having some form of robotic support, such as lifting people in care facilities and other all-around helpers.</p>
     				<br>
