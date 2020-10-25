@@ -10,10 +10,32 @@
     z-index: 20;
     display: flex;
     flex-direction: row;
-    background: url('img/headerbackground.png');
     background-size: 100% 90px;
+    background-image: linear-gradient(to bottom, 
+        rgba(255, 255, 25),
+        rgba(195,195,195) 15%, 
+        rgba(220, 220, 220) 35%,
+        rgba(255,255,255, 0%) 90%);
     justify-content: space-between;
-
+}
+*{
+    margin: 0; /*cancels out browser-default margins*/
+    padding: 0;
+    box-sizing: border-box; /*border-box include any padding into the element's content*/   
+}
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    height: 0px;
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+body{
+    background-image: url("img/background.png");
+    background-position: center;
+    background-size: cover;
+    cursor: url(img/cursor.png) 36 36, auto;
+}
+html{
+    font-size: 20px; /*https://www.cnblogs.com/shireyhu/p/7832124.html*/
 }
 #header a{
     text-decoration: none;
