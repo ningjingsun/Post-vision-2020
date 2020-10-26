@@ -45,20 +45,33 @@
                 font-family: arialnarrow;
                 font-size: 1.2rem;
                 letter-spacing: -0.05px;
-                z-index: 30;
-                margin-left: 2.3rem;
+                z-index: 50;
+                margin-left: 2rem;
             }
             .headercss{
-                background: rgb(255, 255, 255);
+                background-color: rgb(255, 255, 255);
                 color: rgb(0, 0, 0);
             }
             .headercss:hover{
                 background: rgb(0, 0, 0);
                 color: rgb(255, 255, 255);
             }
-            #header{
-                /*background-color: rgb(50, 50, 50);*/
+
+            .collophon{
+                background: red;
+                height: 0px;
+                width: auto;
+                z-index: 50;
+                padding: 0px;
+                transition: 0.5s all;
+                overflow: hidden;
             }
+            .collophon_open{
+                width: 100vw;
+                height: 300px;
+                transition: 1s all;
+            }
+
         	#content{
         		margin-top: 90px; /*leave space for header*/
         		width: 100vw;
@@ -71,10 +84,6 @@
         		flex-wrap: nowrap;
         		padding-left: 5%;
         		padding-right: 8%;
-                /*padding-left:10%;
-                padding-right:12%;
-                margin-bottom: 0px;
-                padding-bottom: 0%;*/
         	}
             .pic{
                 z-index: 10;
@@ -90,19 +99,11 @@
         		padding-bottom: 0;
         		min-width: 330px;
         		width: 330px;
-        		/*max-height: 100vh;*/
-        		/*margin-right: 9%;
-        		margin-bottom: -10%;*/
         	}
         	.month{
-        		/*font-size: 44pt;
-        		line-height: 48pt;
-        		letter-spacing: -1.2px;
-        		padding-top: 220px;
-        		margin-bottom: 0px;*/
         		color: rgb(40, 40, 40);
                 font-family: arialnarrow;
-                margin-top: 1.2rem;
+                margin-top: 1.1rem;
                 padding-bottom: 2rem;
         		font-size: 1.8rem;
         		line-height: 1.2;
@@ -112,32 +113,30 @@
                 font-family: arialnarrow;
                 color: rgb(40, 40, 40);
         		margin-bottom: 1.4rem;
-        		margin-top: 2.8rem;
+        		margin-top: 2.2rem;
         		font-size:2.7rem;
         		line-height: 1.8rem;
         		letter-spacing: -0.05em;
         	}
         	.title{
                 font-family: arialnarrow;
-        		margin-bottom: 0.9rem;
+        		margin-bottom: 0.6rem;
         		font-size: 1.2rem;
         		line-height: 1.7rem;
         		letter-spacing: -0.05px;
         	}
         </style>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="jquery-3.5.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body><!--all the contents of an HTML document goes here-->
     	<div id=header>
-            <p class=headertext><a href="calendar.html" class=headercss>With the Future Behind Us</a></p>
-            <p class=headertext>Post-Vision 2020</p>
-            <p class=headertext><a href="worldbuilding.html" class=headercss>Worldbuilding as a Daily Practice</a></p>
-        <!--     <img class=headerbackground src="img/headerbackground.png"> -->
-            <!--<div class="nav-left">
-                <p class=headertext id=calendar><a href="calendar.html" class=headercss>With the Future Behind Us</a></p>
-                <p class=headertext>Post-Vision 2020</p>
-                <p class=headertext id=worldbuilding><a href="worldbuilding.html" class=headercss>Worldbuilding as a Daily Practice</a></p>
-            </div>-->
-            <p class=headertext>????</p>
+            <p class="headertext"><a href="calendar.html" class=headercss>With the Future Behind Us</a></p>
+            <p class="headertext">Post-Vision 2020</p>
+            <p class="headertext"><a href="worldbuilding.html" class=headercss>Worldbuilding as a Daily Practice</a></p>
+            <p class="headertext about">????</p>
     	</div>
     	<div id=content>
     		<div id=flex>
@@ -146,7 +145,7 @@
 					<p class=date>1.6</p>
     				<p class=title><a href="https://www.express.co.uk/news/science/1079535/Asteroid-apophis-nasa-asteroid-warning-earth-close-approach-2020" target="_blank">ASTEROID'S "CLOSE APPROACH" DAY</a></p>
     				<img class=pic src="img/Jan.jpg">
-    				<p>The Asteroid Apophis made an “Close Approach” today. It officially crossed paths with the Earth’s orbit at 8:59 a.m. this morning. Named after the Egyptian god Apophis the Great Serpent, the asteroid is almost as tall as the Empire State Building. NASA suggests a 2.7 percent chance of Apophis striking Earth in 2029.</p>
+    				<p>The Asteroid Apophis made an “Close Approach” today. It officially crossed paths with the Earth’s orbit at 8:59 a.m.. Named after the Egyptian god Apophis the Great Serpent, the asteroid is almost as tall as the Empire State Building. NASA suggests a 2.7 percent chance of Apophis striking Earth in 2029.</p>
 
     				<p class=date>1.16</p>
     				<p class=title><a href="https://time.com/5744039/pantone-color-of-the-year-2020/" target="_blank">PANTONE COLOR OF THE YEAR</a></p>
@@ -187,7 +186,7 @@
     				<p class=date>3.8</p>
     				<p class=title><a href="https://www.cnet.com/news/elon-musk-neuralink-works-monkeys-human-test-brain-computer-interface-in-2020/">HUMAN TEST OF ELON MUSK'S NEURALINK</a></p>
     				<img class=pic src="img/Mar.jpg" style="width:14rem">
-    				<p>Elon Musk’s Neuralink successfully held its first tests on humans: The goal is to use Neuralink to understand and treat different forms of brain or spine-related disorders. Paralysed humans could use the implanted device to control phones or computers as a means of enhancing your own brain, giving humans the option to achieve a symbiosis with AI, leading to a future of "superhuman intelligence".</p>
+    				<p>Neuralink successfully held its first tests on humans: The goal is to treat different forms of brain-related disorders. Paralysed humans could use the implanted device to control phones or computers as a means of enhancing your own brain, giving humans the option to achieve a symbiosis with AI, leading to a future of "superhuman intelligence".</p>
 
 					<p class=date>3.12</p>
     				<p class=title><a href="https://www.businessinsider.com/apple-products-launching-2020-iphone-12-apple-watch-ipad-2019-11" target="_blank">APPLE SPRING RELEASE DAY</a></p>
@@ -386,6 +385,15 @@
     				<br>
     			</div>
     		</div>
+            <div class="collophon">
+                <p>DESCRIPTION</p>
+                <p>CALENDAR</p>
+            </div>
     	</div>
+        <script>
+        $(".about").onclick(function(){
+            $(".collophon").toggleClass(".collophon_open");
+        })
+        </script>
     </body>
 </html>
