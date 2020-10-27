@@ -9,21 +9,20 @@
     padding-left: 5%;
     padding-right: 8%;
     width: 100%;
-    height: 90px;
+    height: 110px;
     left: 0px;
     right: 0px;
     top: 0px;
     z-index: 999;
     display: flex;
     flex-direction: row;
-    background-size: 100% 90px;
+    background-size: 100% 110px;
     background-image: linear-gradient(to bottom, 
         rgba(255, 255, 25),
         rgba(195,195,195) 15%, 
         rgba(220, 220, 220) 35%,
         rgba(255,255,255, 0%) 90%);
     justify-content: space-between;
-    box-shadow: 0 20 10px 10px rgb(255, 255, 255);
 }
 #header a{
     text-decoration: none;
@@ -31,6 +30,7 @@
 .headerbackground{
     padding-left: 0rem;
     position: fixed;
+    box-shadow: 0 20 10px 10px rgb(255, 255, 255);
 }
 .headertext{
     font-family: arialnarrow;
@@ -73,6 +73,7 @@ p{
     font-family: mplus;
     font-style: normal;
     margin-top: 0.6rem;
+    margin-bottom: 1.4rem;
     font-size: 0.8rem;
     line-height: 1.16rem;
     letter-spacing: -0.45px;
