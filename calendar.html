@@ -8,6 +8,14 @@
         <meta name="viewport" content="width=device-width"><!--the browser will (probably) render the width of the page at the width of its own screen -->
         <link rel="stylesheet" type="text/css" href="style.css">
         <style>
+            ::-webkit-scrollbar {
+                width: 0px;  /* Remove scrollbar space */
+                height: 7px;
+                background: rgb(230, 230, 230);  /* Optional: just make scrollbar invisible */
+            }
+            ::-webkit-scrollbar-thumb {
+                background: rgb(0, 0, 0);
+            }
             @font-face {
                 font-family: mplus;
                 font-style: normal;
@@ -37,25 +45,6 @@
             /*.nav-left{
                 display: flex;
             }*/
-            .headerbackground{
-                padding-left: 0rem;
-                position: fixed;
-            }
-            .headertext{
-                font-family: arialnarrow;
-                font-size: 1.2rem;
-                letter-spacing: -0.05px;
-                z-index: 50;
-                margin-left: 2rem;
-            }
-            .headercss{
-                background-color: rgb(255, 255, 255);
-                color: rgb(0, 0, 0);
-            }
-            .headercss:hover{
-                background: rgb(0, 0, 0);
-                color: rgb(255, 255, 255);
-            }
 
             .collophon{
                 background: red;
