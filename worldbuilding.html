@@ -6,21 +6,15 @@
         <title></title><!--declaring the title, or name, of the HTML document. displayed in the browser's title bar-->
         <meta name="description" content=""><!--keywords/snippet for search engines-->
         <meta name="viewport" content="width=device-width"><!--the browser will (probably) render the width of the page at the width of its own screen -->
+        <link rel="stylesheet" type="text/css" href="style.css">
         <style>
-            *{
-                margin: 0; /*cancels out browser-default margins*/
-                padding: 0;
-                box-sizing: border-box; /*border-box include any padding into the element's content*/
-                cursor: url(img/cursor.png) 64 64, auto;
+            ::-webkit-scrollbar {
+                width: 7px;  /* Remove scrollbar space */
+                height: 0px;
+                background: rgb(230, 230, 230);  /* Optional: just make scrollbar invisible */
             }
-            body{
-                background-image: url("img/background.png");
-                background-position: center;
-                background-size: cover;
-                background-attachment: fixed;
-            }
-            html{
-                font-size: 20px; /*https://www.cnblogs.com/shireyhu/p/7832124.html*/
+            ::-webkit-scrollbar-thumb {
+                background: rgb(0, 0, 0);
             }
             a{
                 color: rgb(0, 0, 0);
@@ -29,15 +23,6 @@
             a:hover{
                 color: rgb(255, 255, 255);
                 background-color: rgb(0, 40, 255);
-            }
-            p{
-                font-family: roboto;
-                margin-top: 0.6rem;
-                padding-bottom: 0.7rem;
-                font-size: 1rem;
-                line-height: 1.4rem;
-                letter-spacing: -0.15px;
-                color: rgb(30, 30, 30);
             }
             img{
                 z-index: 10;
@@ -56,76 +41,51 @@
             .illustration{
                 max-width: 100%;
                 max-height: 100%;
-                filter: grayscale(100%);
-                box-shadow: 1px 3px 10px 7px rgba(0, 0, 0, 0.22);
+                margin-top: 1rem;
+                /*filter: grayscale(100%);
+                box-shadow: 1px 3px 10px 7px rgba(0, 0, 0, 0.22);*/
             }
+            /*
             .illustration:hover{
                 box-shadow: 3px 8px 30px 10px rgba(0, 0, 0, 0.27);
                 transform:translate(-2px, -7px);
                 transition: transform 0.25s;
                 filter: grayscale(0%);
-            }
+            }*/
         	#quote{
         		margin-left: 64px;
         	}
-            #header{
-                position: fixed;
-                padding-left: 5%;
-                padding-right: 8%;
-                height: 90px;
-                left: 0px;
-                right: 0px;
-                top: 0px;
-                z-index: 20;
-                display: flex;
-                flex-direction: row;
-            }
-            .headerbackground{
-                padding-left: 0rem;
-                position: fixed;
-            }
-            .headertext{
-                z-index: 30;
-                margin-left: 2.3rem;
-                font-family: roboto;
-                margin-top: 0.6rem;
-                font-size: 0.8rem;
-                line-height: 1rem;
-                letter-spacing: -0.15px;
-                color: rgb(30, 30, 30);
-            }
-            .headercss{
-                background: rgb(255, 255, 255);
-                color: rgb(0, 0, 0);
-            }
-            .headercss:hover{
-                background: rgb(255, 255, 255);
-                color: rgb(0, 0, 0);
-            }
+
             #content{
-                margin-top: 90px; /*leave space for header*/
+                margin-top: 150px; /*leave space for header*/
                 width: 100vw;
                 padding-left: 15%;
                 padding-right: 13%;
             }
             #title{
-                padding-top: 6rem;
-                padding-bottom: 2rem;
-                font-size:2.9rem;
-                line-height: 2.9rem;
-                letter-spacing: -0.02em;
+                font-family: arialnarrow;
+                color: rgb(40, 40, 40);
+                margin-bottom: 2.2rem;
+                padding-top: 2.4rem;
+                font-size:2.7rem;
+                line-height: 1.8rem;
+                letter-spacing: -0.01em;
             }
             #subtitle{
-                margin-top: 1.2rem;
-                padding-bottom: 1rem;
-                font-size: 1.9rem;
-                line-height: 1.2;
-                letter-spacing: -0.02em;
+                font-family: arialnarrow;
+                padding-top: 1rem;
+                padding-bottom: 1.6rem;
+                font-size: 1.5rem;
+                line-height: 1.7rem;
+                letter-spacing: -0.04px;
             }
             #keywords{
-                padding-bottom: 4rem;
+                font-family: arialnarrow;
+                margin-top: 1.2rem;
+                margin-bottom: 1.2rem;
                 font-size: 1.5rem;
-                line-height: 1.9rem;
+                line-height: 1.7rem;
+                letter-spacing: -0.04px;
             }
         	#flex{
         		display: flex;
@@ -140,18 +100,16 @@
         	#pic{
         		margin-left: 8%;
         		flex-grow: 1;
-        	}
-        	
+        	}  	
 	</style>
     </head>
     <body><!--all the contents of an HTML document goes here-->
         <div id=header>
-            <img class=headerbackground src="img/headerbackground.png">
-            <p class=headertext id=calendar><a href="calendar.html" class=headercss>With the Future Behind Us</a></p>
-            <p class=headertext>Post-Vision 2020</p>
-            <p class=headertext id=worldbuilding><a href="worldbuilding.html" class=headercss>Worldbuilding as a Daily Practice</a></p>
-            <p class=headertext>About</p>
-    	</div>
+            <p class="headertext"><a href="calendar.html" class=headercss>With the Future Behind Us</a></p>
+            <p class="headertext">Post-Vision 2020</p>
+            <p class="headertext"><a href="worldbuilding.html" class=headercss>Worldbuilding as a Daily Practice</a></p>
+            <p class="headertext about">????</p>
+        </div>
     	<div id=content>
     		<div>
    				<p id=title>Worldbuilding as a Daily Practice</p>
@@ -159,6 +117,8 @@
     		<div>
     			<p id=keywords>Keywords: Worldbuilding, Tactics, Co-opting, Creative Resistance, Personal Systems, Daily Practice, Late Capitalism, Neue-Futurism</p>
     		</div>
+            <br>
+            <br>
     		<div id=flex>
     			<div id=text>
                     <p id=subtitle>ART, POETRY, AND WORLD&shy;BUILDING</p>
