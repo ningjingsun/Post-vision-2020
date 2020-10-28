@@ -22,7 +22,7 @@
         rgba(255, 255, 25),
         rgba(195,195,195) 10%, 
         rgba(220, 220, 220) 35%,
-        rgba(255,255,255, 0%) 90%);
+        transparent 90%);
     justify-content: space-between;
 }
 #header a{
@@ -31,7 +31,7 @@
 .headerbackground{
     padding-left: 0rem;
     position: fixed;
-    box-shadow: 0 20 10px 10px rgb(255, 255, 255);
+    box-shadow: 0 20 30px 30px rgb(255, 255, 255);
 }
 .headertext{
     font-family: 'Syne Mono', monospace;
@@ -45,7 +45,7 @@
     color: rgb(0, 0, 0);
 }
 .headercss:hover{
-    background: rgb(45, 45, 45);
+    background: rgb(25, 25, 25);
     color: rgb(255, 255, 255);
 }
 
