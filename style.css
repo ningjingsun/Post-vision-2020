@@ -14,7 +14,7 @@
     left: 0px;
     right: 0px;
     top: 0px;
-    z-index: 999;
+    z-index: 40;
     display: flex;
     flex-direction: row;
     background-size: 100% 110px;
@@ -31,10 +31,10 @@
 .headerbackground{
     padding-left: 0rem;
     position: fixed;
-    box-shadow: 0 20 30px 30px rgb(255, 255, 255);
+    box-shadow: 0 20 40px 40px rgb(255, 255, 255);
 }
 .headertext{
-    font-family: 'Syne Mono', monospace;
+    font-family: arialnarrow;
     font-size: 1.2rem;
     letter-spacing: -0.05px;
     z-index: 50;
@@ -71,13 +71,13 @@ html{
     src: url(fonts/Arial Narrow.ttf);
 }
 p{
-    font-family: mplus;
+    font-family: arialnarrow;
     font-style: normal;
     margin-top: 0.6rem;
     margin-bottom: 1.4rem;
-    font-size: 0.8rem;
-    line-height: 1.16rem;
-    letter-spacing: -0.25px;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    letter-spacing: -0.15px;
 }
 
 /*.about-content{
