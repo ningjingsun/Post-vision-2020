@@ -63,7 +63,7 @@
             }
 
         	#content{
-        		margin-top: 90px; /*leave space for header*/
+        		margin-top: 40px; /*leave space for header*/
         		width: 100vw;
         		overflow-x: scroll;
         	}
@@ -80,16 +80,20 @@
                 max-width: 100%;
             }
         	.column{
-        		height: calc(100vh - 90px); /*leave space for header*/
+        		height: calc(100vh - 47px); /*leave space for header*/
         		overflow-x: hidden;
         		overflow-y: scroll;
         		padding: 1rem;
-        		padding-right: 2.7rem;
+                padding-top: 5rem;
+        		padding-right: 2.3rem;
         		padding-left: 2.3rem;
         		padding-bottom: 0;
         		min-width: 330px;
         		width: 330px;
         	}
+            .column:hover{
+                background-color: rgba(200, 200, 200, 40%);
+            }
         	.month{
         		color: rgb(40, 40, 40);
                 font-family: 'Syne Mono', monospace;
