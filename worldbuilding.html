@@ -11,13 +11,32 @@
             ::-webkit-scrollbar {
                 width: 7px;  /* Remove scrollbar space */
                 height: 0px;
-                background: rgb(30, 30, 30);   /* Optional: just make scrollbar invisible */
+                background: rgb(230, 230, 230);   /* Optional: just make scrollbar invisible */
             }
             ::-webkit-scrollbar-thumb {
-                background: rgb(230, 230, 230);
+                background: rgb(30, 30, 30);
+            }
+            #header{
+                background-image: linear-gradient(to bottom, 
+                rgba(255, 255, 35),
+                rgba(170,170,170) 10%, 
+                rgba(210, 210, 210) 38%,
+                transparent 100%);
+            }
+            .headertext{
+                color: rgb(30, 30, 30);
+                margin-top: 0.6rem;
+            }
+            body{
+                background-image: url("img/background0.png");
+                background-position: center;
+                background-size: cover;
+                background-attachment: fixed;
+                width: 100vw;
+                background-color: rgb(240, 240, 240);
             }
             a{
-                color: rgb(255, 255, 255);
+                color: rgb(30, 30, 30);
             }
             a:hover{
                 font-style: italic;
@@ -36,14 +55,10 @@
                 font-size: 1rem;
                 line-height: 1.3rem;
                 letter-spacing: 0px;
-                color: rgb(255, 255, 255);
-            }
-            .headertext{
-                margin-top: 0.6rem;
+                color: rgb(30, 30, 30);
             }
         	.caption{
-        		font-style: italic;
-        		color: rgb(140, 140, 140);
+        		color: rgb(120, 120, 120);
         		margin-left: auto;
         		margin-right: auto;
                 margin-top: 0rem;
@@ -65,7 +80,6 @@
             }
             #title{
                 font-family: arialnarrow;
-                color: rgb(255, 255, 255);
                 margin-bottom: 2.4rem;
                 padding-top: 2.4rem;
                 font-size:3rem;
@@ -97,7 +111,7 @@
         	}
         	#text{
                 padding-right: 2.7%;
-                max-width: 54%;
+                max-width: 50%;
         	}
         	#pic{
         		margin-left: 8%;
@@ -152,23 +166,33 @@
 				<div id=pic>
                     <p id=subtitle>Taxonomy</p>
 
-                    <p>1. Create your library of personal symbols and draw icons for each of them.</p>
+                    <p>1. Create your library of personal symbols and draw icons for each of them; write down the meanings they carry and how they relate to each other.</p>
                     <img id=icon class=illustration src="img/3icon.png">
-                    <p class=caption>Icons from the anime Digimon</p>
+                    <p class=caption><a href="https://www.google.com/search?q=digimon+adventure&tbm=isch&ved=2ahUKEwin5_WXiufsAhUJ2aQKHXphAUEQ2-cCegQIABAA&oq=digimon+ad&gs_lcp=CgNpbWcQARgAMgQIABBDMgQIABBDMgQIABBDMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIAFD4B1izCmD9EGgAcAB4AIAB4wKIAaIIkgEDMy0zmAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=fauhX-e0JYmykwX6woWIBA&bih=932&biw=1830&rlz=1C5CHFA_enUS761US761">Icons from the anime Digimon</a></p>
 
-                    <p>2. Write down your personal recipe and self-caring dishes.</p>
+                    <p>2. Write down your personal recipe and self-caring dishes; document the days and moments you cook/have them, and the ways they make you feel.</p>
                     <img class=illustration src="img/2food.jpg">
-                    <p class=caption>Chinese Protest Recipes by Ronald Tau at Meat Studio</p>
+                    <p class=caption><a href="https://www.instagram.com/rontau/">Chinese Protest Recipes by Ronald Tau at Meat Studio</a></p>
 
-                    <p>3. Write down poems in your mother tongue and send them to your friends.</p>
+                    <p>3. Collect any object that is personally meaningful to you; document their names, their colors, appearances, odors, the ways they trigger narratives about yourself.</p>
+                    <img id=object class=illustration src="img/5object.png">
+                    <p class=caption><a href="https://byscene.com/index">Ongoing by Scene Peng</a></p>
+
+                    <p>4. Set up secret rituals only known to yourself; keep following them on a daily basis.</p>
+                    <img id=picnic class=illustration src="img/7picnic.png">
+                    <p class=caption><a href="https://qihang.li">The Five Diversions by Qihang Li</a></p>
+
+                    <p>5. Write down quick poems in your mother tongue and send them to your friends; exchange letters, encipher and decipher letters with your own coding systems.</p>
                     <img class=illustration src="img/4language.jpg">
-                    <p class=caption>Digi Cards by Kevin Dong and Raina Wellman</p>
+                    <p class=caption><a href="https://www.instagram.com/kevin.dong/">Digi Cards by Kevin Dong and Raina Wellman</a></p>
 
-                    <p>4. Imagine how the habitants in your world would look and wear like them.</p>
+                    <p>6. Imagine how the habitants in your world would look and wear like them; document the ways that clothes empower you.</p>
                     <img id=clothes class=illustration src="img/1clothes.jpg">
-                    <p class=caption>Killer Rabit by Yu Dong</p>
+                    <p class=caption><a href="https://d-o-y.com/Killer-Rabbit">Killer Rabit by Yu Dong</a></p>
 
-                    <p>5. Daily ritual</p>
+                    <p>7. Collect all materials about yourself; map out the system of them, how the information relates to each other, and archive them as an enclyopedia.</p>
+                    <img id=earth class=illustration src="img/6earth.png">
+                    <p class=caption><a href="https://gigazine.net/gsc_news/en/20200708-archive-whole-earth-catalog/">The Whole Earth Catalog by Stuart Brand</a></p>
 
 
     			</div>
