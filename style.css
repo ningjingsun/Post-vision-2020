@@ -10,6 +10,11 @@
     font-style: normal;
     src: url(fonts/arialnarrow.ttf);
 }
+@font-face {
+    font-family: mono;
+    font-style: normal;
+    src: url(fonts/3X3-MonoRegular.woff);
+}
 #header{
     position: fixed;
     padding-left: 5%;
