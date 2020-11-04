@@ -28,11 +28,6 @@
     display: flex;
     flex-direction: row;
     background-size: 100% 110px;
-    /*background-image: linear-gradient(to bottom, 
-        rgba(255, 255, 35),
-        rgba(170,170,170) 10%, 
-        rgba(210, 210, 210) 38%,
-        transparent 100%);*/
     justify-content: space-between;
 }
 #header a{
@@ -152,13 +147,3 @@ p{
     line-height: 1.2rem;
     letter-spacing: -0.15px;
 }
-
-/*.about-content{
-    display: none;
-    position: fixed;
-    
-}
-.visible{
-    display: block;
-
-}*/
