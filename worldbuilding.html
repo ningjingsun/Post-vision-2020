@@ -129,7 +129,7 @@
                 overflow-y: scroll;
         	}
         	.picture{
-                overflow: hidden;
+                /*overflow: hidden;*/
                 padding-top: 4.23rem;
                 height: calc(100vh - 47px);
         		margin-left: 8%;
@@ -243,9 +243,6 @@
                         <br>
                         <p style="text-align: center">❤ ❤ ❤</p>
                         <br>
-                        <br>
-                        <br>
-                        <br>
                     </div>
 
                     <div class=pic-clone>
@@ -274,7 +271,6 @@
         $(".about").click(function(){
             $(".collophon").toggleClass("collophon_open");
         })
-
 
 
         var doc = window.document,
@@ -354,7 +350,7 @@
             if (scrollPos > 2) { // Added 2 pixel to make it able to scroll above top
                 setScrollPos(getScrollPos() + scrollSpeed)
             }
-        window.requestAnimationFrame(autoScroll)
+            window.requestAnimationFrame(autoScroll)
         }
 
         autoScroll()
