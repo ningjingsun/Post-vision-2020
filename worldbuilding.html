@@ -128,7 +128,7 @@
                 max-width: 50%;
                 overflow-y: scroll;
         	}
-        	#picture{
+        	.picture{
                 overflow: hidden;
                 padding-top: 4.23rem;
                 height: calc(100vh - 47px);
@@ -189,7 +189,7 @@
                         <br>
 					</div>
 				</div>
-				<div id=picture>
+				<div class=picture>
                     <p id=subtitle>Taxonomy</p>
                     <div class=pic>
                         <p>1. Create your library of personal symbols and draw icons for each of them; write down the meanings they carry and how they relate to each other.</p>
@@ -278,7 +278,7 @@
 
 
         var doc = window.document,
-            context = doc.querySelector('.pic'),
+            context = doc.querySelector('.picture'),
             clones = context.querySelectorAll('.pic-clone'),
             disableScroll = false,
             scrollHeight = 0,
