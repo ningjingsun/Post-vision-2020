@@ -3,10 +3,14 @@
     <head><!-- a container for metadata -->
         <meta charset="utf-8"><!--charset: character encoding capable of encoding all characters on the web  -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!--for browser compatibility: choose rendering engine to view the page in an correct view (for old ver. IE)  -->
-        <title></title><!--declaring the title, or name, of the HTML document. displayed in the browser's title bar-->
+        <title>Post-Vision 2020</title><!--declaring the title, or name, of the HTML document. displayed in the browser's title bar-->
         <meta name="description" content=""><!--keywords/snippet for search engines-->
         <meta name="viewport" content="width=device-width"><!--the browser will (probably) render the width of the page at the width of its own screen -->
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
             ::-webkit-scrollbar {
@@ -19,11 +23,11 @@
             }
             #header{
                 background-image: linear-gradient(to bottom, 
-                rgba(225, 225, 225),
-                rgba(170, 170, 170) 5%,
+                rgba(255, 255, 255),
+                rgba(170, 170, 170) 6%,
                 rgba(140, 140, 140) 8%, 
-                rgba(90, 90, 90) 16%,
-                rgba(60, 60, 60) 25%,
+                rgba(90, 90, 90) 15%,
+                rgba(60, 60, 60) 24%,
                 rgba(40, 40, 40) 38%,
                 transparent 50%);
             }
@@ -80,6 +84,15 @@
                 margin-top: 0.6rem;
                 color: rgb(255, 255, 255);
             }
+            #arrow{
+                position: relative;
+                margin-top: 44vh;
+                margin-left: -40px;
+                margin-right: 20px;
+                max-width: 100%;
+                width: 20px;
+                height: auto;
+            }
         	#content{
         		margin-top: 40px; /*leave space for header*/
         		width: 100vw;
@@ -90,8 +103,8 @@
         		flex-direction: row;
         		align-items: stretch;
         		flex-wrap: nowrap;
-        		padding-left: 4.4%;
-        		padding-right: 8%;
+        		padding-left: 3%;
+        		padding-right: 3%;
         	}
             .pic{
                 z-index: 10;
@@ -116,7 +129,7 @@
             }
         	.month{
                 font-family: arialnarrow;
-                margin-top: -1rem;
+                margin-top: -0.8rem;
                 padding-bottom: 1.2rem;
         		font-size: 1.5rem;
         		line-height: 1.2;
@@ -141,18 +154,19 @@
                 font-style: italic;
             }
         </style>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body><!--all the contents of an HTML document goes here-->
     	<div id=header>
             <p class="headertext"><a href="calendar.html" class=headercss>With the Future Behind Us</a></p>
-            <p class="headertext">Daily Ritual Objects A—Z</p>
-            <p class="headertext"><a href="worldbuilding.html" class=headercss>Worldbuilding as a Daily Practice</a></p>
+            <p class="headertext"><a href="worldbuilding.html" class=headercss>Worldbuilding Practice A–Z</a></p>
+            <!--<p class="headertext">Personal Ritual Taxonomy A–Z</p>-->
             <p class="headertext about">????</p>
     	</div>
     	<div id=content>
     		<div id=flex>
+                <div id=arrow>
+                    <img src="img/arrow.png" style="max-width: 40px; height: auto">
+                </div>
     			<div class=column>
     				<p class=month>Jan</p>
 					<p class=date>1.6</p>
@@ -545,10 +559,12 @@
     			</div>
     		</div>
             <div class="collophon">
-                <p class="collophontext description">This project is composed of three layers of narrative: ① an archive of people’s previous projection into the future of 2020; ② a collection of people’s daily stories in the face of a global crisis; ③ a short essay on worldbuilding as a daily practice.<br><br>© 2020 Ningjing Sun; Last updated in November 2020</p>
+                <p class="collophontext description">This project is composed of three layers of narrative: ① an archive of people’s previous projection into the future of 2020; ② a collection of people’s daily stories in the face of a global crisis; ③ a short essay on worldbuilding as a daily practice.<br><br>© 2020 Ningjing Sun; Last updated in November 2020<br>Special thanks to Marie Otsuka and Minkyoung Kim</p>
                 <p class="collophontext description">2020 is a big year and the beginning of a new decade. This calendar below acts as an archive of people’s previous predictions about 2020. It aims to excavate and collect these predictions, projections, lost hopes and wishes that people made about 2020 before its actual arrival—some positive, some negative, but most of them unfulfilled due to the global pandemic—and weave them together into a parallel, fictitious narrative of the year.</p>
-                <p class="collophontext about cancel1"></p>
-                <p class="collophontext about cancel2"></p>
+                <div class=collophontext>
+                    <p class="collophontext about cancel1"></p>
+                    <p class="collophontext about cancel2"></p>
+                </div>
             </div>
     	</div>
         <script>
