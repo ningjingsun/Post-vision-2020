@@ -17,8 +17,9 @@
 }
 #header{
     position: fixed;
-    padding-left: 5%;
-    padding-right: 6%;
+    display: flex;
+    padding-left: 4.6%;
+    padding-right: 6.4%;
     width: 100vw;
     height: 110px;
     left: 0px;
@@ -28,7 +29,16 @@
     display: flex;
     flex-direction: row;
     background-size: 100% 110px;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
+}
+.headertext:nth-child(1){
+    flex: 4.14;
+}
+.headertext:nth-child(2){
+    flex: 4.14;
+}
+.headertext:nth-child(3){
+    flex: 1;
 }
 #header a{
     text-decoration: none;
@@ -44,7 +54,7 @@
     font-size: 1.4rem;
     letter-spacing: -0.05px;
     z-index: 50;
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 .headercss{
     background-color: transparent;
@@ -64,7 +74,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     position: fixed;
-    padding-left: 5%;
+    padding-left: 3.7%;
     padding-right: 6%;
     left: 0px;
     top: 0px;
@@ -81,7 +91,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     position: fixed;
-    padding-left: 5%;
+    padding-left: 3.7%;
     padding-right: 6%;
     left: 0px;
     top: 0px;
@@ -93,10 +103,13 @@
     transition: all 0.6s ease-in;
 }
 .collophontext:nth-child(1){
-    flex: 1.76;
+    flex: 1.77;
 }
 .collophontext:nth-child(2){
-    flex: 2;
+    flex: 1.7;
+}
+.collophontext:nth-child(3){
+    flex: 0.54;
 }
 .collophontext{
     font-family: arialnarrow;
@@ -110,18 +123,18 @@
     color: rgb(0, 0, 0);
 }
 .cancel1{
-    width: 42px;
+    width: 50px;
     height: 30px;
-    border-bottom: 2px solid black;
-    transform: translateX(120%) translateY(-2%) rotate(45deg);
+    border-bottom: 2.6px solid black;
+    transform: translateX(70%) translateY(-6%) rotate(45deg);
     position: relative;
     margin: 0px;
 }
 .cancel2{
-    width: 42px;
+    width: 50px;
     height: 30px;
-    border-bottom: 2px solid black;
-    transform: translateX(-26%) translateY(-2%) rotate(-45deg);
+    border-bottom: 2.6px solid black;
+    transform: translateX(32%) translateY(-108%) rotate(-45deg);
     position: relative;
     margin: 0px;
 }
