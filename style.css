@@ -125,6 +125,13 @@
     margin-left: 2rem;
     color: rgb(0, 0, 0);
 }
+.collophonlink{
+    text-decoration: none;
+    margin-left: -0.05rem;
+}
+.collophonlink:hover{
+    font-style: italic;
+}
 .cancel1{
     width: 50px;
     height: 30px;
