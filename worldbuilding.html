@@ -16,10 +16,34 @@
 		::-webkit-scrollbar {
             width: 9px;  /* Remove scrollbar space */
             height: 9px;
-            background: rgb(30, 30, 30);  /* Optional: just make scrollbar invisible */
+            background: rgb(220, 220, 220);  /* Optional: just make scrollbar invisible */
    	    }
         ::-webkit-scrollbar-thumb {
             background: rgb(255, 255,255);
+        }
+        .essay::-webkit-scrollbar {
+            width: 0px;  /* Remove scrollbar space */
+            height: 0px;
+            background: transparent;  /* Optional: just make scrollbar invisible */
+        }
+        .essay::-webkit-scrollbar-thumb {
+            background: transparent;
+        }
+        .essayblock::-webkit-scrollbar {
+            width: 0px;  /* Remove scrollbar space */
+            height: 0px;
+            background: transparent;  /* Optional: just make scrollbar invisible */
+        }
+        .essayblock::-webkit-scrollbar-thumb {
+            background: transparent;
+        }
+        .collectblock::-webkit-scrollbar {
+            width: 0px;  /* Remove scrollbar space */
+            height: 0px;
+            background: transparent;  /* Optional: just make scrollbar invisible */
+        }
+        .collectblock::-webkit-scrollbar-thumb {
+            background: transparent;
         }
 		#header{
             background-image: linear-gradient(to bottom, 
@@ -52,7 +76,7 @@
             font-family: arialnarrow;
             font-style: normal;
             font-size: 1rem;
-            line-height: 1.2rem;
+            line-height: 1.3rem;
             letter-spacing: 0px;
             color: rgb(30, 30, 30);
         }
@@ -65,13 +89,13 @@
         #title{
             font-family: arialnarrow;
             margin-top: 1.2rem;
-            margin-bottom: 1.6rem;
+            margin-bottom: 1.3rem;
             padding-top: 0rem;
-            font-size:3.4rem;
-            line-height: 3.5rem;
-            letter-spacing: -0.05rem;
+            font-size:3rem;
+            line-height: 3.2rem;
+            letter-spacing: -0.02rem;
         }
-        #subtitle{
+        .subtitle{
             font-family: arialnarrow;
             padding-top: 0.1rem;
             padding-bottom: 0.1rem;
@@ -82,93 +106,105 @@
         #keywords{
             font-family: arialnarrow;
             margin-top: 1.2rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.4rem;
             font-size: 1.4rem;
             line-height: 1.7rem;
             letter-spacing: 0px;
         }
-    	#essay{
-        	margin-top: 40px; /*leave space for header*/
-            margin-bottom: 0px;
-            width: 100vw;
-            padding-left: 6%;
-            padding-right: 13%;
-            z-index: 10;
-        }
         .essayblock{
         	position: fixed;
+            display: flex;
             font-family: arialnarrow;
-            /*display: flex;
-            justify-content: center;
-            align-items: center;*/
+            overflow-x: hidden;
+            overflow-y: hidden;
             text-align: left;
-            margin-top: 40px;
-            margin-bottom: 0.32rem;
-            padding: 0.8rem;
-            padding-top: 0.6rem;
-            padding-left: 1.6rem;
-            padding-right: 1.6rem;
+            margin-top: 70px;
+            margin-left: 6%;
+            margin-right: 13%;
+            padding: 0rem;
             border: 0.8px dotted black;
             background-color: white;
             color: black;
             height: 66vh;
             width: 35.7vw;
-            overflow-y: scroll;
-            z-index: 30;
+            z-index: 40;
         }
-        .collectblock{
-            position: fixed;
-            font-family: arialnarrow;
-            /*display: flex;
-            justify-content: center;
-            align-items: center;*/
-            text-align: left;
-            margin-top: 30rem;
-            margin-bottom: 0.32rem;
-            margin-left: 50rem;
-            padding: 0.8rem;
-            padding-top: 0.6rem;
-            padding-left: 1.6rem;
-            padding-right: 1.6rem;
-            border: 0.8px dotted black;
-            background-color: white;
-            color: black;
-            height: 30vh;
-            width: 30vw;
+        .essay{
+            max-width: 93%;
+            width: 93%;
             overflow-y: scroll;
-            z-index: 30;
+            margin-left: 7%;
+            padding-top: 3%;
         }
         .cancel3{
    			width: 50px;
     		height: 30px;
     		border-bottom: 2.6px solid black;
-    		transform: translateX(70%) translateY(-6%) rotate(45deg);
-    		position: relative;
+    		transform: translateX(-6%) translateY(10%) rotate(45deg);
     		margin: 0px;
+            padding: 0px;
 		}
 		.cancel4{
     		width: 50px;
     		height: 30px;
     		border-bottom: 2.6px solid black;
-    		transform: translateX(32%) translateY(-108%) rotate(-45deg);
-    		position: relative;
+    		transform: translateX(-42%) translateY(-92%) rotate(-45deg);
     		margin: 0px;
 		}
-		.cancel{
-			position: fixed;
-			margin-left: 23.5rem;
+		.cancelA{
+			right: 0;
+            top: 0;
+            max-width: 6%;
+            width: 6%;
+            margin-right: 2%;
+            padding-top: 1%;
 		}
+        .cancelB{
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin-right: 2%;
+            padding-top: 1%;
+        }
         .asset{
             margin-left: 80rem;
             margin-height: 40rem;
             z-index: 30;
+        }
+        .collectblock{
+            position: fixed;
+            display: flex;
+            font-family: arialnarrow;
+            /*display: flex;
+            justify-content: center;
+            align-items: center;*/
+            text-align: left;
+            margin-top: 66vh;
+            margin-left: 62vw;
+            min-width: 12vh;
+            padding: 0rem;
+            border: 0.8px dotted black;
+            background-color: white;
+            color: black;
+            height: 26vh;
+            width: 36vw;
+            overflow-y: scroll;
+            z-index: 40;
+        }
+        #download{
+            margin-left: 23vw;
+            margin-top: 17vh;
+            padding-left: 0.3rem;
+            padding-right: 0.3rem;
+            background: white;
+            border: 0.8px dotted black;
         }
         .asset2{
             margin-left: 20rem;
             margin-height: 120rem;
             padding-height: 50rem;
         }
-        .illustration{
+        .asset{
             max-width: 200px;
             width: 200px;
             max-height: auto;
@@ -185,33 +221,24 @@
         <p class="headertext about">????</p>
     </div>
 
-    <div id=essay>
-    	<div class=essayblock>
-    		<div class=cancel>
-            	<p class="cancel3"></p>
-            	<p class="cancel4"></p>
-        	</div>
-    		<div>
-                <p id=title>Worldbuilding as a Daily Practice</p>
-            </div>
-            <div>
-                <p id=keywords>Keywords: Worldbuilding, Tactics, Co-opting, Creative Resistance, Personal Systems, Daily Practice, Late Capitalism, Neue-Futurism</p>
-            </div>
-            <p id=subtitle>Art, Poetry and World&shy;building</p>
+    <div class=essayblock>
+    	<div class=essay>
+            <p id=title>Worldbuilding as a Daily Practice</p>
+            <p id=keywords>Keywords: Worldbuilding, Tactics, Co-opting, Creative Resistance, Personal Systems, Daily Practice, Late Capitalism, Neue-Futurism</p>
+            <p class=subtitle>Art, Poetry and World&shy;building</p>
     		<p>During my time at RISD, I was fortunate to be immersed in an environment where artists from all of the different creative fields gathered around. It thus became a hobby of mine to observe how the different creators created—what 	their personal practices were, and where their inner systems of logic came from.</p>
 			<p>It quickly occured to me that all different forms of creations—poems, paintings, sculptures, films, and many other more — are in essence the same, which are fundamentally structured around the concept and act of “worldbuilding”. Ian Chang defined a “world” as “a reality that (one) can believe in: one that promises to bring about habitable structure from the potential of chaos, and aims toward a future transformative enough to metabolize the pain and pleasure of its dysfunction<sup>[1]</sup>”. As he further elaborated in the project named Worlding Raga<sup>[1]</sup>,</p>
 			<div id=quote>
 				<p>“We could say a World is something like a gated garden. A World has borders. A World has laws. A World has values. A World has dysfunction. A World can grow up. A World has members who live in it. A World gives its members permission to act differently than outside of it. A World incentivizes its members to keep it alive, often with the pleasures of its dysfunction. A World counts certain actions inside it as relevant and meaningful. A World undergoes reformations and disruptions. A World has mythic figures. A World is a container for all the possible stories of itself. A World manifests evidence of itself in its members, emissaries, symbols, tangible artifacts, and media, yet it is always something more.”</p>
 			</div>
 			<p>All creations originate from such urge and desire of worldbuilding, and all great creations succeed in building a world and channeling its potential in front of the audience. Think about the complexity of the epistemological frameworks of Game of Thrones and Harry Potter, or the interwoven pictorial symbols in the paintings of Picasso and David Hockney. On one hand, in order for their work to be accessible in the first place, the artists familiarize themselves with the public, circulatory systems of social and cultural signifiers; on the other hand, all creators hold a secret treasury of their own hermeneutic, idiosyncratic systems of symbols, visuals and artistic devices, each closely intercorrelated with the others by following certain self-designed rules. By combining these external and internal systems, the artists are able to create their worlds which are open, generative and self-perpetuating.</p>
-			<p>As an art student who learns to create, I’m especially interested in how young artists develop their personal artistic practice, and it turns out that the project of “worldbuilding”—which is at the core of the practice of every mature artist— is an extremely slow and laborious process of piling up, or piecing together a picture bit by bit. If we go back to the moment before a world is born, we would see a creator look at the meaningless, chaotic void—the thing we called Reality—and wonder what to do about it. The curious creator then finds out something interesting, something directly or indirectly related to the creator’s inborn sensitivities or ongoing history, therefore latent with meanings and potential—the creator thus decides to take that slice from the Reality and keep it their own. Sometimes the creator finds nothing meaningful and thus has to wait. Sometimes the creator has to trace back their memory again and again to excavate things that might shed light on the present. As time goes by, the conscious and diligent creator accumulates a larger and larger personal collection, where symbols, vocabularies and imageries start to refer to and intercorrelate with each other according to certain self-designed rules and rationales. That’s the very beginning of a World, a secret entry point into the vastness of the creator’s inner psyche. What I am interested in, beyond this revelation that artistic creation is about worldbuilding, is in the fact that with such methodologies of co-opting the Reality and making part of the Reality our own—something that professional artists receive their years of training on but each of us could also exercise on a daily basis—we as individuals would be able to restore a sense of trust and belief in the Reality.</p>
-			<p id=subtitle>“Tactics”, not “Strategies”</p>
+			<p>As an art student who learns to create, I’m especially interested in how young artists develop their personal artistic practice, and it turns out that the project of “worldbuilding”—which is at the core of the practice of every mature artist— is an extremely slow and laborious process of piling up, or piecing together a picture bit by bit. If we go back to the moment before a world is born, we would see a creator look at the meaningless, chaotic void—the thing we called Reality—and wonder what to do about it. The curious creator then finds out something interesting, something directly or indirectly related to the creator’s inborn sensitivities or ongoing history, therefore latent with meanings and potential—the creator thus decides to take that slice from the Reality and keep it their own. Sometimes the creator finds nothing meaningful and thus has to wait. Sometimes the creator has to trace back their memory again and again to excavate things that might shed light on the present. As time goes by, the conscious and diligent creator accumulates a larger and larger personal collection, where symbols, vocabularies and imageries start to refer to and intercorrelate with each other according to certain self-designed rules and rationales. That’s the very beginning of a World, a secret entry point into the vastness of the creator’s inner psyche. What I am interested in, beyond this revelation that artistic creation is about worldbuilding, is in the fact that with such methodologies of co-opting the Reality and making part of the Reality our own—something that professional artists receive their years of training on but each of us could also exercise on a daily basis—we as individuals would be able to restore a sense of trust in the Reality.</p>
+			<p class=subtitle>“Tactics”, not “Strategies”</p>
 			<p>Worldbuilding is about how we navigate the world that we live in and build Trust in that Reality. The notion of a world is born as our complex and enduring response to the chaos of the bald Reality, and it always originates from the living inside one, which is deep within its ongoing history. As we enter the stage of late Capitalism, it becomes too often for an individual to lose their personal agency over the Reality. As we find ourselves stuck between the unraveling old realities and the emerging bleak ones—especially at our present time of 2020—worldbuilding has the potential to become a powerful ritual that everyone could exercise on a daily basis in order to help us “navigate darkness, maintain agency despite indeterminacy, and appreciate the multitude of Worlds we can choose to live in and create<sup>[1]</sup>”.</p>
 			<p>In his book “The Practice of Everyday Life<sup>[2]</sup>”, Michel de Certeau made a critical distinction between the concepts of “strategy” and “tactics”. As he clarified, “strategies” are created by government and other institutional bodies who are labeled as the “producers”, whereas individuals are the “consumers” acting in the environments bounded and defined by strategies by using self-designed “tactics”. “Tactics” are by their nature defensive, expedient, and opportunistic, being seized momentarily within different spaces and sets of relations. This definition concretely illustrates how our daily routine practices—our “arts of doing things” such as reading, cooking, talking, walking, sleeping—often work in a process of poaching on the territories of the power bodies, heeding their rules and utilizing their products, but never wholly determined by any of them. In the chapter “Walking in the City”, for instance, de Certeau pointed out that whereas the “city” and “city map” is generated by the strategies developed by organizational power structures, the pedestrian at street level moves in ways that are tactical but never fully determined by the plans of organizing bodies.</p>
 			<p>De Certeau’s theory accurately exposes the oppressiveness of the symbolic systems run by the dominant cultures, and yet it also points to a possible way out—don’t just inherit the systems; play with the systems. Co-opt the systems, individualise them and make them your own. In my opinions, these tactics are perfect examples of how the concept of worldbuilding could be realized and practiced on a daily basis. The thing is, we don’t have to be professional artists in order to exercise the practice of worldbuilding. As our current world gradually slips into a scene of extreme bleakness and barrenness, it’s more and more important to recognize art/worldbuilding not as a perquisite of the oftentimes elite artists, but as an urgent practice/daily ritual that each individual should carry out in our everyday lives.</p>
-			<p>Under the methodologies of worldbuilding, there is a call for us to not just inherit the current world and live by its existing traditions and rules, but to awaken our urge and inborn sensibilities to create, and therefore regain the agency to build up a small world around us—by co-opting the mainstream cultures, stripping them for parts, taking out the symbols that are personally meaningful to us and making them our own with our idiosyncratic way. By doing so, the conceptual framework of worldbuilding had the potential to offer us a point of creative resistance and epistemic disobedience. Perhaps as we all encounter the bleak Reality of 2020, the mere belief in the existence of such a world—a world that is worth building, worth living in, and worth believing in—would would become a huge comfort and encouragement for each of us.</p>
-			<div>
-			<p id=subtitle>Bibliography</p>
+			<p>Under the methodologies of worldbuilding, there is a call for us to not just inherit the current world and live by its existing traditions and rules, but to awaken our urge and inborn sensibilities to create, and therefore regain the agency to build up a small world around us—by co-opting the mainstream cultures, stripping them for parts, taking out the symbols that are personally meaningful to us and making them our own with our idiosyncratic way. By doing so, the conceptual framework of worldbuilding had the potential to offer us a point of creative resistance and epistemic disobedience. Perhaps as we all encounter the bleak Reality of 2020, the mere belief in the existence of such a world—a world that is worth building, worth living in, and worth believing in—would become a huge comfort and encouragement for each of us.</p>
+			<p class=subtitle>Bibliography</p>
 			<p class=bibliography><a href="https://www.ribbonfarm.com/2019/03/05/worlding-raga-2-what-is-a-world/" class=bibliography>[1] Ian Chang, Worlding Raga: 2—What is a World?</a><br>
 			<a href="https://en.wikipedia.org/wiki/The_Practice_of_Everyday_Life" class=bibliography>[2] Michel de Certeau, The Practice of Everyday Life.</a><br>
 			<a href="http://journal.finfar.org/articles/notes-toward-a-critical-approach-to-worlds-and-world-building/" class=bibliography>[3] Stefan Ekman and Audrey Isabel Taylor, Notes Towards a Critical Approach to Worlds and World-Building.</a><br>
@@ -219,18 +246,26 @@
 			</p>
             <p style="text-align: center">❤ ❤ ❤</p>
             <br>
-    	</div>
+        </div>
+        <div class=cancelA>
+            <p class="cancel3"></p>
+            <p class="cancel4"></p>
+        </div>
     </div>
 
-    <div id=collect>
-        <div class=collectblock>
-            <p id=title>Collection</p>
+     <div class=collectblock>
+        <p class=subtitle id=download>Download</p>
+        <div class=collectasset>
+        </div>
+        <div class=cancelB>
+            <p class="cancel3"></p>
+            <p class="cancel4"></p>
         </div>
     </div>
 
     <div class=asset>
-        <img class=illustration src="img/assetA.png">
-        <img class="illustration asset2" src="img/assetB.png">
+        <img class=asset src="img/assetA.png">
+        <img class=asset src="img/assetB.png">
     </div>
 
     <div class="collophon">
@@ -241,12 +276,13 @@
             <p class="collophontext about cancel2"></p>
         </div>
     </div>
-</div>
+
     <script>	//collophon
     	$(".about").click(function(){
         	$(".collophon").toggleClass("collophon_open");
     	})
     </script>
+    <!--
 	<script type="text/javascript">
 		var edgeSizea = 240;
 		var edgeSizeb = 480;
@@ -441,8 +477,8 @@
 		// scrolling will be initiated and with what intensity it is taking place.
 		function drawGridLines() {
 
-			var increment = 100;
-			var incrementCount = 100;
+			var increment = 200;
+			var incrementCount = 50;
 			var maxDimension = ( increment * incrementCount );
 
 			// Draw the boxes that make up the grid.
@@ -490,6 +526,6 @@
 			guard.style.right = "0px";
 			document.body.appendChild( guard );
 		}	//grid
-	</script>
+	</script>-->
 </body>
 </html>
