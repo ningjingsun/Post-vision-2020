@@ -193,7 +193,7 @@
             #quote{
                 margin-left: 64px;
             }
-            #google{
+            .google{
                 z-index: 0;
                 position: absolute;
                 max-width: 86vw;
@@ -201,6 +201,7 @@
                 /*margin-top: -0.85rem;*/
                 margin-top: 1.6rem;
                 margin-left: 4.6rem;
+                transition: all 0.5s ease;
                 opacity: 56%;
                 /*box-shadow: 0 0 12px 16px rgb(243, 243, 243); */
             }
@@ -217,7 +218,7 @@
             <p class="headertext"><a href="room.html" class=headercss>Meditation Room/A–Z</a></p>
             <p class="headertext about">????</p>
         </div>
-        <div id=google>
+        <div class=google>
             <iframe width="100%" height="440px" src="https://docs.google.com/spreadsheets/d/1xp-L_rFaUQKtXhISgBNTS2WG6kZWFVZV6sc46YPlGkA/edit?usp=sharing" style="width: 86vw; height: 82vh;" class="scroll-transition-fade"></iframe>
             <div class=mask>
             </div>
@@ -594,6 +595,19 @@
             $(".collophon").toggleClass("collophon_open");
         })
 
+        /*
+        $(document).ready(function(){       
+            var scroll_pos = 0;
+            $(".picture").scroll(function() {
+                scroll_pos = $(".picture").scrollTop();
+                if(scroll_pos > 200) {
+                    $(".google").css("opacity":"50%");
+                } else {
+                    $(".google").css("opacity;":"100%");
+                }
+            });
+            });
+            */
         /*
         var doc = window.document,
             context = doc.querySelector('.picture'),
