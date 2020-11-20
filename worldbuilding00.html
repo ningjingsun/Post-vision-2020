@@ -11,11 +11,12 @@
             ::-webkit-scrollbar {
                 width: 0px;  /* Remove scrollbar space */
                 height: 0px;
-                background: rgb(230, 230, 230);   /* Optional: just make scrollbar invisible */
+                background: rgb(230, 230, 230);   /* Optional: just make scrollbar invisible*/
             }
             ::-webkit-scrollbar-thumb {
                 background: transparent;
             }
+            
             #header{
                 background-image: linear-gradient(to bottom, 
                 rgba(255, 255, 35),
@@ -36,7 +37,7 @@
                 background-color: rgb(240, 240, 240);
             }
             a{
-                color: rgb(0, 0, 0);
+                color: rgb(30, 30, 30);
             }
             a:hover{
                 font-style: italic;
@@ -58,46 +59,6 @@
                 letter-spacing: 0px;
                 color: rgb(30, 30, 30);
             }
-            .pic{
-                display: flex;
-                position: relative;
-                max-width: 90%;
-                width: 90%;
-                max-height: auto;
-                height: auto;
-            }
-            .picblock{
-                position: relative;
-                margin-left: 0.7rem;
-                margin-right: 0.7rem;
-                max-width: 70%;
-                width: 70%;
-            }
-            .tag{
-                display: inline-block;
-                position: relative;
-                top: 0rem;
-                background-color: white;
-                color: black;
-                font-size: 3.3rem;
-                margin-top: 0rem;
-                margin-bottom: 0rem;
-                height: 4rem;
-                padding: 0.8rem;
-                padding-top: 1.3rem;
-                border: 0.8px dotted black;
-                font-family: arialnarrow;
-                font-style: normal;
-                color: rgb(0, 0, 0);
-            }
-            .descriptiontext{
-                display: flex;
-                flex-direction: column;
-                align-items: stretch;
-                align-self: start;
-                max-width: 30%;
-                width: 30%;
-            }
             .caption{
                 /*display: flex;
                 justify-content: center;
@@ -113,16 +74,6 @@
                 height: -webkit-fill-available;
                 overflow: auto;
                 line-height: 1.25rem;
-            }
-            .smalltitle{
-                font-size: 2.12rem;
-                line-height: 1.04;
-                letter-spacing: -0.02em;
-            }
-            .illustration{
-                max-width: 100%;
-                max-height: 100%;
-                box-shadow: 0px 0px 5px rgb(0, 0, 0, 20%);
             }
             .bibliography{
                 font-family: mono;
@@ -180,26 +131,9 @@
                 height: calc(100vh - 47px);
                 padding-right: 3.3%;
                 margin-right: 0;
-                max-width: 43.6%;
+                max-width: 42%;
                 overflow-y: scroll;
         	}
-        	.picture{
-                height: calc(100vh - 40px);
-                padding-top: 3.48rem;
-                /*padding-top: 75vh;*/
-                margin-left: -1.34rem;
-                padding-left: 0;
-                flex-grow: 1;
-                overflow: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-            .texttitle{
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-            }
             .verticalcenter{
                 position: absolute;
                 margin: 0;
@@ -215,14 +149,14 @@
             .google{
                 z-index: 0;
                 position: absolute;
-                max-width: 86vw;
-                max-height: 82vh;
+                max-width: 50vw;
+                max-height: 60vh;
                 /*margin-top: -0.85rem;*/
                 margin-top: 1.6rem;
                 margin-left: 4.6rem;
                 transition: all 0.5s ease;
-                opacity: 56%;
-                /*box-shadow: 0 0 12px 16px rgb(243, 243, 243); */
+                /*opacity: 56%;
+                box-shadow: 0 0 12px 16px rgb(243, 243, 243); */
             }
 	</style>
         <!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
@@ -241,6 +175,7 @@
             <br>
             <br>
     		<div id=flex>
+                
     			<div id=text>
                     <div>
                         <p id=title>Worldbuilding as a Daily Practice</p>
@@ -276,359 +211,7 @@
                         <br>
 					</div>
 				</div>
-
-                <div class=picture>
-                    <div class="pic d">
-                        <p class=tag>A</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/archive.png">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(endless)</i><br>Archiving</p>
-                            <p class=caption>Collect any objects personally meaningful to you; document their names, appearances, odors, and the ways they trigger narratives.<br><br><a href="https://byscene.com/index">Ongoing by ByScene ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic b">
-                        <p class=tag>B</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/bootleg.png">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(aggressive)</i><br>Bootlegging</p>
-                            <p class=caption>Embrace the post-modern reality; copy it, appropriate it and steal from it, until you truly owns it.<br><br><a href="https://libbymarrs.net/index.html">Bootlegging Clothing by Libby Marrs ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic c">
-                        <p class=tag>C</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/cook.jpg">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(cathartic)</i><br>Cooking</p>
-                            <p class=caption>Write your personal recipe and self-caring dishes; document the ways they make you feel when you have them.<br><br><a href="https://www.instagram.com/rontau/">Chinese Protest Recipes by Ronald Tau ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic c">
-                        <p class=tag>D</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/dérive.png">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(nostalgic)</i><br>Dériving</p>
-                            <p class=caption>Discard the map and go to uncharted places; follow your instincts and wander in the city; go find out the sunniest spot and have a picnic with your friends there.<br><br><a href="https://qihang.li">The Five Diversions by Qihang Li ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic d">
-                        <p class=tag>E</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/encipher.png">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(uncanny)</i><br>Enciphering</p>
-                            <p class=caption>Encipher a message using 100 different ways; then create keys for deciphering each of them; publish your codebook.<br><br><a href="https://www.instagram.com/_lmao6__/">_lmao6_ by Baijun Chen ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic b">
-                        <p class=tag>F</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/fortune-telling.png">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(enlightening)</i><br>Fortune-telling</p>
-                            <p class=caption>Keep a deck of tarot cards with you; let your instincts and inspirations guide you to make life decisions.<br><br><a href="www.wenkaiwang.site">Shaman Trip by Wenkai Wang ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic c">
-                        <p class=tag>G</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/grow.png"></a>
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(hybrid)</i><br>Growing</p>
-                            <p class=caption>Grow up a life, water it and feed it; see how it inherits or mutates; document its inter-dependency with you.<br><br><a href="https://sarapark.me/">Future Footwear by Sara Park ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic d">
-                        <p class=tag>H</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/heal.jpeg">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(magic)</i><br>Healing</p>
-                            <p class=caption>Take a deep breathe, get a rest, go outside for a walk and look at the nature around you; let the supernatural power heal your mind.<br><br><a href="http://xinbaonuzi.com/end-time-angels">End Time Angels by Dian Liang ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic b">
-                        <p class=tag>I</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/idolize.png">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(delicate)</i><br>Idolizing</p>
-                            <p class=caption>Create a persona/ autobiographical avatar for your dream idol wannabe; then perform it.<br><br><a href="https://www.yasminehuang.com/illogical-innocence">Illogical Innocence by Yasmine Huang ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic c">
-                        <p class=tag>J</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/journal.png">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(intensive)</i><br>Journaling</p>
-                            <p class=caption>Document your stream of consciousness; create a personal repository for it.<br><br><a href="https://postit.cargo.site/">Postit by Joss Liao ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic b">
-                        <p class=tag>K</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/kiss.png">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(affirmative)</i><br>Kissing</p>
-                            <p class=caption>As the title suggests.<br><br><a href="http://weiyi.li/#0036">The Lovers by Weiyi Li ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic c">
-                        <p class=tag>L</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/love.png">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(vulnerable & protective)</i><br>Loving</p>
-                            <p class=caption>Love boldly and never feel afraid.<br><br><a href="https://tiger.exposed/assets/uncommon-sense/UC1.pdf">The Should Be Here is not Here by Darong Lang ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic d">
-                        <p class=tag>M</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/mail.jpg">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(romantic)</i><br>Mailing</p>
-                            <p class=caption>Write letters in your mother tongue and send them to your friends; encipher and decipher the messages with your own coding systems.<br><br><a href="https://www.instagram.com/kevin.dong/">Digi Cards by Kevin Dong and Raina Wellman ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic b">
-                        <p class=tag>N</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/nailpolish.jpg">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(meditative)</i><br>Nailpolishing</p>
-                            <p class=caption>Polish every part of your body carefully.<br><br><a href="https://www.instagram.com/misuzushibano/">Nailpolishing by Misuzu Shibano ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic c">
-                        <p class=tag>O</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/obscure.png">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(active)</i><br>Obscuring</p>
-                            <p class=caption>Defamiliarize the familiar reality; obscure your everyday existence and turn it into a myth.<br><br><a href="https://www.stellaegelja.com/">Images by Stella Egelja ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic b">
-                        <p class=tag>P</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/perform.png">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(urgent)</i><br>Performing</p>
-                            <p class=caption>Exaggerate your physical body languages; use your movements to speak; feel your body, listen to it and let it empowers you.<br><br><a href="https://libbymarrs.net/hierarchy-of-needs/index.html">Emergency Suit! by Niya Sun and Libby Marrs ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic a">
-                        <p class=tag>Q</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/queer.png">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(robust)</i><br>Queering</p>
-                            <p class=caption>Create your own system of fluid gender; collect the symbol/icons that would visually represent the spirit of it.<br><br><a href="https://www.instagram.com/bysan.z/">BW000N by Bysanz ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic c">
-                        <p class=tag>R</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/rap.png">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(flamboyant)</i><br>Rapping</p>
-                            <p class=caption>Turn slangs into spoken-word poems; sing them aloud on the street to praise or critique.<br><br><a href="https://zhouyiqun.cargo.site">Rap by Yiqun Zhou ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic b">
-                        <p class=tag>S</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/style.jpg">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(chimeric)</i><br>Styling</p>
-                            <p class=caption>Imagine how the habitants on your planet would look like; wear like them and document the ways in which clothing empowers you.<br><br><a href="https://d-o-y.com/Killer-Rabbit">Killer Rabit by Yu Dong ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic d">
-                        <p class=tag>T</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/tattoo.png">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(sanguine)</i><br>Tattooing</p>
-                            <p class=caption>Find out your life motto and draw an icon for it; find out the most secret place on your body for it.<br><br><a href="https://www.instagram.com/gentlepokes/">Gentlepokes by Em Jiang ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic b">
-                        <p class=tag>U</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/unlearn.jpg">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(critical)</i><br>Unlearning</p>
-                            <p class=caption>Unlearn the existing rules and question mainstream canons; reseek authenticity from your daily routines and rebuild empathy with the objects/tools in front of you. <br><br><a href="https://fanmailfrommaddy.cargo.site">Fanmail by Madeleine Teh ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic c">
-                        <p class=tag>V</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/visualize.png">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(attentive)</i><br>Visualizing</p>
-                            <p class=caption>Choose a piece of past memories and make it visible in front of you; try 10 different ways of visualizing it.<br><br><a href="https://vimeo.com/leileixia">Frame—A Multimedia Performance by Leilei Xia ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic d">
-                        <p class=tag>W</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/word.png">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(enchanting)</i><br>Wording</p>
-                            <p class=caption>Map out a list of your favorite words; see how they relate to each other and how they develop their own senses of poetics.<br><br><a href="http://tdingsun.github.io/reading-machines/">Reading Machines by Tiger Dingsun ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic c">
-                        <p class=tag>X</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/xxoo.jpg">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(spirited)</i><br>XXOOing</p>
-                            <p class=caption>Take intimate advantures in your one-to-one relationships; feel your vulnerability.<br><br><a href="https://www.instagram.com/p/CDRwRRXDoRu/">Spoon for Lovers by Isabel Rower ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic d">
-                        <p class=tag>Y</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/youtube.png">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(electrifying)</i><br>YouTubing</p>
-                            <p class=caption>Meet with new people and exchange life experiences.<br><br><a href="https://m.weibo.cn/status/4569289769624598?sudaref=www.google.com">Fobulous EP02 by Yi Yang ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="pic b">
-                        <p class=tag>Z</p>
-                        <div class=picblock>
-                            <img class=illustration src="img/zoom.jpg">
-                        </div>
-                        <div class=descriptiontext>
-                            <p class="caption smalltitle"><i>(blissful)</i><br>Zooming</p>
-                            <p class=caption>Unite with friends and gather around with the people you love; support others, and get through the (hard) time together.<br><br><a href="https://www.instagram.com/risd_gd/">Class 2020 Graduation by RISD GD Department ↪</a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-
-
-                    <br>
-                    <br>
-                    <div class=descriptiontext>
-                        <p class=caption style="text-align: center">❤ ❤ ❤</p>
-                    </div>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                </div>
-
+                
 			</div>
             <div class="collophon">
                 <p class="collophontext description">This project is composed of three layers of narrative: <a href="calendar.html" class="collophontext collophonlink">① an archive of people’s previous projection into the future of 2020;</a> <a href="worldbuilding.html" class="collophontext collophonlink">② an essay on worldbuilding as a daily practice;</a><a href="room.html" class="collophontext collophonlink"> ③ a meditation room of people’s daily stories in the face of a global crisis.</a><br><br>© 2020 Ningjing Sun; Last updated in November 2020<br>Special thanks to Marie Otsuka and Minkyoung Kim</p>
