@@ -19,7 +19,7 @@
             #header{
                 background-image: linear-gradient(to bottom, 
                 rgba(255, 255, 35),
-                rgba(190,190,190) 13%, 
+                rgba(130,130,130) 10%, 
                 rgba(180, 180, 180) 36%,
                 transparent 100%);
             }
@@ -27,13 +27,26 @@
                 color: rgb(30, 30, 30);
                 margin-top: 0.6rem;
             }
+            /*
+            #header{
+                background-image: linear-gradient(to bottom, 
+                rgba(255, 255, 35),
+                rgba(190,190,190) 10%, 
+                rgba(180, 180, 180) 30%,
+                transparent 100%);
+            }
+            .headertext{
+                color: rgb(30, 30, 30);
+                margin-top: 0.6rem;
+            }*/
             body{
-                background-image: url("img/background0.png");
+                background-image: url("img/background3.png");
                 background-position: center;
                 background-size: cover;
                 background-attachment: fixed;
                 width: 100vw;
-                background-color: rgb(100, 100, 100);
+                /*background-color: rgb(100, 100, 100);*/
+                background-color: rgb(200, 200, 200);
                 margin-bottom: 0px;
             }
             a{
@@ -55,30 +68,34 @@
                 margin-top: 40px; /*leave space for header*/
                 margin-bottom: 0px;
                 width: 100vw;
-                padding-left: 6%;
-                padding-right: 13%;
+                /*padding-left: 6%;
+                padding-right: 13%;*/
+                padding-left: 45%;
+                padding-right: 0rem;
+                margin-right: 0rem;
                 z-index: 10;
             }
         	.picture{
                 height: calc(100vh - 40px);
                 /*padding-top: 4.23rem;*/
-                padding-top: 75vh;
-        		margin-left: 0rem;
+                padding-top: 8vh;
+                padding-right: 0rem;
+        		margin: 0rem;
         		flex-grow: 1;
                 overflow: auto;
                 -webkit-overflow-scrolling: touch;
         	}
             .a{
-                left: 40%;
+                left: 10%;
             }
             .b{
-                left: 27%;
+                left: 10%;
             }
             .c{
-                left: 13.5%;
+                left: 10%;
             }
             .d{
-                left: 1%;
+                left: 10%;
             }
             .subtitle{
                 display: flex;
@@ -104,8 +121,8 @@
             .pic{
                 display: flex;
                 position: relative;
-                max-width: 60%;
-                width: 60%;
+                max-width: 84%;
+                width: 84%;
                 max-height: auto;
                 height: auto;
             }   
@@ -135,8 +152,8 @@
                 position: relative;
                 margin-left: 0.7rem;
                 margin-right: 0.7rem;
-                max-width: 70%;
-                width: 70%;
+                max-width: 60%;
+                width: 60%;
             }
             .tag{
                 display: inline-block;
@@ -148,9 +165,13 @@
                 margin-top: 0rem;
                 margin-bottom: 0rem;
                 height: 4rem;
-                padding: 0.8rem;
+                padding-left: auto;
+                padding-right: auto;
+                text-align: center;
                 padding-top: 1.3rem;
                 border: 0.8px dotted black;
+                box-shadow: 10px 10px 12px rgb(0, 0, 0, 40%);
+                width: 9%;
             }
             .descriptiontext{
                 display: flex;
@@ -163,9 +184,6 @@
             .caption{
                 position: relative;
                 font-family: arialnarrow;
-                /*display: flex;
-                justify-content: center;
-                align-items: center;*/
                 text-align: left;
                 margin: 0;
                 margin-bottom: 0.32rem;
@@ -176,6 +194,8 @@
                 color: black;
                 height: -webkit-fill-available;
                 overflow: auto;
+                float: left;
+                box-shadow: 10px 10px 12px rgb(0, 0, 0, 40%);
             }
             .smalltitle{
                 font-size: 2.12rem;
@@ -196,14 +216,15 @@
             .google{
                 z-index: 0;
                 position: absolute;
-                max-width: 86vw;
-                max-height: 82vh;
+                max-width: 56vw;
+                max-height: 88vh;
                 /*margin-top: -0.85rem;*/
                 margin-top: 1.6rem;
                 margin-left: 4.6rem;
                 transition: all 0.5s ease;
-                opacity: 56%;
-                /*box-shadow: 0 0 12px 16px rgb(243, 243, 243); */
+                opacity: 70%;
+                /*opacity: 56%;
+                box-shadow: 0 0 12px 16px rgb(243, 243, 243); */
             }
 	</style>
         <!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
@@ -219,12 +240,18 @@
             <p class="headertext about">????</p>
         </div>
         <div class=google>
-            <iframe width="100%" height="440px" src="https://docs.google.com/spreadsheets/d/1xp-L_rFaUQKtXhISgBNTS2WG6kZWFVZV6sc46YPlGkA/edit?usp=sharing" style="width: 86vw; height: 82vh;" class="scroll-transition-fade"></iframe>
+            <iframe width="100%" height="440px" src="https://docs.google.com/spreadsheets/d/1xp-L_rFaUQKtXhISgBNTS2WG6kZWFVZV6sc46YPlGkA/edit?usp=sharing" style="width: 56vw; height: 88vh;" class="scroll-transition-fade"></iframe>
             <div class=mask>
             </div>
         </div>
     	<div id=content>
     		<div class=picture>
+                <div class="descriptiontext">
+                    <p class=caption style="display: inline-block; text-align: center; margin-left: 34%; width: 100%;background-color: rgba(255, 255, 35); border: none">↑ ↑ ↑ Scroll Up ↑ ↑ ↑</p>
+                </div>
+                <br>
+                <br>
+
                 <div class="pic d">
                     <p class=tag>A</p>
                     <div class=picblock>
@@ -232,7 +259,7 @@
                     </div>
                     <div class=descriptiontext>
                         <p class="caption smalltitle"><i>(endless)</i><br>Archiving</p>
-                        <p class=caption>Collect any object personally meaningful to you; document their names, appearances, odors, and the ways they trigger narratives about yourself.<br><br><a href="https://byscene.com/index">Ongoing by Scene Peng ↪</a></p>
+                        <p class=caption>Collect objects meaningful to you; document their names, odors, looks, and how they trigger narratives.<br><br><a href="https://byscene.com/index">Ongoing by Scene ↪</a></p>
                     </div>
                 </div>
                 <br>
@@ -264,14 +291,14 @@
                 <br>
                 <br>
 
-                <div class="pic c">
+                <div class="pic a">
                     <p class=tag>D</p>
                     <div class=picblock>
                         <img class=illustration src="img/dérive.png">
                     </div>
                     <div class=descriptiontext>
                         <p class="caption smalltitle"><i>(nostalgic)</i><br>Dériving</p>
-                        <p class=caption>Discard the map and go to uncharted places; follow your instincts and wander in the city; go find out the sunniest spot and have a picnic with your friends there.<br><br><a href="https://qihang.li">The Five Diversions by Qihang Li ↪</a></p>
+                        <p class=caption>Discard the map and go to uncharted places; follow your instincts and wander in the city.<br><br><a href="https://qihang.li">The Five Diversions by Qihang Li ↪</a></p>
                     </div>
                 </div>
                 <br>
@@ -336,7 +363,7 @@
                     </div>
                     <div class=descriptiontext>
                         <p class="caption smalltitle"><i>(delicate)</i><br>Idolizing</p>
-                        <p class=caption>Create a persona/ autobiographical avatar for your dream idol wannabe; then perform it.<br><br><a href="https://www.yasminehuang.com/illogical-innocence">Illogical Innocence by Yasmine Huang ↪</a></p>
+                        <p class=caption>Create a persona/ avatar for your dream idol wannabe; then perform it.<br><br><a href="https://www.yasminehuang.com/illogical-innocence">Illogical Innocence by Yasmine Huang ↪</a></p>
                     </div>
                 </div>
                 <br>
@@ -388,7 +415,7 @@
                     </div>
                     <div class=descriptiontext>
                         <p class="caption smalltitle"><i>(romantic)</i><br>Mailing</p>
-                        <p class=caption>Write letters in your mother tongue and send them to your friends; encipher and decipher the messages with your own coding systems.<br><br><a href="https://www.instagram.com/kevin.dong/">Digi Cards by Kevin Dong and Raina Wellman ↪</a></p>
+                        <p class=caption>Write letters in your mother tongue and send them to your best friends.<br><br><a href="https://www.instagram.com/kevin.dong/">Digi Cards by Kevin Dong and Raina Wellman ↪</a></p>
                     </div>
                 </div>
                 <br>
@@ -433,7 +460,7 @@
                 <br>
                 <br>
 
-                <div class="pic a">
+                <div class="pic b">
                     <p class=tag>Q</p>
                     <div class=picblock>
                         <img class=illustration src="img/queer.png">
@@ -466,7 +493,7 @@
                     </div>
                     <div class=descriptiontext>
                         <p class="caption smalltitle"><i>(chimeric)</i><br>Styling</p>
-                        <p class=caption>Imagine how the habitants on your planet would look like; wear like them and document the ways in which clothing empowers you.<br><br><a href="https://d-o-y.com/Killer-Rabbit">Killer Rabit by Yu Dong ↪</a></p>
+                        <p class=caption>Imagine how the habitants on your planet would look like; wear like them and document how clothing empowers you.<br><br><a href="https://d-o-y.com/Killer-Rabbit">Killer Rabit by Yu Dong ↪</a></p>
                     </div>
                 </div>
                 <br>
@@ -479,7 +506,7 @@
                     </div>
                     <div class=descriptiontext>
                         <p class="caption smalltitle"><i>(sanguine)</i><br>Tattooing</p>
-                        <p class=caption>Find out your life motto and draw an icon for it; find out the most secret place on your body for it.<br><br><a href="https://www.instagram.com/gentlepokes/">Gentlepokes by Em Jiang ↪</a></p>
+                        <p class=caption>Find out your life motto and draw an icon for it on the most secret place on your body.<br><br><a href="https://www.instagram.com/gentlepokes/">Gentlepokes by Em Jiang ↪</a></p>
                     </div>
                 </div>
                 <br>
@@ -505,13 +532,13 @@
                     </div>
                     <div class=descriptiontext>
                         <p class="caption smalltitle"><i>(attentive)</i><br>Visualizing</p>
-                        <p class=caption>Choose a piece of past memories and make it visible in front of you; try 10 different ways of visualizing it.<br><br><a href="https://vimeo.com/leileixia">Frame—A Multimedia Performance by Leilei Xia ↪</a></p>
+                        <p class=caption>Choose a piece of past memories and try 10 different ways of visualizing it.<br><br><a href="https://vimeo.com/leileixia">Frame—A Multimedia Performance by Leilei Xia ↪</a></p>
                     </div>
                 </div>
                 <br>
                 <br>
 
-                <div class="pic d">
+                <div class="pic a">
                     <p class=tag>W</p>
                     <div class=picblock>
                         <img class=illustration src="img/word.png">
@@ -563,12 +590,10 @@
                 <br>
                 <br>
 
-
-                <br>
-                <br>
                 <div class=descriptiontext>
-                	<p class=caption style="text-align: center">❤ ❤ ❤</p>
+                	<p class=caption style="display: inline-block; text-align: center; margin-left: 34%; width: 100%;background-color: rgba(255, 255, 35); border: none">❤ ❤ ❤</p>
             	</div>
+                <br>
                 <br>
                 <br>
                 <br>
