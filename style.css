@@ -52,13 +52,13 @@
 .headerbackground{
     padding-left: 0rem;
     position: fixed;
-    box-shadow: 0 30 50px 50px rgb(70, 70, 70);
 }
 .headertext{
     font-family: arialnarrow;
     display: inline-block;
     margin-top: 0.3rem;
     font-size: 1.4rem;
+    line-height: 1.5rem;
     letter-spacing: -0.05px;
     z-index: 50;
     margin-left: 1rem;
