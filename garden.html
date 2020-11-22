@@ -7,10 +7,11 @@
     <meta name="description" content=""><!--keywords/snippet for search engines-->
     <meta name="viewport" content="width=device-width"><!--the browser will (probably) render the width of the page at the width of its own screen -->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<style>
 		::-webkit-scrollbar {
             width: 13px;  /* Remove scrollbar space */
@@ -288,8 +289,8 @@
             display: block;
             margin-left: 3%;
             margin-top: 0;
-            margin-bottom: 11vh;
-            padding-top: 3%;
+            margin-bottom: 11.4vh;
+            padding-top: 2.2%;
             z-index: 999;
             background-color: white;
             box-shadow: 5px 10px 10px white;
@@ -360,7 +361,7 @@
 
     <div class=collectblock>
         <div id=downloadblock>
-            <p class=subtitle id=click>Click and collect your assets!</p>
+            <p class=subtitle id=click>Double click to collect assets!</p>
             <div class=assetblock></div>
             <div id=download>
                 <p class="subtitle download">Download</p>
@@ -412,20 +413,24 @@
         })
     </script>
 
-    <script>    //adding asset to an array
-
+    <script>    //make assets draggable
+        $(function(){
+            $(".asset").draggable();
+        });
     </script>
 
-    <script>    //post thumbnail into collection box
+    <script>    //adding asset to an array
+    </script>
+
+    <script>    //append picture to collection box
         $(document).ready(function(){
-            $(".assetimage").click(function(){
+            $(".assetimage").dblclick(function(){
                 $(".assetimage").clone().css({"height":"7vh","max-width":"7vh","margin-top":"2vh"}).appendTo(".assetblock");
             });
         });
     </script> //已经append过的不能再append了；不能重复append
 
-
-    <script>    //package all selected assets into zip, downloading
+    <script>    //package all selected assets into zip, downloading / OR print them out
     </script>
 
     <!--
