@@ -369,9 +369,9 @@
             <p class=subtitle id=click>Double click to collect assets!</p>
             <div class=assetblock></div>
             <div id=button>
-                <p class="subtitle button refresh">↺</p>
-                <p class="subtitle button">Print</p>
-                <p class="subtitle button download">Download</p>
+                <p class="subtitle button refresh inactive">↺</p>
+                <p class="subtitle button inactive">Print</p>
+                <p class="subtitle button download inactive">Download</p>
             </div>
         </div>
         <!--<div class=cancelB>
@@ -383,19 +383,19 @@
     <div class=assetA>
         <div class=asset>
             <div class=assetimage>
-                <img src="img/assetA.png">
+                <a href="img/assetA.png"><img src="img/assetA.png"></a>
             </div>
         </div>
 
         <div class=asset>
             <div class=assetimage>
-                <img src="img/assetB.png">
+                <a href="img/assetB.png"><img src="img/assetB.png"></a>
             </div>
         </div>
 
         <div class=asset>
             <div class=assetimage>
-                <img src="img/bear.png">
+                <a href="img/bear.png"><img src="img/bear.png"></a>
             </div>
         </div>
     </div>
@@ -445,6 +445,36 @@
                 downloadUrls.push(addUrl);
                 setupDownload();
             });
+
+            /*
+            function doClickAction() {
+                return false; 
+            }
+            function doDoubleClickAction() {
+                $("#double-click h2").append("•"); 
+            }
+
+            var timer = 0;
+            var delay = 200;
+            var prevent = false;
+
+            $(".assetimage").
+            .on("click", function(){
+                timer = setTimeout(function() {
+                if (!prevent) {
+                    doClickAction();
+                }
+                prevent = false;
+                }, delay);
+            })
+            .on("dblclick",(function(){
+                clearTimeout(timer);
+                prevent = true;
+                $(this).clone().css({"height":"7vh","max-width":"7vh","margin-top":"2vh","margin-right":"1vw"}).appendTo(".assetblock");
+                let addUrl = $(this).find('a').attr('href');
+                downloadUrls.push(addUrl);
+                setupDownload();
+            });*/
 
             function setupDownload(){
                 if (downloadUrls.length > 0){
