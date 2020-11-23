@@ -301,16 +301,22 @@
         .asset{
             position: absolute;
             display: flex;
-            max-width: 26vw;
-            width: 26vw;
+            max-width: 28vw;
+            width: 28vw;
             max-height: auto;
             height: auto;
             z-index: 30;
             margin-left: 10px;
         }
         .largeasset{
-            max-width: 30vw;
-            width: 30vw;
+            max-width: 34vw;
+            width: 34vw;
+            max-height: auto;
+            height: auto;
+        }
+        .smallasset{
+            max-width: 24vw;
+            width: 24vw;
             max-height: auto;
             height: auto;
         }
@@ -320,7 +326,7 @@
             width: 60%;
             height: auto;
         }
-        .assetA{
+        .assetScreen{
             max-width: 100%;
             width: 100%;
         }
@@ -329,16 +335,20 @@
             width: 100%;
         }
         .asset:first-child{
-            left: 400px;
-            top: 100px;
+            left: 570px;
+            top: 80px;
         }
         .asset:nth-child(2){
-            left: 600px;
-            top: 400px;
+            left: 760px;
+            top: 600px;
         }
         .asset:nth-child(3){
-            left: 800px;
+            left: 1200px;
             top: 200px;
+        }
+        .asset:nth-child(4){
+            left: 450px;
+            top: 600px;
         }
     </style>
 </head>
@@ -386,7 +396,7 @@
         </div>-->
     </div>
 
-    <div class=assetA>
+    <div class=assetScreen>
         <div class=asset>
             <div class=assetimage>
                 <a href="img/assetA.png"><img src="img/assetA.png"></a>
@@ -402,6 +412,12 @@
         <div class="asset largeasset">
             <div class=assetimage>
                 <a href="iimg/assetC.png"><img src="img/assetC.png"></a>
+            </div>
+        </div>
+
+        <div class="asset smallasset">
+            <div class=assetimage>
+                <a href="iimg/assetD.png"><img src="img/assetD.png"></a>
             </div>
         </div>
     </div>
