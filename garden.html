@@ -301,48 +301,68 @@
         .asset{
             position: absolute;
             display: flex;
-            max-width: 28vw;
-            width: 28vw;
+            flex-direction: column;
+            max-width: 16vw;
+            width: 16vw;
             max-height: auto;
             height: auto;
             z-index: 30;
             margin-left: 10px;
         }
         .largeasset{
-            max-width: 34vw;
-            width: 34vw;
+            max-width: 19vw;
+            width: 19vw;
             max-height: auto;
             height: auto;
         }
         .smallasset{
-            max-width: 24vw;
-            width: 24vw;
+            max-width: 14vw;
+            width: 14vw;
             max-height: auto;
             height: auto;
         }
         .nametag{
-            display: inline-block;
+            display: block;
+            /*display: inline-block;*/
             position: relative;
             top: 0rem;
             background-color: white;
             color: black;
-            font-size: 2.12rem;
-            line-height: 2.2rem;
+            font-size: 1.4rem;
+            line-height: 1.5rem;
             margin-top: 0rem;
             margin-bottom: 0rem;
-            height: 3rem;
-            padding-left: auto;
-            padding-right: auto;
+            padding-left: 0.2rem;
+            padding-right: 0.2rem;
             text-align: center;
-            padding-top: 1rem;
+            padding-top: 0.3rem;
+            padding-bottom: 0.3rem;
             border: 0.8px dotted black;
             box-shadow: 10px 10px 12px rgb(0, 0, 0, 40%);
-            width: 20%;
+            max-width: 100%;
+        }
+        .startag{
+            display: inline;
+            /*display: inline-block;*/
+            position: relative;
+            top: 0rem;
+            background-color: white;
+            color: black;
+            margin-top: 0.3rem;
+            margin-bottom: 0rem;
+            padding-left: 0.2rem;
+            padding-right: 0.2rem;
+            text-align: center;
+            padding-top: 0.3rem;
+            padding-bottom: 0.3rem;
+            border: 0.8px dotted black;
+            box-shadow: 10px 10px 12px rgb(0, 0, 0, 40%);
+            max-width: 100%;
         }
         .assetimage{
             position: relative;
-            max-width: 60%;
-            width: 60%;
+            max-width: 100%;
+            width: 100%;
             height: auto;
         }
         .assetScreen{
@@ -367,6 +387,10 @@
         }
         .asset:nth-child(4){
             left: 450px;
+            top: 600px;
+        }
+        .asset:nth-child(5){
+            left: 1500px;
             top: 600px;
         }
     </style>
@@ -417,31 +441,43 @@
 
     <div class=assetScreen>
         <div class=asset>
-            <p class=nametag>fruits</p>
             <div class=assetimage>
                 <a href="img/assetA.png"><img src="img/assetA.png"></a>
             </div>
+            <p class=nametag>daily fresh fruits</p>
+            <p class=startag>(∞/∞ unlimited)<br>health ★★★★<br>longevity ★★★</p>
         </div>
 
         <div class=asset>
-            <p class=nametag>keys</p>
             <div class=assetimage>
                 <a href="img/assetB.png"><img src="img/assetB.png"></a>
             </div>
+            <p class=nametag>a key found in a cabin</p>
+            <p class=startag>(1/1)<br>courage ★★★★★★<br>risk / surprise ⚠️⚠️⚠️⚠️⚠️⚠️</p>
         </div>
 
         <div class="asset largeasset">
-            <p class=nametag>a letter from mom</p>
             <div class=assetimage>
-                <a href="iimg/assetC.png"><img src="img/assetC.png"></a>
+                <a href="img/assetC.png"><img src="img/assetC.png"></a>
             </div>
+            <p class=nametag>weekly letters from mom</p>
+            <p class=startag>(∞/∞ unlimited)<br>unreserved support ★★★<br>a person always by your side ★★★</p>
         </div>
 
         <div class="asset smallasset">
-            <p class=nametag>a deck of tarot cards</p>
             <div class=assetimage>
-                <a href="iimg/assetD.png"><img src="img/assetD.png"></a>
+                <a href="img/assetD.png"><img src="img/assetD.png"></a>
             </div>
+            <p class=nametag>a deck of tarot cards</p>
+            <p class=startag>(5/5)<br>insight ★★★★<br>resolution ★★★★</p>
+        </div>
+
+        <div class="asset smallasset">
+            <div class=assetimage>
+                <a href="img/assetE.png"><img src="img/assetE.png"></a>
+            </div>
+            <p class=nametag>a scarf worn by two people</p>
+            <p class=startag>(10/10)<br>empathy ★★★★★<br><br> Wear the scarf together with another person, and you will hear what that person is thinking about right now.</p>
         </div>
     </div>
 
