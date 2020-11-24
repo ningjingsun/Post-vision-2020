@@ -114,12 +114,11 @@
             line-height: 2.1rem;
             letter-spacing: 0px;
         }
-        #keywords{
+        .keywords{
             font-family: arialnarrow;
-            margin-top: 1.2rem;
-            margin-bottom: 1.4rem;
             font-size: 1.4rem;
-            line-height: 1.7rem;
+            margin-bottom: -0.4rem;
+            line-height: 1.9rem;
             letter-spacing: 0px;
         }
         .essayblock{
@@ -246,8 +245,9 @@
             box-sizing: border-box;
             max-width: 100%;
             width: 100%;
-            height: 24vh;
+            height: 100%;
             padding-top: 0;
+            padding-bottom: 0;
             margin: 0;
             z-index: 999;
             overflow-y: hidden;
@@ -265,7 +265,7 @@
         }
         .assetblock{
             display: flex;
-            margin-top: 6vh;
+            margin-top: 4.5vh;
             position: absolute;
             padding-left: 3%;
             flex-wrap: wrap;
@@ -393,6 +393,15 @@
             left: 1500px;
             top: 600px;
         }
+        @media print {
+            body * {
+            display:none;
+            }
+
+        body .printable {
+            display:block;
+            }
+        }
     </style>
 </head>
 <body>
@@ -407,10 +416,9 @@
     <div class=essayblock>
     	<div class=essay>
             <p id=title>Post-2020: A Journey into the Unknown</p>
-            <p id=keywords>Dear friend,
-                <br>
-                <br>
-                Click and collect 5 assets that you want to take with you as you enter the journey into the unknown.</p>
+            <p class=keywords>Dear my friend,</p><br>
+            <p class=keywords>A garden is an open place where free gifts are circulated and offered to its visitors in hope of sharing delight and support.</p><br>
+            <p class=keywords>Scattered around the space are 30 objects for self-empowering. Please feel free to collect as many as 5 assets that you want to take with you in your future adventures! Carefully select those that you think would work for you the most:)</p>
         </div>
 
         <div class="cancelA aboutA">
@@ -429,7 +437,7 @@
             <div class=assetblock></div>
             <div id=button>
                 <p class="subtitle button refresh inactive">↺</p>
-                <p class="subtitle button inactive">Print</p>
+                <p class="subtitle button inactive" onclick="divPrint();">Print</p></a>
                 <p class="subtitle button download inactive">Download</p>
             </div>
         </div>
@@ -442,7 +450,7 @@
     <div class=assetScreen>
         <div class=asset>
             <div class=assetimage>
-                <a href="img/assetA.png"><img src="img/assetA.png"></a>
+                <a href="img/assetA.png" onclick="return false"><img src="img/assetA.png"></a>
             </div>
             <p class=nametag>daily fresh fruits</p>
             <p class=startag>(∞/∞ unlimited)<br>health ★★★★<br>longevity ★★★</p>
@@ -450,15 +458,15 @@
 
         <div class=asset>
             <div class=assetimage>
-                <a href="img/assetB.png"><img src="img/assetB.png"></a>
+                <a href="img/assetB.png" onclick="return false"><img src="img/assetB.png"></a>
             </div>
-            <p class=nametag>a key found in a cabin</p>
+            <p class=nametag>a key found in your childhood's cabin</p>
             <p class=startag>(1/1)<br>courage ★★★★★★<br>risk / surprise ⚠️⚠️⚠️⚠️⚠️⚠️</p>
         </div>
 
         <div class="asset largeasset">
             <div class=assetimage>
-                <a href="img/assetC.png"><img src="img/assetC.png"></a>
+                <a href="img/assetC.png" onclick="return false"><img src="img/assetC.png"></a>
             </div>
             <p class=nametag>weekly letters from mom</p>
             <p class=startag>(∞/∞ unlimited)<br>unreserved support ★★★<br>a person always by your side ★★★</p>
@@ -466,7 +474,7 @@
 
         <div class="asset smallasset">
             <div class=assetimage>
-                <a href="img/assetD.png"><img src="img/assetD.png"></a>
+                <a href="img/assetD.png" onclick="return false"><img src="img/assetD.png"></a>
             </div>
             <p class=nametag>a deck of tarot cards</p>
             <p class=startag>(5/5)<br>insight ★★★★<br>resolution ★★★★</p>
@@ -474,7 +482,7 @@
 
         <div class="asset smallasset">
             <div class=assetimage>
-                <a href="img/assetE.png"><img src="img/assetE.png"></a>
+                <a href="img/assetE.png" onclick="return false"><img src="img/assetE.png"></a>
             </div>
             <p class=nametag>a scarf worn by two people</p>
             <p class=startag>(10/10)<br>empathy ★★★★★<br><br> Wear the scarf together with another person, and you will hear what that person is thinking about right now.</p>
@@ -521,7 +529,7 @@
             let downloadUrls=[];
 
             $(".assetimage").dblclick(function(){
-                $(this).clone().css({"height":"7vh","max-width":"7vh","margin-top":"2vh","margin-right":"1vw"}).appendTo(".assetblock");
+                $(this).clone().css({"max-height":"9vh","max-width":"9vh","margin-top":"3vh","margin-right":"1vw"}).appendTo(".assetblock");
                 let addUrl = $(this).find('a').attr('href');
                 downloadUrls.push(addUrl);
                 setupDownload();
@@ -598,9 +606,19 @@
     </script> //how to append only once?
 
     <script>    //print
+        function divPrint() {
+            // Some logic determines which div should be printed...
+            // This example uses div3.
+            $(".assetblock").addClass("printable");
+            window.print();
+        }
+        $(".print").click(function(){
+            if($(".button").hasClass('active')){
+                divPrint();
+            }
+        })
     </script>
 
-    <!--
 	<script type="text/javascript">
 		var edgeSizea = 240;
 		var edgeSizeb = 480;
@@ -843,7 +861,7 @@
 			guard.style.right = "0px";
 			document.body.appendChild( guard );
 		}	//grid
-	</script>-->
+	</script>
 
 </body>
 </html>
