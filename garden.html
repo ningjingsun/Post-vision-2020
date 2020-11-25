@@ -374,12 +374,12 @@
             width: 100%;
         }
         .asset:first-child{
-            left: 570px;
+            left: 520px;
             top: 80px;
         }
         .asset:nth-child(2){
-            left: 660px;
-            top: 600px;
+            left: 700px;
+            top: 450px;
         }
         .asset:nth-child(3){
             left: 1200px;
@@ -407,10 +407,17 @@
         }
         @media print {
             body * {
-            display:none;
+                /*display:none;*/
+                visibility: hidden;
             }
-        body .printable {
-            display:block;
+            .printable * {
+                visibility: visible;
+            }
+            .printable {
+                display: block;
+                position: fixed;
+                left: -300px;
+                top: -800px;
             }
         }
     </style>
@@ -420,7 +427,7 @@
         <p class="headertext"><a href="calendar.html" class=headercss>With the Future Behind Us</a></p>
         <p class="headertext"><a href="worldbuilding.html" class=headercss>Worldbuilding Daily Tactics</a></p>
         <p class="headertext"><a href="room.html" class=headercss>Self-Meditation Room/A–Z</a></p>
-        <p class="headertext"><a href="garden.html" class=headercss>Garden and the Genesis</a></p>
+        <p class="headertext"><a href="garden.html" class=headercss>Garden and Magic Offerings</a></p>
         <p class="headertext about">????</p>
     </div>
 
@@ -444,20 +451,16 @@
         </div>
     </div>
 
-    <div class=collectblock>
+    <div class="collectblock">
         <div id=downloadblock>
             <p class=subtitle id=click>Double click to collect your 5 assets!</p>
-            <div class=assetblock></div>
+            <div class="assetblock printable"></div>
             <div id=button>
                 <p class="subtitle button refresh inactive">↺</p>
                 <p class="subtitle button inactive" onclick="divPrint();">Print</p></a>
                 <p class="subtitle button download inactive">Download</p>
             </div>
         </div>
-        <!--<div class=cancelB>
-            <p class=cancel5></p>
-            <p class=cancel6></p>
-        </div>-->
     </div>
 
     <div class=assetScreen>
@@ -558,9 +561,14 @@
         $(document).ready(function(){
 
             let assetUrls = [
-                'bear.png',
                 'assetA.png',
-                'assetB'
+                'assetB.png',
+                'assetC.png',
+                'assetD.png',
+                'assetE.png',
+                'assetF.png',
+                'assetG.png',
+                'assetH.png'
             ]
 
             let downloadUrls=[];
@@ -640,13 +648,13 @@
                 downloadUrls = [];
             });
         });
-    </script> //how to append only once?
+    </script>
 
     <script>    //print
         function divPrint() {
             // Some logic determines which div should be printed...
             // This example uses div3.
-            $(".assetblock").addClass("printable");
+            /*$(".assetblock").addClass("printable");*/
             window.print();
         }
         $(".print").click(function(){
