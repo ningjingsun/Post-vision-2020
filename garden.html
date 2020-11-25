@@ -401,6 +401,10 @@
             left: 1000px;
             top: 1000px;
         }
+        .asset:nth-child(8){
+            left: 2250px;
+            top: 1000px;
+        }
         @media print {
             body * {
             display:none;
@@ -470,7 +474,7 @@
                 <a href="img/assetB.png" onclick="return false"><img src="img/assetB.png"></a>
             </div>
             <p class=nametag>a key found in your childhood's cabin</p>
-            <p class=startag>(1/1)<br>courage ★★★★★★★<br>risk / surprise ⚠️⚠️⚠️⚠️⚠️⚠️⚠️</p>
+            <p class=startag>(use ONCE only)<br>courage ★★★★★★★<br>risk / surprise ⚠️⚠️⚠️⚠️⚠️⚠️⚠️</p>
         </div>
 
         <div class="asset largeasset">
@@ -486,7 +490,7 @@
                 <a href="img/assetD.png" onclick="return false"><img src="img/assetD.png"></a>
             </div>
             <p class=nametag>a deck of tarot cards</p>
-            <p class=startag>(5/5)<br>insight ★★★★<br>resolution ★★★★</p>
+            <p class=startag>(5 times only)<br>insight ★★★★★<br>resolution ★★★★</p>
         </div>
 
         <div class="asset smallasset">
@@ -494,7 +498,7 @@
                 <a href="img/assetE.png" onclick="return false"><img src="img/assetE.png"></a>
             </div>
             <p class=nametag>a scarf worn by two people</p>
-            <p class=startag>(10/10)<br>empathy ★★★★★<br><br> Wear the scarf together with another person, and you will hear what that person is thinking about right now.</p>
+            <p class=startag>(10 times only)<br>empathy ★★★★★<br><br> Wear the scarf together with another person, and you will hear what that person is thinking about right now.</p>
         </div>
 
         <div class="asset smallasset">
@@ -510,7 +514,15 @@
                 <a href="img/assetG.png" onclick="return false"><img src="img/assetG.png"></a>
             </div>
             <p class=nametag>incantated perfume</p>
-            <p class=startag>(20ml/20ml)<br>charisma ★★★★★<br>risk / surprise ⚠️⚠️⚠️<br><br>Attract and convince other people without reservations! (Only work in one-to-one relationship.)</p>
+            <p class=startag>(20ml only)<br>charisma ★★★★★★<br>risk / surprise ⚠️⚠️⚠️<br><br>Attract and convince other people without reservations! (Only work in one-to-one relationship.)</p>
+        </div>
+
+        <div class="asset smallasset">
+            <div class=assetimage>
+                <a href="img/assetH.png" onclick="return false"><img src="img/assetH.png"></a>
+            </div>
+            <p class=nametag>microchip implantation</p>
+            <p class=startag>(irreversible)<br>learning efficiency ★★★★★★<br>risk / surprise ⚠️⚠️⚠️⚠️<br><br>Implant this microchip into your brain, and you will become a fast learner like never before.</p>
         </div>
     </div>
 
@@ -842,7 +854,7 @@
 			var maxDimension = ( increment * incrementCount );
 
 			// Draw the boxes that make up the grid.
-			for ( var x = 0 ; x < incrementCount/2.8 ; x++ ) {
+			for ( var x = 0 ; x < incrementCount/2 ; x++ ) {
 				for ( var y = 0 ; y < incrementCount/3.5 ; y++ ) {
 
 					var xOffset = ( x * increment );
