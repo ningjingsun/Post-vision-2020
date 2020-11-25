@@ -24,10 +24,10 @@
             background: rgb(225, 225, 225);
         }
         .collophon{
-            background-color: rgb(70, 255, 30);
+            background-color: rgb(30, 255, 20);
         }
         .collophon_open{
-            background-color: rgb(70, 255, 30);
+            background-color: rgb(30, 255, 20);
         }
         .essay::-webkit-scrollbar {
             width: 0px;  /* Remove scrollbar space */
@@ -59,7 +59,7 @@
 		#header{
             background-image: linear-gradient(to bottom, 
             rgba(0, 255, 0),
-            rgba(120,255,120) 8%, 
+            rgba(120,255,120) 10%, 
             rgba(190, 255, 190) 20%,
             transparent 100%);
             }
@@ -378,7 +378,7 @@
             top: 80px;
         }
         .asset:nth-child(2){
-            left: 760px;
+            left: 660px;
             top: 600px;
         }
         .asset:nth-child(3){
@@ -386,18 +386,25 @@
             top: 200px;
         }
         .asset:nth-child(4){
-            left: 450px;
-            top: 600px;
+            left: 200px;
+            top: 650px;
         }
         .asset:nth-child(5){
             left: 1500px;
             top: 600px;
         }
+        .asset:nth-child(6){
+            left: 1800px;
+            top: 400px;
+        }
+        .asset:nth-child(7){
+            left: 1000px;
+            top: 1000px;
+        }
         @media print {
             body * {
             display:none;
             }
-
         body .printable {
             display:block;
             }
@@ -419,7 +426,7 @@
             <p class=keywords>Dear my friend,</p><br>
             <p class=keywords>Welcome! A garden is an open place where free gifts are circulated and offered to its visitors in hope of sharing delight and support.</p><br>
             <p class=keywords>Scattered around the space are 30 magic objects for self-empowering. Please feel free to collect 5 assets that you want to take with you the most in your future adventures! </p><br>
-            <p class=keywords>Carefully select those that you need the most right now / would empower you the most in your future:) I wish you all the best in your post-2020 journey!</p><br>
+            <p class=keywords>Carefully select those that you need the most, or those that would empower you the most:) I wish you all the best in your post-2020 journey!</p><br>
             <p class=keywords>Yours sincerely,<br>Written in December, 2020</p><br><br>
         </div>
 
@@ -463,7 +470,7 @@
                 <a href="img/assetB.png" onclick="return false"><img src="img/assetB.png"></a>
             </div>
             <p class=nametag>a key found in your childhood's cabin</p>
-            <p class=startag>(1/1)<br>courage ★★★★★★<br>risk / surprise ⚠️⚠️⚠️⚠️⚠️⚠️</p>
+            <p class=startag>(1/1)<br>courage ★★★★★★★<br>risk / surprise ⚠️⚠️⚠️⚠️⚠️⚠️⚠️</p>
         </div>
 
         <div class="asset largeasset">
@@ -488,6 +495,22 @@
             </div>
             <p class=nametag>a scarf worn by two people</p>
             <p class=startag>(10/10)<br>empathy ★★★★★<br><br> Wear the scarf together with another person, and you will hear what that person is thinking about right now.</p>
+        </div>
+
+        <div class="asset smallasset">
+            <div class=assetimage>
+                <a href="img/assetF.png" onclick="return false"><img src="img/assetF.png"></a>
+            </div>
+            <p class=nametag>artificial sun in your bedroom</p>
+            <p class=startag>(∞/∞ unlimited)<br>good mental health everyday ★★★<br><br>Olafur Eliasson's Sun Light is being manufactured on a mass scale.</p>
+        </div>
+
+        <div class="asset smallasset">
+            <div class="assetimage">
+                <a href="img/assetG.png" onclick="return false"><img src="img/assetG.png"></a>
+            </div>
+            <p class=nametag>incantated perfume</p>
+            <p class=startag>(20ml/20ml)<br>charisma ★★★★★<br>risk / surprise ⚠️⚠️⚠️<br><br>Attract and convince other people without reservations! (Only work in one-to-one relationship.)</p>
         </div>
     </div>
 
@@ -523,11 +546,9 @@
         $(document).ready(function(){
 
             let assetUrls = [
+                'bear.png',
                 'assetA.png',
-                'assetB.png',
-                'assetC.png'
-                'assetD.png'
-                'assetE.png'
+                'assetB'
             ]
 
             let downloadUrls=[];
@@ -623,7 +644,7 @@
         })
     </script>
 
-	<!--<script type="text/javascript">
+	<script type="text/javascript">
 		var edgeSizea = 240;
 		var edgeSizeb = 480;
 		var timer = null;
@@ -821,8 +842,8 @@
 			var maxDimension = ( increment * incrementCount );
 
 			// Draw the boxes that make up the grid.
-			for ( var x = 0 ; x < incrementCount ; x++ ) {
-				for ( var y = 0 ; y < incrementCount/2 ; y++ ) {
+			for ( var x = 0 ; x < incrementCount/2.8 ; x++ ) {
+				for ( var y = 0 ; y < incrementCount/3.5 ; y++ ) {
 
 					var xOffset = ( x * increment );
 					var yOffset = ( y * increment );
@@ -865,7 +886,7 @@
 			guard.style.right = "0px";
 			document.body.appendChild( guard );
 		}	//grid
-	</script>-->
+	</script>
 
 </body>
 </html>
