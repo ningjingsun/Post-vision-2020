@@ -382,7 +382,7 @@
             top: 450px;
         }
         .asset:nth-child(3){
-            left: 1200px;
+            left: 1150px;
             top: 200px;
         }
         .asset:nth-child(4){
@@ -390,11 +390,11 @@
             top: 650px;
         }
         .asset:nth-child(5){
-            left: 1500px;
+            left: 1400px;
             top: 600px;
         }
         .asset:nth-child(6){
-            left: 1800px;
+            left: 1700px;
             top: 400px;
         }
         .asset:nth-child(7){
@@ -402,16 +402,16 @@
             top: 800px;
         }
         .asset:nth-child(8){
-            left: 2250px;
-            top: 780px;
+            left: 2150px;
+            top: 850px;
         }
         .asset:nth-child(9){
             left: 3300px;
-            top: 200px;
+            top: 150px;
         }
         .asset:nth-child(10){
-            left: 1980px;
-            top: 1800px;
+            left: 2100px;
+            top: 100px;
         }
         .asset:nth-child(11){
             left: 640px;
@@ -422,20 +422,25 @@
             top: 400px;
         }
         .asset:nth-child(13){
-            left: 1880px;
-            top: 1050px;
+            left: 1780px;
+            top: 1150px;
         }
         .asset:nth-child(14){
-            left: 2630px;
+            left: 2580px;
             top: 350px;
         }
         .asset:nth-child(15){
-            left: 2250px;
-            top: 100px;
+            left: 2900px;
+            top: 300px;
         }
+        .asset:nth-child(16){
+            left: 2480px;
+            top: 1000px;
+        }
+        /*
         @media print {
             body * {
-                /*display:none;*/
+                /*display:none;
                 visibility: hidden;
             }
             .printable * {
@@ -447,7 +452,7 @@
                 left: -300px;
                 top: -800px;
             }
-        }
+        }*/
     </style>
 </head>
 <body>
@@ -485,7 +490,7 @@
             <div class="assetblock printable"></div>
             <div id=button>
                 <p class="subtitle button refresh inactive">↺</p>
-                <p class="subtitle button inactive" onclick="divPrint();">Print</p></a>
+                <!--<p class="subtitle button inactive" onclick="divPrint();">Print</p></a>-->
                 <p class="subtitle button download inactive">Download</p>
             </div>
         </div>
@@ -569,7 +574,7 @@
                 <a href="img/assetJ.png" onclick="return false"><img src="img/assetJ.png"></a>
             </div>
             <p class=nametag>crêpes cooking set</p>
-            <p class=startag>(∞/∞ unlimited)<br>generousity ★★★<br>kindness ★★★<br>surprise 🌀<br><br>Cook a crêpe for your friend to receive 1 point of surprise🌀!</p>
+            <p class=startag>(∞/∞ unlimited)<br>intimacy ★★★★<br>generosity ★★★<br>surprise 🌀<br><br>Cook a crêpe for your friend to foster close relationships and receive 1 point of surprise🌀!</p>
         </div>
 
         <div class="asset">
@@ -609,7 +614,15 @@
                 <a href="img/assetO.png" onclick="return false"><img src="img/assetO.png"></a>
             </div>
             <p class=nametag>drama queen brooch</p>
-            <p class=startag>(∞/∞ unlimited)<br>drama ★★★★★<br>surprise 🌀🌀🌀🌀<br>risk ⚠️⚠️<br><br>A drama queen always enjoys drama and surprise in life.</p>
+            <p class=startag>(10 times only)<br>drama ★★★★★★<br>surprise 🌀🌀🌀🌀🌀🌀<br>risk ⚠️⚠️<br><br>A drama queen always enjoys drama and surprise in life.</p>
+        </div>
+
+        <div class="asset largeasset">
+            <div class=assetimage>
+                <a href="img/assetP.png" onclick="return false"><img src="img/assetP.png"></a>
+            </div>
+            <p class=nametag>ordinary T-shirt</p>
+            <p class=startag>(∞/∞ unlimited)<br>stability ★★★★★<br>goodness ★★★★★<br><br>Live a peaceful life.</p>
         </div>
     </div>
 
@@ -734,6 +747,7 @@
         });
     </script>
 
+    <!--
     <script>    //print
         function divPrint() {
             // Some logic determines which div should be printed...
@@ -746,7 +760,7 @@
                 divPrint();
             }
         })
-    </script>
+    </script> -->
 
 	<script type="text/javascript">
 		var edgeSizea = 240;
