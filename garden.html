@@ -78,7 +78,6 @@
             background-attachment: fixed;*/
             background-size: cover;
             background-attachment: scroll;
-            width: 200vw;
             background-color: rgb(255, 255, 255);
             margin-bottom: 0px;
         }
@@ -365,10 +364,6 @@
             width: 100%;
             height: auto;
         }
-        .assetScreen{
-            max-width: 100%;
-            width: 100%;
-        }
         img{
             max-width: 100%;
             width: 100%;
@@ -418,7 +413,7 @@
             top: 1000px;
         }
         .asset:nth-child(12){
-            left: 3600px;
+            left: 3660px;
             top: 400px;
         }
         .asset:nth-child(13){
@@ -460,6 +455,28 @@
         .asset:nth-child(22){
             left: 750px;
             top: 1370px;
+        }
+        .leftMargin{
+            left: 4000px;
+            top: 0px;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            max-width: 5vw;
+            width: 5vw;
+            max-height: auto;
+            height: auto;
+        }
+        .bottomMargin{
+            left: 0px;
+            top: 2400px;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            max-width: 5vw;
+            width: 5vw;
+            max-height: auto;
+            height: auto;
         }
         /*
         @media print {
@@ -697,6 +714,16 @@
             <p class=startag>(∞/∞ unlimited use times)<br>calmness ★★★★<br>peacefulness ★★★★<br><br>Stay inside and escape from reality until you feel ready. YOU DESERVE REST. </p>
         </div>
 
+
+
+        <div class="leftMargin" style="background-color: transparent">
+            <img src="img/assetV.png" style="opacity: 0">
+        <div>
+
+        <div class="bottomMargin" style="background-color: transparent">
+            <img src="img/assetV.png" style="opacity: 0">
+        <div>
+
     </div>
 
     <div class="collophon">
@@ -730,24 +757,27 @@
     <script>    //collect + zip
         $(document).ready(function(){
 
-            let assetUrls = [
-                'assetA.png',
-                'assetB.png',
-                'assetC.png',
-                'assetD.png',
-                'assetE.png',
-                'assetF.png',
-                'assetG.png',
-                'assetH.png'
-            ]
-
             let downloadUrls=[];
 
             $(".assetimage").dblclick(function(){
+
+                if( !$(this).hasClass('used')){
+                    if(downloadUrls.length<5){
+                        $(this).clone().css({"max-height":"9vh","max-width":"9vh","margin-top":"3vh","margin-right":"1vw"}).appendTo(".assetblock");
+                        let addUrl = $(this).find('a').attr('href');
+                        downloadUrls.push(addUrl);
+                        setupDownload();
+                        $(this).addClass('used');
+                    }else{
+                        alert("You could only collect FIVE assets!");
+                    }
+                }
+                /*
                 $(this).clone().css({"max-height":"9vh","max-width":"9vh","margin-top":"3vh","margin-right":"1vw"}).appendTo(".assetblock");
                 let addUrl = $(this).find('a').attr('href');
                 downloadUrls.push(addUrl);
-                setupDownload();
+                setupDownload();*/
+
             });
 
             /*
@@ -791,13 +821,14 @@
 
             $(".download").click(function(){
                 if($(".button").hasClass('active')){
-                    saveToZip('garden.zip', downloadUrls);
+                    saveToZip('world_assets.zip', downloadUrls);
+                    alert("Your assets are being downloaded. \r\nGood luck on your future journey. You are now ready to go!");
                 }
             });
 
             function saveToZip (filename, urls){
                 const zip = new JSZip()
-                const folder = zip.folder('world')
+                const folder = zip.folder('world_assets')
                 urls.forEach((url)=> {
                     const blobPromise = fetch(url).then(r => {
                         if (r.status === 200) return r.blob()
@@ -835,7 +866,9 @@
         })
     </script> -->
 
-	<script type="text/javascript">
+	<script type="text/javascript">    //tutorial and source code originally by Ben Nadel.
+    //https://www.bennadel.com
+    //http://bennadel.github.io/JavaScript-Demos/demos/window-edge-scrolling/
 		var edgeSizea = 240;
 		var edgeSizeb = 480;
 		var timer = null;
@@ -1035,10 +1068,11 @@
 
 			// Draw the boxes that make up the grid.
 			for ( var x = 0 ; x < incrementCount/2 ; x++ ) {
-				for ( var y = 0 ; y < incrementCount/3.5 ; y++ ) {
+				for ( var y = 0 ; y < incrementCount/3.2 ; y++ ) {
 
 					var xOffset = ( x * increment );
 					var yOffset = ( y * increment );
+                    
 
 					var box = document.createElement( "span" );
 					box.style.position = "absolute";
@@ -1051,13 +1085,13 @@
 					box.style.color = "rgb(234, 234, 234)" ;
 					box.style.boxSizing = "border-box";
 					box.style.padding = "5px 5px 5px 5px";
-					/*box.innerText = ( xOffset + ", " + yOffset );
+					box.innerText = ( xOffset + ", " + yOffset );
+                    
 					document.body.appendChild( box );
 
 				}
 			}
 			
-            /*
 			// Draw the edges that delineate the scrolling zone.
 			var edge = document.createElement( "span" );
 			edge.style.position = "fixed";
@@ -1077,7 +1111,8 @@
 			guard.style.left = "0px";
 			guard.style.right = "0px";
 			document.body.appendChild( guard );
-		}	//grid */
+        */
+		}	//grid 
 	</script>
 
 </body>
