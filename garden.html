@@ -7,21 +7,21 @@
     <meta name="description" content=""><!--keywords/snippet for search engines-->
     <meta name="viewport" content="width=device-width"><!--the browser will (probably) render the width of the page at the width of its own screen -->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/jszip.min.js"></script>
     <script src="js/FileSaver.min.js"></script>
+    <!--<script src="js/garden_script.js"></script>-->
 	<style>
 		::-webkit-scrollbar {
-            width: 13px;  /* Remove scrollbar space */
-            height: 13px;
-            background: rgb(160, 160, 160);
+            width: 12px;  /* Remove scrollbar space */
+            height: 12px;
+            background-color: rgb(10, 100, 10);
    	    }
         ::-webkit-scrollbar-thumb {
-            background: rgb(225, 225, 225);
+            /*background: rgb(225, 225, 225);*/
+            background: rgb(40, 255, 30);
         }
         .collophon{
             background-color: rgb(30, 255, 20);
@@ -638,7 +638,7 @@
                 <a href="img/assetO.png" onclick="return false"><img src="img/assetO.png"></a>
             </div>
             <p class=nametag>drama queen brooch</p>
-            <p class=startag>(10 use times only)<br>drama ★★★★★★<br>surprise 🌀🌀🌀🌀🌀🌀<br>risk ⚠️⚠️<br><br>A drama queen always enjoys drama and surprise in life.</p>
+            <p class=startag>(10 use times only)<br>drama ★★★★★★<br>surprise 🌀🌀🌀🌀🌀🌀<br>risk ⚠️⚠️<br><br>A true drama queen always welcomes drama and surprise in life.</p>
         </div>
 
         <div class="asset largeasset">
@@ -1026,6 +1026,7 @@
 		}
 		// I draw the grid and edge lines in the document so that it is clear where
 		// scrolling will be initiated and with what intensity it is taking place.
+        /*
 		function drawGridLines() {
 
 			var increment = 200;
@@ -1050,7 +1051,7 @@
 					box.style.color = "rgb(234, 234, 234)" ;
 					box.style.boxSizing = "border-box";
 					box.style.padding = "5px 5px 5px 5px";
-					/*box.innerText = ( xOffset + ", " + yOffset );*/
+					/*box.innerText = ( xOffset + ", " + yOffset );
 					document.body.appendChild( box );
 
 				}
@@ -1066,7 +1067,7 @@
 			edge.style.right = ( edgeSizeb + "px" );
 			edge.style.border = "2px solid #CC0000";
 			edge.style.borderRadius = "5px 5px 5px 5px";
-			document.body.appendChild( edge );*/
+			document.body.appendChild( edge );
 
 			// Add mouse-guard so that nothing is selectable.
 			var guard = document.createElement( "div" );
@@ -1076,7 +1077,7 @@
 			guard.style.left = "0px";
 			guard.style.right = "0px";
 			document.body.appendChild( guard );
-		}	//grid
+		}	//grid */
 	</script>
 
 </body>
