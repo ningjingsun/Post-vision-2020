@@ -163,6 +163,45 @@
                 color: white;
                 z-index: -1;
             }
+            .zoom1:hover{
+                cursor: help;
+            }
+            .piczoomin1{
+                position: fixed;
+                max-width: 0%;
+                width: 0%;
+                left: 50%;
+                opacity: 0;
+                cursor: default;
+            }
+            .piczoomout1{
+                position: fixed;
+                left: 34%;
+                top: 6%;
+                max-width: 33%;
+                width: 33%;
+                opacity: 100;
+                transition-duration: 0.12s;
+                cursor: default;
+            }
+            .piczoomincolor1{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 0vw;
+                height: 0vh;
+                background-color: rgba(0, 0, 0, 0);
+                cursor: default;
+            }
+            .piczoomoutcolor1{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.85);
+                cursor: default;
+            }
         </style>
     </head>
     <body><!--all the contents of an HTML document goes here-->
@@ -191,7 +230,9 @@
     					<p class=tag>Astronomy</p>
     					<p class=tag>Technology</p>
     				</div>
-    				<img class=pic src="img/Jan.jpg" style="max-width: 100%">
+    				<img class="pic zoom1" src="img/Jan.jpg" style="max-width: 100%">
+                    <div class="zoom1 piczoomincolor1"></div>
+                    <img class="zoom1 piczoomin1" src="img/Jan.jpg">
     				<p>The Asteroid Apophis made an “Close Approach” today. It officially crossed paths with Earth’s orbit at 8:59 a.m.. Named after the god Apophis the Great Serpent, the asteroid is almost as tall as the Empire State Building. NASA suggests a 2.7 percent chance of Apophis striking Earth in 2029.</p>
 
     				<p class=date>1.16</p>
@@ -587,6 +628,10 @@
         <script>
         $(".about").click(function(){
             $(".collophon").toggleClass("collophon_open");
+        })
+        $(".zoom1").click(function(){
+            $(".piczoomin1").toggleClass("piczoomout1");
+            $(".piczoomincolor1").toggleClass("piczoomoutcolor1")
         })
         </script>
     </body>
