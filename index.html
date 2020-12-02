@@ -3,12 +3,141 @@
     <head><!-- a container for metadata -->
         <meta charset="utf-8"><!--charset: character encoding capable of encoding all characters on the web  -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!--for browser compatibility: choose rendering engine to view the page in an correct view (for old ver. IE)  -->
-        <title></title><!--declaring the title, or name, of the HTML document. displayed in the browser's title bar-->
+        <title>Post-Vision 2020</title><!--declaring the title, or name, of the HTML document. displayed in the browser's title bar-->
         <meta name="description" content=""><!--keywords/snippet for search engines-->
         <meta name="viewport" content="width=device-width"><!--the browser will (probably) render the width of the page at the width of its own screen -->
+        <link rel="stylesheet" href="https://use.typekit.net/igl8gmo.css">
+    	<style>
+    		@font-face {
+    			font-family: arialnarrow;
+    			font-style: normal;
+    			src: url(fonts/arialnarrow.ttf);
+			}
+			@font-face {
+    			font-family: mono;
+    			font-style: normal;
+    			src: url(fonts/3X3-MonoRegular.woff);
+			}
+			@keyframes backgroundcolors{
+				0% {
+                    background-color: rgb(0, 0, 0);
+                }
+                60% {
+                    background-color: rgb(150, 150, 150);
+                }
+                100%{
+                	background-color:rgb(0, 0, 0);
+                }
+			}
+			@keyframes textcolors{
+				0% {
+                    color: rgb(30, 30, 30);
+                }
+                60% {
+                    color: rgb(130, 130, 130);
+                }
+                100%{
+                	color:rgb(30, 30, 30);
+                }
+			}
+    		body{
+                /*background-color: rgb(0, 0, 0);*/
+                animation: backgroundcolors 10s infinite;
+    		}
+    		p{
+    			font-family: arialnarrow;
+                font-style: normal;
+        		font-size: 3rem;
+        		line-height: 4.6rem;
+        		letter-spacing: 0.4px;
+        		color: white;
+        		margin: 0;
+        		color: white;
+        		margin-bottom: 0.8rem;
+    		}
+    		a{
+    			text-decoration: none;
+    			color: white;
+    		}
+    		a:hover{
+    			font-style: italic;
+    		}
+    		.header{
+    			position: fixed;
+    			display: flex;
+    			flex-direction: row;
+    			padding-left: 1.8%;
+    			padding-right: 6.4%;
+    			height: 110px;
+    			left: 0px;
+    			right: 0px;
+    			top: 0px;
+    		}
+    		.headertext{
+    			font-size: 1.8rem;
+    			line-height: 1.5rem;
+    			letter-spacing: 0.2px;
+    			margin-top: 1rem;
+    			padding-left: 4vw;
+    		}
+    		.background{
+    			position: fixed;
+    			width: 100%;
+    			height: 100%;
+    			top: 0;
+    			z-index: -1;
+    		}
+    		.title{
+    			margin: 0 auto;
+    			margin-top: 7.7%;
+    			width: 60%;
+    			color: white;
+    			z-index: -1;
+    		}
+    		.text{
+    			margin-left: 14vw;
+    			margin-right: 14vw;
+    			margin-top: 10%;
+    			text-align: center;
+    			z-index: 999;
+    		}
+    		.titletext{
+    			font-family: new-spirit-condensed;
+    			font-style: normal; 
+    			font-size: 26vh; 
+    			line-height: 25vh; 
+    			letter-spacing: 1.5vw; 
+    			animation: textcolors 10s infinite; 
+    			text-align: center;
+    		}
+    		.calendarlink:hover{
+    			color: rgb(155, 155, 155);
+    		}
+    		.worldbuildinglink:hover{
+    			color: rgb(10, 30, 255);
+    		}
+    		.roomlink:hover{
+    			color: rgb(255, 255, 35);
+    		}
+    		.gardenlink:hover{
+    			color: rgb(30, 255, 20);
+    		}
+    	</style>
     </head>
     
     <body><!--all the contents of an HTML document goes here-->
-
+    	<div class="background">
+    		<div class="title">
+    			<p class="titletext">POST-<br>VISION<br>2020</p>
+    		</div>
+    	</div>
+    	<div class="header">
+    		<p class="headertext">Written and designed by Ningjing Sun</p>
+    		<p class="headertext">Last updated: December 2020</p>
+    	</div>
+    	<div class="text">
+    		<p>2020 is a point of transformation. As we are about to enter the post-2020 era, this is a place for you to find new connections, retain your intimacy, and protect your own vulnerability.</p><br><br>
+    		<p>This project is composed of four layers: <a href="calendar.html" class="calendarlink">① an archive of people’s previous projections into the future of 2020;</a> <a href="worldbuilding.html" class="worldbuildinglink">② an essay on worldbuilding as a daily practice;</a> <a href="room.html" class="roomlink">③ a meditation room of people’s daily stories in the face of a global crisis;</a> <a href="garden.html" class="gardenlink">④ a garden of gifts and offerings that will prepare you for your future advantures.</a></p>
+    	</div>
     </body>
 </html>
