@@ -57,6 +57,7 @@ $(function(){
 
         $(".refresh").click(function(){         //empty assetblock
             $(".assetblock").empty();
+            $(".assetimage").removeClass('used');
             $(".button").removeClass('active');
             downloadUrls = [];
         });
