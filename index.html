@@ -14,6 +14,9 @@
     			box-sizing: border-box; /*border-box include any padding into the element's content*/   
     			/*cursor: url(img/cursor.png) 64 64, auto;*/
 			}
+			html{
+    			font-size: 20px; /*https://www.cnblogs.com/shireyhu/p/7832124.html*/
+			}
     		@font-face {
     			font-family: arialnarrow;
     			font-style: normal;
@@ -59,8 +62,8 @@
     		p{
     			font-family: arialnarrow;
                 font-style: normal;
-        		font-size: 3rem;
-        		line-height: 4.6rem;
+        		font-size: 2.2rem;
+        		line-height: 3.7rem;
         		letter-spacing: 0.4px;
         		color: white;
         		margin: 0;
@@ -79,18 +82,19 @@
     			display: flex;
     			flex-direction: row;
     			padding-left: 1.8%;
-    			padding-right: 6.4%;
+    			padding-right: 1.8%;
     			height: 110px;
     			left: 0px;
     			right: 0px;
     			top: 0px;
     		}
     		.headertext{
-    			font-size: 1.8rem;
+    			font-size: 1.4rem;
     			line-height: 1.5rem;
-    			letter-spacing: 0.4px;
-    			margin-top: 1rem;
-    			padding-left: 4vw;
+   			 	letter-spacing: 0.4px;
+    			margin-top: 0.5rem;
+    			margin-left: 3.2rem;
+    			margin-right: 1.6rem;
     		}
     		.background{
     			position: fixed;
@@ -108,9 +112,9 @@
     		}
     		.text{
     			position: fixed;
-    			margin-left: 14vw;
-    			margin-right: 14vw;
-    			margin-top: 9.4vw;
+    			margin-left: 15vw;
+    			margin-right: 15vw;
+    			margin-top: 16vh;
     			text-align: center;
     			z-index: 999;
     		}
@@ -124,7 +128,7 @@
     			text-align: center;
     		}
     		.calendarlink:hover{
-    			color: rgb(255, 255, 255);
+    			color: rgb(255, 60, 30);
     		}
     		.worldbuildinglink:hover{
     			color: rgb(10, 30, 255);
@@ -138,19 +142,35 @@
     	</style>
     </head>
     
-    <body><!--all the contents of an HTML document goes here-->
+    <body onload=display_ct();> <!--all the contents of an HTML document goes here-->
     	<div class="background">
     		<div class="title">
     			<p class="titletext">POST-<br>VISION<br>2020</p>
     		</div>
     	</div>
     	<div class="header">
-    		<p class="headertext">Written and designed by Ningjing Sun</p>
-    		<p class="headertext">Last updated: December 2020</p>
+    		<p class="headertext">Degree project by Ningjing Sun</p>
+    		<p class="headertext">Final review on Dec 11, 11am EST</p>
+    		<p class="headertext">RISD Graphic Design</p>
+    		<p class="headertext"><span id="ct"></span> CST</p>
     	</div>
     	<div class="text">
     		<p>2020 is a point of transformation. As we are about to enter the post-2020 era, this is a place for you to find new connections, retain your intimacy, and protect your own vulnerability.</p><br><br>
-    		<p>This project is composed of four layers: <a href="calendar.html" class="calendarlink">① an archive of people’s previous projections into the future of 2020;</a> <a href="worldbuilding.html" class="worldbuildinglink">② an essay on worldbuilding as a daily practice;</a> <a href="room.html" class="roomlink">③ a meditation room of people’s daily stories in the face of a global crisis;</a> <a href="garden.html" class="gardenlink">④ a garden of gifts and offerings that will prepare you for your future advantures.</a></p>
+    		<p>This project is composed of four layers: <a href="calendar.html" class="calendarlink">① an archive of people’s previous projections into the future of 2020;</a> <a href="worldbuilding.html" class="worldbuildinglink">② an essay on worldbuilding as a daily practice;</a> <a href="room.html" class="roomlink">③ a meditation room of people’s daily practices in the face of a global crisis;</a> <a href="garden.html" class="gardenlink">④ a garden of gifts and offerings that will prepare you for your future advantures.</a></p>
     	</div>
     </body>
+    <script>
+		function display_c(){
+			var refresh=1000; // Refresh rate in milli seconds
+			mytime=setTimeout('display_ct()',refresh)
+		}
+
+		function display_ct() {
+			var x = new Date()
+			var x1=x.getMonth() + 1+ "/" + x.getDate() + "/" + x.getFullYear(); 
+			x1 = x1 + " — " +  x.getHours( )+ ":" +  x.getMinutes() + ":" +  x.getSeconds();
+			document.getElementById('ct').innerHTML = x1;
+			display_c();
+		}
+	</script>
 </html>
