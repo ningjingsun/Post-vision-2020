@@ -79,7 +79,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     position: fixed;
-    padding-left: 3.7%;
+    padding-left: 3.2%;
     padding-right: 6%;
     left: 0px;
     top: 0px;
@@ -96,7 +96,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     position: fixed;
-    padding-left: 3.7%;
+    padding-left: 3.2%;
     padding-right: 6%;
     left: 0px;
     top: 0px;
@@ -108,20 +108,20 @@
     transition: all 0.6s ease-in;
 }
 .collophontext:nth-child(1){
-    flex: 1.77;
+    flex: 0.54;
 }
 .collophontext:nth-child(2){
     flex: 1.7;
 }
 .collophontext:nth-child(3){
-    flex: 0.54;
+    flex: 0.36;
 }
 .collophontext{
     font-family: arialnarrow;
     font-size: 1rem;
     line-height: 1.3rem;
-    margin-top: 0.2rem;
-    margin-bottom: 0.4rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.6rem;
     letter-spacing: -0.05px;
     z-index: 50;
     margin-left: 2rem;
