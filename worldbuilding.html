@@ -43,14 +43,18 @@
                 color: rgb(30, 30, 30);
                 margin-top: 0.6rem;
             }
+            html{
+                height: auto;
+                min-height: 100%;
+            }
             body{
-                /*background-image: url("img/background2.png");
-                background-position: center;
-                background-size: cover;
-                background-attachment: fixed;
-                width: 100vw;*/
-                background-color: rgb(235, 235, 235);
+               /* background-color: linear-gradient(rgb(220, 220, 220) 0%, rgb(170, 170, 170) 50%, rgb(120, 120, 120) 80%);*/
                 overflow-y: scroll;
+                background: linear-gradient(to bottom, rgb(230, 230, 230) 0%, rgb(180, 180, 180) 50%, rgb(120, 120, 120) 100%);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                /*background-color: rgb(230, 230, 230);*/
             }
             a{
                 color: rgb(30, 30, 30);
@@ -105,6 +109,7 @@
                 width: 100vw;
                 padding-left: 6%;
                 padding-right: 2%;
+                z-index: 999;
             }
             #title{
                 margin-bottom: 2.15rem;
@@ -145,8 +150,9 @@
                 padding-top: 3rem;
                 height: calc(100vh - 47px);
                 padding-right: 3.3%;
-                margin-right: 0;
+                margin-left: 0;
                 max-width: 64%;
+                background-color: linear-gradient(to bottom, rgb(230, 230, 230) 0%, rgb(180, 180, 180) 50%, rgb(120, 120, 120) 100%);;
                 /*overflow-y: scroll;*/
         	}
             .verticalcenter{
@@ -165,7 +171,7 @@
                 font-family: mono;
                 font-size: 1rem;
                 color: white;
-                background-color: rgb(130, 160, 255);
+                background-color: rgb(140, 180, 255);
                 border-radius: 30px;
                 /*border: 1px solid #f8bbbb;*/
                 /*display: inline-block;*/
@@ -173,7 +179,7 @@
                 padding-right: 10px;
                 padding-top: 4px;
                 padding-bottom: 4px;
-                height: 42px;
+                height: 44px;
                 box-shadow: 0px 0px 5px 4px rgb(170, 200, 255);
                 transition-duration: 0.12s;
                 /* margin-right: 5px;
@@ -188,22 +194,18 @@
                 font-family: mono;
                 font-size: 1rem;
                 color: white;
-                background-color: rgb(255, 170, 85);
+                background-color: rgb(255, 200, 85);
                 border-radius: 30px;
-                /*border: 1px solid #f8bbbb;*/
-                /*display: inline-block;*/
                 padding-left: 10px;
                 padding-right: 10px;
                 padding-top: 4px;
                 padding-bottom: 4px;
-                height: 42px;
+                height: 44px;
                 box-shadow: 0px 0px 5px 4px rgb(255, 210, 150);
                 transition-duration: 0.12s;
-                /* margin-right: 5px;
-                margin-left: 5px; */
             }
             .worldbuilding:hover{
-                background-color: rgb(255, 95, 0);
+                background-color: rgb(255, 110, 0);
                 border: 1px solid rgb(255, 140, 70);
                 box-shadow: 0px 0px 5px 3px rgb(255, 200, 150);
             }
@@ -212,13 +214,43 @@
                 width: 100%;
                 height: 100%;
                 top: 0;
-                z-index: -1;
+                z-index: -10;
             }
             .backgroundtitle{
                 margin: 0 auto;
                 margin-top: 7.7%;
                 width: 60%;
                 color: white;
+                z-index: -10;
+            }
+            .starrysky{
+                position: fixed;
+                width: 100vw;
+                height: 100vh;
+                left: 0;
+                top: 0;
+                z-index: -1;
+            }
+            .star{
+                display: block;
+                position: fixed;
+                width: 24vw;
+                height: 24vw;
+                border-radius: 50%;
+                background-color: rgb(255, 255, 255);
+                box-shadow: 0px 0px 5px 5px rgb(205, 205, 255);
+                opacity: 0.35;
+                z-index: -1;
+            }
+            .staryellow{
+                display: block;
+                position: fixed;
+                width: 24vw;
+                height: 24vw;
+                border-radius: 50%;
+                background-color: rgb(255, 255, 180);
+                box-shadow: 0px 0px 5px 5px rgb(255, 255, 180);
+                opacity: 0.1;
                 z-index: -1;
             }
 	</style>
@@ -237,9 +269,15 @@
         </div>
         <div class="backgroundimage">
             <div class="backgroundtitle">
-                <p style="font-family: new-spirit-condensed; font-style: normal; font-size: 26vh; line-height: 25vh; letter-spacing: 1.5vw; color: rgb(215, 215, 220); text-align: center;">POST-<br>VISION<br>2020</p>
+                <p style="font-family: new-spirit-condensed; font-style: normal; font-size: 26vh; line-height: 25vh; letter-spacing: 1.5vw; color: rgb(205, 205, 210); text-align: center;">POST-<br>VISION<br>2020</p>
             </div>
         </div>
+
+        <div class="starrysky">
+            <div class="star" style="opacity: 0"></div>
+            <div class="staryellow" style="opacity: 0"></div>
+        </div>
+
     	<div id=content>
             <br>
             <br>
@@ -271,6 +309,7 @@
 						<a href="https://en.wikipedia.org/wiki/The_Practice_of_Everyday_Life" class=bibliography>[2] Michel de Certeau, The Practice of Everyday Life.</a><br>
 						<a href="http://journal.finfar.org/articles/notes-toward-a-critical-approach-to-worlds-and-world-building/" class=bibliography>[3] Stefan Ekman and Audrey Isabel Taylor, Notes Towards a Critical Approach to Worlds and World-Building.</a><br>
 						<a href="https://www.tinymixtapes.com/features/2018-against-worldbuilding" class=bibliography>[4] Nick James Scavo, 2018: Against Worldbuilding.</a><br>
+                        <a href="https://www.tinymixtapes.com/features/2010s-end-of-anarchy-streaming-platforms-culture-industry-commodification-of-accessibility">[5] Baldr Eldursson, 2010s: The End of Anarchy—Streaming Platforms, the Culture Industry & the Commodification of Accessibility.</a>
 						</p>
                         <br>
                         <p style="text-align: center">❤ ❤ ❤</p>
@@ -292,9 +331,17 @@
 		</div>
 
         <script>
-        $(".about").click(function(){
-            $(".collophon").toggleClass("collophon_open");
-        })
+            $(".about").click(function(){
+                $(".collophon").toggleClass("collophon_open");
+            })
+
+            $(".world").click(function(){
+                $(".star:first").clone().css({"left": Math.random() * window.innerWidth, "top": Math.random() * window.innerHeight, "opacity": 0.4}).appendTo(".starrysky");
+            });
+
+            $(".worldbuilding").click(function(){
+                $(".staryellow:first").clone().css({"left": Math.random() * window.innerWidth, "top": Math.random() * window.innerHeight, "opacity": 0.4}).appendTo(".starrysky");
+            });
         </script>
     </body>
 </html>
