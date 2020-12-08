@@ -3,11 +3,14 @@
 <head>
     <meta charset="utf-8"><!--charset: character encoding capable of encoding all characters on the web  -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!--for browser compatibility: choose rendering engine to view the page in an correct view (for old ver. IE)  -->
-    <title>Post-Vision 2020</title><!--declaring the title, or name, of the HTML document. displayed in the browser's title bar-->
-    <meta name="description" content=""><!--keywords/snippet for search engines-->
+    <title>The Magic Garden</title><!--declaring the title, or name, of the HTML document. displayed in the browser's title bar-->
+    <meta name="description" content="The Magic Garden"><!--keywords/snippet for search engines-->
+    <meta name="author" content="Ningjing Sun">
     <meta name="viewport" content="width=device-width"><!--the browser will (probably) render the width of the page at the width of its own screen -->
     <link rel="stylesheet" type="text/css" href="style.css">
-
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <link rel="alternate icon" href="img/favicon.ico">
+    <link rel="mask-icon" href="img/favicon.svg" color="#ff8a01">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/jszip.min.js"></script>
@@ -131,8 +134,8 @@
             border: 0.8px dotted black;
             background-color: white;
             color: black;
-            height: 86vh;
-            width: 35.6vw;
+            height: 75vh;
+            width: 34vw;
             z-index: 40;
             transition: 0.7s;
         }
@@ -143,11 +146,11 @@
             transition: 0.5s;
         }
         .essay{
-            max-width: 93%;
-            width: 93%;
+            max-width: 90%;
+            width: 90%;
             overflow-y: scroll;
-            margin-left: 5.5%;
-            padding-top: 0.5%;
+            margin-left: 6.4%;
+            padding-top: 6%;
             transition: 0.3s;
         }
         .essayClose{
@@ -512,6 +515,9 @@
             max-height: auto;
             height: auto;
         }
+        .earthicon:hover{
+                font-style: normal;
+            }
         /*
         @media print {
             body * {
@@ -536,17 +542,17 @@
         <p class="headertext"><a href="worldbuilding.html" class=headercss>Worldbuilding Practice</a></p>
         <p class="headertext"><a href="room.html" class=headercss>Self-Meditation Room</a></p>
         <p class="headertext"><a href="garden.html" class=headercss>The Magic Garden</a></p>
-        <p class="headertext about">????</p>
+        <p class="headertext about earthicon">🌏🌎🌍</p>
     </div>
 
     <div class=essayblock>
     	<div class=essay>
-            <p id=title>A letter to the post-2020 adventurers:</p>
-            <p class=keywords>Dear my friend,</p><br>
+            <!--<p id=title>A letter to the post-2020 adventurers:</p>-->
+            <p class=keywords>Dear post-2020 adventurers,</p><br>
             <p class=keywords>Welcome! A garden is an open place where free gifts are circulated and offered to its visitors in hope of sharing delight and support.</p><br>
             <p class=keywords>Scattered around the space are 30 magic objects for self-empowering. Please feel free to collect 5 assets that you want to take with you the most in your future adventures! </p><br>
             <p class=keywords>Carefully select those that you need the most, or those that would empower you the most:) I wish you all the best in your post-2020 journey!</p><br>
-            <p class=keywords>Yours sincerely,<br>Written in December, 2020</p><br><br>
+            <p class=keywords>Yours sincerely,<br>Written in December, 2020</p><br><br><br>
         </div>
 
         <div class="cancelA aboutA">
@@ -825,7 +831,7 @@
     </div>
 
     <div class="collophon">
-        <p class="collophontext description">Ningjing Sun © 2020<br>RISD BFA Graphic Design<br><br><a href="index.html" class="collophontext collophonlink">↪ Go back to the Landing Page</a></p>
+        <p class="collophontext description">Ningjing Sun © 2020<br>RISD BFA Graphic Design<br><br><a href="index.html" class="collophontext collophonlink">↪ Post-Vision 2020</a></p>
         <p class="collophontext description">CHAPTER 4<br><br>A garden is a space where seeds of hope grow up. It is a fluid space that communicates vulnerability and intimacy, a space where gifts are circulated and offered to the visitors in the hope of sharing love, delight, and empathy. The last chapter of this project is a secret repository that aims to collect necessary assets which would prepare you for your future advantures. Click, collect, and carry the assets with you right away as we step into the new future together.</p>
         <div class=collophontext>
             <p class="collophontext about cancel1"></p>
@@ -844,6 +850,7 @@
             $(".cancelA").toggleClass("cancelAClose");
             $(".expandClose").toggleClass("expand");
         })
+
     </script>
 
 </body>
