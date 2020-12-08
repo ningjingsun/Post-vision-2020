@@ -105,7 +105,7 @@
         		flex-direction: row;
         		align-items: stretch;
         		flex-wrap: nowrap;
-        		padding-left: 2.8%;
+        		padding-left: 3.4%;
         		padding-right: 3%;
         	}
             .pic{
@@ -120,14 +120,13 @@
         		overflow-y: scroll;
         		padding: 1rem;
                 padding-top: 6.3rem;
-        		padding-right: 2.2rem;
-        		padding-left: 2.5rem;
+        		padding-right: 2rem;
+        		padding-left: 2.2rem;
         		padding-bottom: 0;
-        		min-width: 330px;
-        		width: 365px;
+        		min-width: 332px;
         	}
             .column:hover{
-                background-color: rgba(0, 0, 0, 70%);
+                background-color: rgba(0, 0, 0, 60%);
             }
         	.month{
                 font-family: arialnarrow;
@@ -499,6 +498,23 @@
                 line-height: 3.8rem;
                 letter-spacing: 0rem;
             }
+            .landingpage:hover{
+                font-style: normal;
+            }
+            .contextinfo{
+                margin-top: -20px;
+                padding-right: 20%;
+            }
+            .chapter1{
+                background-color: rgb(255, 80, 50);
+                padding-right: 0.3rem;
+                padding-left: 0.3rem;
+                padding-top: -1rem;
+                padding-bottom: 0.3rem;
+            }
+            .about:hover{
+                font-style: normal;
+            }
         </style>
     </head>
     <body><!--all the contents of an HTML document goes here-->
@@ -507,7 +523,9 @@
             <p class="headertext"><a href="worldbuilding.html" class=headercss>Worldbuilding Practice</a></p>
             <p class="headertext"><a href="room.html" class=headercss>Self-Meditation Room</a></p>
             <p class="headertext"><a href="garden.html" class=headercss>The Magic Garden</a></p>
-            <p class="headertext about earthicon">🌏🌎🌍</p>
+            <!--<p class="headertext about earthicon"><a href="index.html" class="headercss landingpage">🌏🌎🌍</a></p>-->
+            <div><p class="headertext chapter1 about">chapter 1</p></div>
+            <p class="headertext about earthicon"><a href="index.html" class="headercss landingpage"><img src="img/favicon.svg" style="max-height: 36px"></a></p>
     	</div>
         <div class="backgroundimage">
             <div class="backgroundtitle">
@@ -515,13 +533,14 @@
             </div>
         </div>
     	<div id=content>
+            <div class=largetitlediv>
+                <p class=largetitle>2020: A Predicted Newspaper</p>
+            </div>
     		<div id=flex>
                 <div id=arrow>
                     <img src="img/arrow.png" style="max-width: 43px; height: auto">
                 </div>
-                <div class=largetitlediv>
-                        <p class=largetitle>2020: A Predicted Newspaper</p>
-                </div>
+                
     			<div class=column>
     				<!--<p class=month>Jan</p>-->
 					<p class=date>1.6</p>
@@ -918,7 +937,7 @@
     			</div>
     		</div>
             <div class="collophon">
-                <p class="collophontext description">Ningjing Sun © 2020<br>RISD BFA Graphic Design<br><br><a href="index.html" class="collophontext collophonlink">↪ Post-Vision 2020</a></p>
+                <p class="collophontext description">Ningjing Sun © 2020<br>RISD BFA Graphic Design</p>
                 <p class="collophontext description">CHAPTER 1<br><br>2020 is a big year and the beginning of a new decade. The first chapter of this project acts as an archive of people’s previous predictions about 2020 in the form of a calendar. It aims to excavate and collect these predictions, projections, lost hopes and wishes that people made about 2020 before its actual arrival—some positive, some negative, but most of them unfulfilled due to the global pandemic—and weave them together into a parallel, fictitious narrative of the year.</p>
                 <div class=collophontext>
                     <p class="collophontext about cancel1"></p>
