@@ -19,7 +19,7 @@
     position: fixed;
     display: flex;
     padding-left: 4.6%;
-    padding-right: 6.4%;
+    padding-right: 4.6%;
     width: 100vw;
     height: 110px;
     left: 0px;
@@ -31,19 +31,22 @@
     /*justify-content: space-between;*/
 }
 .headertext:nth-child(1){
-    flex: 1.96;
+    flex: 1.1;
 }
 .headertext:nth-child(2){
-    flex: 1.96;
+    flex: 1.1;
 }
 .headertext:nth-child(3){
-    flex: 1.96;
+    flex: 1.1;
 }
 .headertext:nth-child(4){
-    flex: 1.96;
+    flex: 2;
 }
 .headertext:nth-child(5){
-    flex: 1;
+    flex: 0.2;
+}
+.headertext:nth-child(6){
+    flex: 0.2;
 }
 #header a{
     text-decoration: none;
@@ -92,18 +95,8 @@
     transition: all 0.3s ease-in;
 }
 .collophon_open{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    position: fixed;
-    padding-left: 3.2%;
-    padding-right: 6%;
-    left: 0px;
-    top: 0px;
-    width: 100vw;
     height: auto;
     overflow: auto;
-    z-index: 100;
     background: rgba(255, 255, 35);
     transition: all 0.6s ease-in;
 }
@@ -111,10 +104,10 @@
     flex: 0.54;
 }
 .collophontext:nth-child(2){
-    flex: 1.7;
+    flex: 1.74;
 }
 .collophontext:nth-child(3){
-    flex: 0.36;
+    flex: 0.28;
 }
 .collophontext{
     font-family: arialnarrow;
