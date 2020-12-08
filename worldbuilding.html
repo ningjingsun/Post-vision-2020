@@ -56,7 +56,7 @@
             }
             body{
                 background: rgb(250, 250, 250);
-                background: linear-gradient(180deg, rgb(240, 240, 240) 0%, rgb(240, 240, 240) 25%, rgb(180, 180, 180) 76%, rgb(100, 100, 100) 100%);
+                background: linear-gradient(180deg, rgb(240, 240, 240) 0%, rgb(240, 240, 240) 25%, rgb(185, 185, 185) 100%);
             }
             a{
                 color: rgb(30, 30, 30);
@@ -262,11 +262,11 @@
                 display: block;
                 width: 12vw;
                 border-bottom: 12px solid rgb(205, 205, 255);
-                -webkit-animation: rotating 5s linear infinite;
-                -moz-animation: rotating 5s linear infinite;
-                -ms-animation: rotating 5s linear infinite;
-                -o-animation: rotating 5s linear infinite;
-                animation: rotating 5s linear infinite;
+                -webkit-animation: rotating 8s linear infinite;
+                -moz-animation: rotating 8s linear infinite;
+                -ms-animation: rotating 8s linear infinite;
+                -o-animation: rotating 8s linear infinite;
+                animation: rotating 8s linear infinite;
                 transform-origin: right bottom;
             }
             .starw1{
@@ -296,6 +296,19 @@
             sup{
                 font-size: 1rem;
             }
+            .landingpage:hover{
+                font-style: normal;
+            }
+            .chapter2{
+                background-color: rgb(0, 30, 255);
+                padding-right: 0.3rem;
+                padding-left: 0.3rem;
+                padding-top: -1rem;
+                padding-bottom: 0.3rem;
+            }
+            .about:hover{
+                font-style: normal;
+            }
 	</style>
         <!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -308,11 +321,12 @@
             <p class="headertext"><a href="worldbuilding.html" class=headercss>Worldbuilding Practice</a></p>
             <p class="headertext"><a href="room.html" class=headercss>Self-Meditation Room</a></p>
             <p class="headertext"><a href="garden.html" class=headercss>The Magic Garden</a></p>
-            <p class="headertext about earthicon">🌏🌎🌍</p>
+            <div><p class="headertext chapter2 about" style="color: white">chapter 2</p></div>
+            <p class="headertext about earthicon"><a href="index.html" class="headercss landingpage"><img src="img/favicon.svg" style="max-height: 36px"></a></p>
         </div>
         <div class="backgroundimage">
             <div class="backgroundtitle">
-                <p style="font-family: new-spirit-condensed; font-style: normal; font-size: 26vh; line-height: 25vh; letter-spacing: 1.5vw; color: rgb(205, 205, 210); text-align: center;">POST-<br>VISION<br>2020</p>
+                <p style="font-family: new-spirit-condensed; font-style: normal; font-size: 26vh; line-height: 25vh; letter-spacing: 1.5vw; color: rgb(215, 215, 220); text-align: center;">POST-<br>VISION<br>2020</p>
             </div>
         </div>
 
@@ -368,7 +382,7 @@
                 
 			</div>
             <div class="collophon">
-                <p class="collophontext description">Ningjing Sun © 2020<br>RISD BFA Graphic Design<br><br><a href="index.html" class="collophontext collophonlink">↪ Post-Vision 2020</a></p>
+                <p class="collophontext description">Ningjing Sun © 2020<br>RISD BFA Graphic Design</a></p>
                 <p class="collophontext description">CHAPTER 2<br><br>As we encounter the reality of 2020, it is important to remember that self-creation remains an emancipatory and potentially revolutionary act when engaged actively. The second chapter of this project presents an essay on worldbuilding as a daily practice. By co-opting the existing reality and regaining agency to build up a world ourselves, the conceptual framework of worldbuilding has the potential to offer us a point of creative resistance and epistemic disobedience. </p>
                 <div class=collophontext>
                     <p class="collophontext about cancel1"></p>
@@ -382,11 +396,11 @@
             })
 
             $(".world").click(function(){
-                $(".starwhite:first").clone().css({"left": (Math.random() * (0.8 - 0.0) + 0.0) * window.innerWidth, "top": (Math.random() * (0.8 - 0.2) + 0.2) * window.innerHeight, "opacity": 0.4}).appendTo(".starrysky");
+                $(".starwhite:first").clone().css({"left": (Math.random() * (0.8 - 0.1) + 0.1) * window.innerWidth, "top": (Math.random() * (0.8 - 0.2) + 0.2) * window.innerHeight, "opacity": 0.6}).appendTo(".starrysky");
             });
 
             $(".worldbuilding").click(function(){
-                $(".staryellow:first").clone().css({"left": (Math.random() * (0.8 - 0.0) + 0.0) * window.innerWidth, "top": (Math.random() * (0.8 - 0.2) + 0.2) * window.innerHeight, "opacity": 0.4}).appendTo(".starrysky");
+                $(".staryellow:first").clone().css({"left": (Math.random() * (0.8 - 0.1) + 0.1) * window.innerWidth, "top": (Math.random() * (0.8 - 0.2) + 0.2) * window.innerHeight, "opacity": 0.6}).appendTo(".starrysky");
             });
         </script>
     </body>
