@@ -160,7 +160,7 @@
                 text-align: center;
                 padding-top: 1.3rem;
                 border: 0.8px dotted black;
-                box-shadow: 4px 10px 20px 8px rgb(0, 0, 0, 45%);
+                box-shadow: 4px 10px 32px 10px rgb(0, 0, 0, 45%);
                 width: 9%;
             }
             .descriptiontext{
@@ -186,7 +186,7 @@
                 background-color: white;
                 color: black;
                 float: left;
-                box-shadow: 4px 10px 20px 8px rgb(0, 0, 0, 45%);
+                box-shadow: 4px 10px 32px 10px rgb(0, 0, 0, 45%);
             }
             .smalltitle{
                 font-family: arialnarrow;
@@ -199,7 +199,7 @@
                 width: 100%;
                 height: auto;
                 /*box-shadow: 0px 0px 7px rgb(0, 0, 0, 30%);*/
-                box-shadow: 6px 10px 20px 8px rgb(0, 0, 0, 45%);
+                box-shadow: 6px 10px 32px 10px rgb(0, 0, 0, 45%);
                 /*opacity: 0.7;*/
             }
             #quote{
@@ -251,6 +251,25 @@
             .about:hover{
                 font-style: normal;
             }
+            .hovercaption{
+                font-family: mono;
+                font-size: 0.8rem;
+                letter-spacing: -0.01rem;
+                line-height: 1.1rem;
+                text-align: center;
+                position: absolute;
+                margin-top: -34%;
+                margin-left: auto;
+                margin-right: auto;
+                opacity: 0.4;
+            }
+            .illustration:hover{
+                background-color: rgb(255, 0, 0);
+                opacity: 0.6;
+            }
+            .illustration:hover .hovercaption{
+                opacity: 1;
+            }
 	</style>
         <!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -292,6 +311,7 @@
                     <p class=tag>A</p>
                     <div class=picblock>
                         <img class=illustration src="img/archive.png">
+                        <p class=hovercaption>Ongoing by Scene ↪</p>
                     </div>
                     <div class=descriptiontext>
                         <p class="caption smalltitle"><i>(endless)</i><br>Archiving</p>
