@@ -37,7 +37,7 @@
     flex: 1.1;
 }
 .headertext:nth-child(3){
-    flex: 1.1;
+    flex: 0.8;
 }
 .headertext:nth-child(4){
     flex: 2;
