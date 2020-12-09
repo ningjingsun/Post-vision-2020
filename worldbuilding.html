@@ -43,11 +43,18 @@
             .collophontext{
                 color: white;
             }
-            #header{
+            .header{
                 background-image: linear-gradient(to bottom, 
                 rgba(70, 110, 255),
                 rgba(160, 160, 255) 15%, 
                 rgba(190, 190, 255) 44%,
+                rgba(255, 255, 255, 0));
+            }
+            .headeroff{
+                background-image: linear-gradient(to bottom, 
+                rgba(30, 60, 255),
+                rgba(90, 120, 255) 11%, 
+                rgba(120, 140, 255) 28%,
                 rgba(255, 255, 255, 0));
             }
             .headertext{
@@ -113,7 +120,7 @@
         		margin-left: 64px;
         	}
             #content{
-                margin-top: 28px; /*leave space for header*/
+                margin-top: 46px; /*leave space for header*/
                 width: 100vw;
                 padding-left: 6%;
                 padding-right: 2%;
@@ -224,6 +231,9 @@
                 top: 0;
                 z-index: -999;
             }
+            .backgroundtitleoff{
+                opacity: 0.4;
+            }
             .backgroundtitle{
                 margin: 0 auto;
                 margin-top: 7.7%;
@@ -238,6 +248,9 @@
                 left: 0;
                 top: 0;
                 z-index: -1;
+            }
+            .starryskyoff{
+                background-color: rgba(110, 110, 110, 0.75);
             }
             @keyframes rotating{
                 from {
@@ -349,17 +362,23 @@
                 width: 10vw;
                 height: 10vw;
                 border-radius: 50%;
-                background-color: rgb(185, 185, 255);
-                box-shadow: 0px 0px 5px 5px rgb(105, 105, 125);
+                background-color: rgb(175, 195, 255);
+                box-shadow: 0px 0px 40px 10px rgb(65, 85, 105);
                 -webkit-filter: blur(.5rem);
                 filter: blur(.5rem);
                 z-index: -1;
+                opacity: 0.7;
 
                 animation-duration: 20s;
                 animation-name: changestar;
                 animation-iteration-count: infinite;
                 animation-direction: alternate;
                 animation-delay: 1.5s;
+            }
+            .starw1off{
+                background-color: rgb(120, 140, 255);
+                box-shadow: 0px 0px 6px 6px rgb(90, 120, 255);
+                opacity: 0.85;
             }
             .starw1:hover{
                 background-color: rgb(255, 0, 0);
@@ -398,12 +417,13 @@
             .backgroundtitleon{
                 color: rgb(205, 205, 210);
                 filter: blur(.25rem);
+                font-family: new-spirit-condensed; 
+                font-style: normal; 
+                font-size: 26vh; 
+                line-height: 25vh; 
+                letter-spacing: 1.5vw; 
+                text-align: center;" 
             }
-
-            .backgroundtitledark{
-                color: rgb(135, 135, 130);
-            }
-
             .section_1{
                 color: rgb(195, 195, 200);
             }
@@ -424,7 +444,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body class="bodyon"><!--all the contents of an HTML document goes here-->
-        <div id=header>
+        <div id=header class=header>
             <p class="headertext"><a href="calendar.html" class=headercss>The Future Behind Us</a></p>
             <p class="headertext"><a href="worldbuilding.html" class=headercss>Worldbuilding Practice</a></p>
             <p class="headertext"><a href="room.html" class=headercss>Taxonomy A—Z</a></p>
@@ -434,7 +454,7 @@
         </div>
         <div class="backgroundimage">
             <div class="backgroundtitle">
-                <p style="font-family: new-spirit-condensed; font-style: normal; font-size: 26vh; line-height: 25vh; letter-spacing: 1.5vw; text-align: center;" class="backgroundtitleon">POST-<br>VISION<br>2020</p>
+                <p class="backgroundtitleon">POST-<br>VISION<br>2020</p>
             </div>
         </div>
 
@@ -508,7 +528,10 @@
 
             $(".worldbuilding").click(function(){
                 $(".bodyon").toggleClass("bodychange");
-                /*$(".backgroundtitleon")toggleClass("backgroundtitledark");*/
+                $(".header").toggleClass("headeroff");
+                $(".starw1").toggleClass("starw1off");
+                $(".starrysky").toggleClass("starryskyoff");
+                /*$(".backgroundtitle")toggleClass("backgroundtitleoff");*/
             })
 
 
