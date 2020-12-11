@@ -80,6 +80,7 @@
             }*/
         	.picture{
                 /*height: calc(100vh - 40px);*/
+                padding-top: 17vh;
                 padding-left: 3%;
                 padding-right: 10%;
         		margin: 0rem;
@@ -737,7 +738,7 @@
         function getClonesHeight () {
             clonesHeight = 0;
             for (i = 0; i < clones.length; i += 1) {
-                clonesHeight = clonesHeight/30 + clones[i].offsetHeight;
+                clonesHeight = clonesHeight + clones[i].offsetHeight;
                 }
             return clonesHeight;
         }
