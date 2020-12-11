@@ -15,6 +15,11 @@
     font-style: normal;
     src: url(fonts/3X3-MonoRegular.woff);
 }
+@font-face {
+    font-family: bigtitle;
+    font-style: normal;
+    src: url(fonts/bigtitle.otf);
+}
 #header{
     position: fixed;
     display: flex;
